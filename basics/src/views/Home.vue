@@ -7,6 +7,10 @@
     <ul>
       <li v-for="animal in animals" :key="animal">{{ animal }}</li>
     </ul>
+    <h2 v-if="isLoggedIn">Welcome</h2>
+    <h2 v-else>Please Login</h2>
+    <button v-if="isLoggedIn" @click="logout">Logout</button>
+    <button v-else @click="login">Login</button>
   </div>
 </template>
 
@@ -21,6 +25,7 @@ export default {
       student: "Harry",
       animals: ["horse", "savva", "pig", "Zebra", "lion"],
       animal: "",
+      isLoggedIn: false,
     };
   },
   methods: {
@@ -31,7 +36,18 @@ export default {
       let number = Math.floor(Math.random() * 5);
       this.animal = this.animals[number];
     },
+    login: function() {
+      this.isLoggedIn = true;
+    },
+    logout: function() {
+      this.isLoggedIn = false;
+    },
   },
+  created() {},
+  mounted() {
+    this.changeAnimal();
+  },
+  beforeCreate() {},
 };
 </script>
 
