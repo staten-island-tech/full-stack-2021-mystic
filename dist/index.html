@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.a6dae8f7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Mystic</title>
+<script src="/style.a6dae8f7.js"></script></head>
+<body>
+    <nav>
+        <div class="nav-wrapper container">
+            <a href="#">
+                <img class="game-logo" src="/logo-test.e66150eb.png"> 
+            </a>
+            <ul id="nav-mobile">
+                <li class="loggedIn">
+                    <a href="#" class="modal-trigger" data-target="modal-account">Account</a>
+                </li>
+                <li class="loggedIn">
+                    <a href="#" id="logout">Logout</a>
+                </li>
+                <li class="loggedIn">
+                    <a href="#" class="modal-trigger" data-target="modal-status">Status</a>
+                </li>
+                <li class="loggedOut">
+                    <a href="#" class="modal-trigger" data-target="modal-login">Login</a>
+                </li>
+                <li class="loggedOut">
+                    <a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="welcome-message">
+      <h1>
+        Welcome to Mystic
+      </h1>
+      <h3>
+        Start your journal here
+      </h3>
+      <button class="btn-large loggedOut red lighten-3"> 
+          <a href="#" class="modal-trigger" data-target="modal-signup">Create Account</a>
+      </button>
+    </div>
+    
+
+    <div id="modal-signup" class="modal">
+        <div class="modal-content">
+          <h4>Sign up</h4>
+          <form id="signup-form">
+            <div class="input-field">
+              <input type="email" id="signup-email" required="">
+              <label for="signup-email">Email address</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="signup-password" required="">
+              <label for="signup-password">Choose password</label>
+            </div>
+            
+              <!-- <div class="profile">
+                  <div class="profile-header">
+                  <p>Enter your name</p>
+                  <form id="username-form">
+                      <div class="input-field">
+                        <input type="text" id="username-input" required>
+                        <label for="username-input">Your Name</label>
+                      </div>
+                  </form>
+                  </div>
+                  <div class="profile-body">
+                      <p id="user-gender">Select gender</p>
+                      <p id="user-preference">Preference</p>
+                  </div>
+              </div> 
+ -->
+            <button class="btn">Sign up</button>
+          </form>
+        </div>
+    </div>
+      
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+          <h4>Login</h4><br>
+          <form id="login-form">
+            <div class="input-field">
+              <input type="email" id="login-email" required="">
+              <label for="login-email">Email address</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="login-password" required="">
+              <label for="login-password">Your password</label>
+            </div>
+            <button class="btn">Login</button>
+          </form>
+        </div>
+    </div>
+
+    <div id="modal-account" class="modal">
+        <div class="modal-content">
+          <h4>Account details</h4><br>
+          <div class="account-details"></div>
+        </div>
+    </div>
+
+<!--check status/history
+    <div id="modal-status" class="modal">
+        <div class="modal-content">
+          <h4>Status</h4><br />
+          <form id="create-form">
+            <button class="btn">History</button>
+          </form>
+        </div>
+    </div> -->
+
+      
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <!-- Initialize Firebase -->
+    <script>const firebaseConfig = {
+  apiKey: "AIzaSyC27AFP-OCOKuf9DN_ZndnERnnB4SyJmek",
+  authDomain: "ap-fullstack.firebaseapp.com",
+  databaseURL: "https://ap-fullstack-default-rtdb.firebaseio.com",
+  projectId: "ap-fullstack"
+}; // Initialize Firebase
+
+firebase.initializeApp(firebaseConfig); //auth and firestore references
+
+const auth = firebase.auth();
+const database = firebase.firestore(); //update firestore settings
+
+database.settings({
+  timestampInSnapshots: true
+});</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/auth.7d499326.js"></script>
+    <script src="/JS.46e07ea9.js"></script>
+
+</body>
+</html>

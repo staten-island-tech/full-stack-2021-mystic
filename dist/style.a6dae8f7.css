@@ -1,0 +1,30 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Croissant One", cursive;
+}
+
+body {
+  background-image: url("/animal-crossing-wallpaper-tempBackground.06f95657.webp");
+}
+
+.game-logo {
+  margin-top: 0.8rem;
+  width: 5rem;
+  height: 3rem;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.welcome-message {
+  text-align: center;
+  height: 80vh;
+}
+
+/*# sourceMappingURL=/style.a6dae8f7.css.map */
