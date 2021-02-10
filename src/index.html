@@ -2,14 +2,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/style.scss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Mystic</title>
 </head>
 <body>
     <nav>
         <div class="nav-wrapper container">
-            <a href="#" class="game-logo">
-                <!-- <img src=""> -->
+            <a href="#">
+                <img class="game-logo" src="media/img/logo-test.png"> 
             </a>
             <ul id="nav-mobile">
                 <li class="loggedIn">
@@ -31,9 +32,22 @@
         </div>
     </nav>
 
+    <div class="welcome-message">
+      <h1>
+        Welcome to Mystic
+      </h1>
+      <h3>
+        Start your journal here
+      </h3>
+      <button class='btn-large loggedOut red lighten-3'> 
+          <a href="#" class="modal-trigger" data-target="modal-signup">Create Account</a>
+      </button>
+    </div>
+    
+
     <div id="modal-signup" class="modal">
         <div class="modal-content">
-          <h4>Sign up</h4><br />
+          <h4>Sign up</h4>
           <form id="signup-form">
             <div class="input-field">
               <input type="email" id="signup-email" required />
@@ -43,6 +57,23 @@
               <input type="password" id="signup-password" required />
               <label for="signup-password">Choose password</label>
             </div>
+            
+              <!-- <div class="profile">
+                  <div class="profile-header">
+                  <p>Enter your name</p>
+                  <form id="username-form">
+                      <div class="input-field">
+                        <input type="text" id="username-input" required>
+                        <label for="username-input">Your Name</label>
+                      </div>
+                  </form>
+                  </div>
+                  <div class="profile-body">
+                      <p id="user-gender">Select gender</p>
+                      <p id="user-preference">Preference</p>
+                  </div>
+              </div> 
+ -->
             <button class="btn">Sign up</button>
           </form>
         </div>
@@ -82,23 +113,6 @@
         </div>
     </div> -->
 
-    <div class="container">
-        <div class="profile guides">
-            <div class="profile-header ">
-            <p>Enter your name</p>
-            <form id="username-form">
-                <div class="input-field">
-                  <input type="text" id="title" required>
-                  <label for="title">Your Name</label>
-                </div>
-            </form>
-            </div>
-            <div class="profile-body white">
-                <p>Select gender</p>
-
-            </div>
-        </div>
-      </div>
       
     
     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>

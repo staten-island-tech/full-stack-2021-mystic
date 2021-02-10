@@ -1,6 +1,14 @@
 //listen for auth status
 auth.onAuthStateChanged(user => {
+    /* const userInfo = document.querySelector('#username-form');
+    const username = userInfo['username-input'].value; */
     if (user){
+        /* firebaseDataBase.ref('users/' + user.uid).set({
+            email: user.email,
+            uid : user.uid,
+            username: username
+        });
+     */
         console.log('logged in:', user);
     }else{
         console.log('user logged out');
