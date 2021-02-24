@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Login from "../views/login.vue";
 import Register from "../views/register.vue";
+import FindPassword from "../views/findPassword.vue";
 import Secret from "../views/secret.vue";
 
 Vue.use(VueRouter);
@@ -15,17 +16,22 @@ const routes = [
   },
   {
     path: "/login",
-    name: "login",
+    name: "Login",
     component: Login
   },
   {
     path: "/register",
-    name: "register",
+    name: "Register",
     component: Register
   },
   {
+    path: "/findPassword",
+    name: "FindPass",
+    component: FindPassword
+  },
+  {
     path: "/secret",
-    name: "secret",
+    name: "Secret",
     component: Secret
   },
   {

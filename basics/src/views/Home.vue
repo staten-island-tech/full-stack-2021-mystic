@@ -1,42 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <img class="logo" src="../assets/logo-test.png" />
     
       <div class="welcome-message">
       <h1>
         Welcome to Mystic
       </h1>
-      <h3>
-        Start your journal here
-      </h3>
+      <div class="btn">
       <button class='btn-large loggedOut red lighten-3'> 
-          <a href="#" class="modal-trigger" data-target="modal-signup">Create Account</a>
+          <router-link to="/register">Sign Up</router-link>
       </button>
+      <button class='btn-large loggedOut red lighten-3'> 
+          <router-link to="/login">Login</router-link>
+      </button>
+      </div>
     </div>
-    <nav>
-        <div class="nav-wrapper container">
-            <a href="#">
-                <img class="game-logo" src="media/img/logo-test.png"> 
-            </a>
-            <ul id="nav-mobile">
-                <li class="loggedIn">
-                    <a href="#" class="modal-trigger" data-target="modal-account">Account</a>
-                </li>
-                <li class="loggedIn">
-                    <a href="#" id="logout">Logout</a>
-                </li>
-                <li class="loggedIn">
-                    <a href="#" class="modal-trigger" data-target="modal-status">Status</a>
-                </li>
-                <li class="loggedOut">
-                    <a href="#" class="modal-trigger" data-target="modal-login">Login</a>
-                </li>
-                <li class="loggedOut">
-                    <a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
   </div>
 </template>
 
@@ -51,3 +29,10 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+
+.logo{
+height: 18vh
+}
+</style>

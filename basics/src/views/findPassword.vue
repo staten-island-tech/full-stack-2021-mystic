@@ -4,23 +4,16 @@
     <div id="modal-login" class="modal">
         <div class="modal-content">
           <h4>Login</h4><br />
-          <form @submit.prevent="pressed" id="login-form">
+          <form @submit.prevent="sendEmail" id="login-form">
             <div class="input-field">
-              <input type="email" placeholder="email" v-model="email" id="login-email" required />
+              <input type="email" placeholder="email" v-model="email" id="lost-email" required />
             </div>
-            <div class="input-field">
-              <input type="password" placeholder="password" v-model="password" id="login-password" required />
-            </div>
-            <button class="btn">Login</button>
+            <button class="btn">Reset Password</button>
           </form>
         </div>
     </div>
-    <p>Don't have an account yet? 
-        <router-link to="/register">Sign Up</router-link>
-    </p>
-    <br>
     <p>
-        <router-link to="/findPassword">Forget Password</router-link>
+        <router-link to="/login">Login</router-link>
     </p>
 
 </div>
@@ -38,21 +31,6 @@ import firebase from "firebase"
         };
     },
     methods:{
-        pressed(){
-            firebase
-            .auth()
-            .signInWithEmailAndPassword(this.email, this.password)
-            .then((user) => {
-                console.log(user.data);
-                this.$router.replace({
-                    name:"secret"
-                });
-            })
-            .catch(error => (this.error = error));
-            err => {
-                alert(err);
-            }
-        },
         sendEmail() {
             if (!this.email) {
                 this.error = "Please type in a valid email address.";
