@@ -1,18 +1,18 @@
 <template>
   <div class="home">
-    <img class="logo" src="../assets/logo-test.png" />
     
       <div class="welcome-message">
       <h1>
         Welcome to Mystic
       </h1>
-      <div class="btn">
-      <button class='btn-large loggedOut red lighten-3'> 
-          <router-link to="/register">Sign Up</router-link>
-      </button>
+      <div>
       <button class='btn-large loggedOut red lighten-3'> 
           <router-link to="/login">Login</router-link>
       </button>
+      <button class='btn-large loggedOut red lighten-3'> 
+          <router-link to="/register">Sign Up</router-link>
+      </button>
+      
       </div>
     </div>
   </div>
@@ -32,7 +32,8 @@ export default {
 
 <style lang="scss">
 
-.logo{
-height: 18vh
+
+.btn-large{
+  margin:2%;
 }
 </style>

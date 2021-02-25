@@ -3,9 +3,10 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
-import 'materialize-css'
 import axios from "axios";
 import firebase from "firebase";
+import 'materialize-css/dist/css/materialize.min.css';
+
 
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;

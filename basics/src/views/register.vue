@@ -1,9 +1,9 @@
 <template>
-<div id="signup">
+<div  class="sign-up">
     <div v-if="error" class="error">{{error.message}}</div>
-    <div id="modal-signup" class="modal">
-        <div class="modal-content">
-          <h4>Sign up</h4>
+    <div>
+        <div>
+          <h3>Sign Up</h3>
           <form @submit.prevent="pressed" id="signup-form">
             <div class="input-field">
               <input type="email" placeholder="email" v-model="email" id="signup-email" required />
@@ -23,7 +23,7 @@
 
 </template>
 <script>
-import M from 'materialize-css'
+import M from 'materialize-css';
 import firebase from "firebase";
 import "firebase/auth";
 
@@ -36,6 +36,9 @@ export default {
             error:""
         };
 
+    },
+    mounted () {
+        M.AutoInit();
     },
     methods:{
         pressed(){
@@ -59,5 +62,12 @@ export default {
 
 <style lang = "scss">
 
+.sign-up{
+    margin:35%;
+    margin-top:4%;
+    align-items: center;
+    text-align: center;
+    margin:none;
+}
 
 </style>

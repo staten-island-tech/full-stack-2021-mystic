@@ -1,14 +1,13 @@
 <template>
-<div id="login">
+<div class="login">
     <div v-if="error" class="error">{{error.message}}</div>
-    <div id="modal-login" class="modal">
-        <div class="modal-content">
-          <h4>Login</h4><br />
+    <div>
+        <div>
+          <h3>Login</h3>
           <form @submit.prevent="pressed" id="login-form">
             <div class="input-field">
               <input type="email" placeholder="email" v-model="email" id="login-email" required />
-            </div>
-            <div class="input-field">
+            <br>
               <input type="password" placeholder="password" v-model="password" id="login-password" required />
             </div>
             <button class="btn">Login</button>
@@ -27,7 +26,9 @@
 </template>
 
 <script>
-import firebase from "firebase"
+import firebase from "firebase";
+import M from 'materialize-css';
+
     export default {
         name:"Login",
         data(){
@@ -38,14 +39,18 @@ import firebase from "firebase"
         };
     },
     methods:{
+        mounted () {
+            M.AutoInit();
+        },
         pressed(){
             firebase
             .auth()
             .signInWithEmailAndPassword(this.email, this.password)
             .then((user) => {
                 console.log(user.data);
-                this.$router.replace({
-                    name:"secret"
+                this.$router.push({
+                    name:"Secret",
+                    query: { redirect: '/secret' }
                 });
             })
             .catch(error => (this.error = error));
@@ -53,28 +58,19 @@ import firebase from "firebase"
                 alert(err);
             }
         },
-        sendEmail() {
-            if (!this.email) {
-                this.error = "Please type in a valid email address.";
-                return;
-            }
-            this.error = null;
-            this.emailSending = true;
-            firebase
-            .auth()
-            .sendPasswordResetEmail(this.email)
-            .then(() => {
-            this.emailSending = false;
-            })
-            .catch(error => {
-            this.emailSending = false;
-            this.error = error.message;
-            });
-}
+        
     }
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+
+.login{
+    margin:35%;
+    margin-top:4%;
+    align-items: center;
+    text-align: center;
+    margin:none;
+}
 
 </style>

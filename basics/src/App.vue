@@ -1,12 +1,15 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/register">Register</router-link> |
-      <router-link to="/findPassword">Find Password</router-link> |
-      <router-link to="/secret">Secret</router-link>
+    <div class="nav-wrapper">
+      <a href="#">
+      <img class="logo" src="../src/assets/logo.png" />
+      </a>
+      <ul class="wrapper">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/login">Login</router-link> |
+        <router-link to="/register">Register</router-link>
+      </ul>
     </div>
     <router-view />
   </div>
@@ -20,7 +23,10 @@
   text-align: center;
   color: #2c3e50;
 }
-
+body{
+    background-image: url('../src/assets/animal-crossing-wallpaper-tempBackground.webp');
+    margin:0;
+}
 #nav {
   padding: 30px;
 
@@ -33,6 +39,25 @@
     }
   }
 }
+
+.logo{
+  margin-top: 1%;
+    width: 5vw;
+    height: 4vh;
+}
+
+.nav-wrapper{
+  width:100vw;
+  background-color: coral;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.wrapper{
+  padding-right:2%;
+  width:auto;
+  color:white;
+}
 </style>
 
 <script>
@@ -40,5 +65,9 @@ import M from 'materialize-css'
 
 export default {
 
+mounted () {
+    M.AutoInit()
+},
 }
+
 </script>
