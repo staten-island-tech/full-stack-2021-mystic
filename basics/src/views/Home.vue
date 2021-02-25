@@ -25,9 +25,6 @@
     <ul>
       <li v-for="animal in animals" :key="animal">{{ animal }}</li>
     </ul>
-<<<<<<< HEAD
->>>>>>> parent of a52572b (uploaded Day 2)
-=======
 >>>>>>> parent of a52572b (uploaded Day 2)
   </div>
 </template>
@@ -60,9 +57,6 @@ export default {
       this.animal = this.animals[number];
     },
   },
-<<<<<<< HEAD
->>>>>>> parent of a52572b (uploaded Day 2)
-=======
 >>>>>>> parent of a52572b (uploaded Day 2)
 };
 </script>
