@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
     <div class="nav-wrapper">
       <a href="#">
       <img class="logo" src="../src/assets/logo.png" />
@@ -11,11 +10,6 @@
         <router-link to="/login">Login</router-link> |
         <router-link to="/register">Register</router-link>
       </ul>
-=======
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
->>>>>>> parent of a52572b (uploaded Day 2)
     </div>
     <router-view />
   </div>
