@@ -15,6 +15,7 @@ const routes = [
     component: Home
   },
   {
+<<<<<<< HEAD
     path: "/login",
     name: "Login",
     component: Login
@@ -35,6 +36,8 @@ const routes = [
     component: Secret
   },
   {
+=======
+>>>>>>> parent of a52572b (uploaded Day 2)
     path: "/about",
     name: "About",
     // route level code-splitting
