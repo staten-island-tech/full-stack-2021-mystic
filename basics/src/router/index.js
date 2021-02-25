@@ -16,6 +16,7 @@ const routes = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     path: "/login",
     name: "Login",
     component: Login
@@ -36,6 +37,8 @@ const routes = [
     component: Secret
   },
   {
+=======
+>>>>>>> parent of a52572b (uploaded Day 2)
 =======
 >>>>>>> parent of a52572b (uploaded Day 2)
     path: "/about",

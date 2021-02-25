@@ -15,6 +15,9 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+<<<<<<< HEAD
+>>>>>>> parent of a52572b (uploaded Day 2)
+=======
 >>>>>>> parent of a52572b (uploaded Day 2)
     </div>
     <router-view />
