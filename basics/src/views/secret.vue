@@ -4,19 +4,17 @@
     <div>
         <div>
           <h3>Welcome</h3>
-          <form @submit.prevent="pressed" id="signup-form">
+          <form @submit.prevent=start id="signup-form">
             <div class="input-field">
-              <input type="text" placeholder="Please Enter Your Name" required />
+              <input type="text" placeholder="Please Enter Your Name" />
             </div>
             <p>Who would you like to date with?</p>
             <br>
             <button class="btn">Start</button>
           </form>
+            <button class="btn" @click="logout">Logout</button>
         </div>
     </div>
-    <p>Already have an account?
-        <router-link to="/login">Login</router-link>
-    </p>
 </div>
       
     
@@ -41,23 +39,26 @@ export default {
         M.AutoInit();
     },
     methods:{
-        pressed(){
-            firebase
+        logout(){
+        firebase
             .auth()
-            .createUserWithEmailAndPassword(this.email, this.password)
-            .then((user) => {
-                console.log(user.data);
-                this.$router.replace({
-                    name:"secret"
-                });
-            })
-            .catch(error => (this.error = error));
-            err => {
-                alert(err);
-            }
-        }
+            .signOut()
+            .then(() => {
+            this.$router.push({
+                name:"Home",
+                query: { redirect: '/about' }
+            });
+        })
+        .catch(error => (this.error = error));
+        }},
+        /* start(){
+            const name = (this.text);
+            this.$router.push({
+                name:"Home",
+                query: { redirect: '/about' }
+            });
+        } */
     }
-};
 </script>
 
 <style lang = "scss">
@@ -68,6 +69,9 @@ export default {
     align-items: center;
     text-align: center;
     margin:none;
+}
+.btn{
+    margin:5%;
 }
 
 </style>

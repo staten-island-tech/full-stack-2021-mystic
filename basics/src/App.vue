@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <div class="nav-wrapper">
-      <a href="#">
-      <img class="logo" src="../src/assets/logo.png" />
+      <a>
+      <router-link to="/"><img class="logo" src="../src/assets/logo.png" />
+      </router-link>
       </a>
+      
       <ul class="wrapper">
         <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
-        <router-link to="/login">Login</router-link> |
-        <router-link to="/register">Register</router-link>
+        <router-link to="/about">About</router-link>
       </ul>
     </div>
     <router-view />
@@ -41,9 +41,9 @@ body{
 }
 
 .logo{
-  margin-top: 1%;
-    width: 5vw;
-    height: 4vh;
+  margin-top: 3%;
+    width: 8vw;
+    height: 7vh;
 }
 
 .nav-wrapper{
@@ -64,10 +64,9 @@ body{
 import M from 'materialize-css'
 
 export default {
-
-mounted () {
-    M.AutoInit()
-},
+    mounted () {
+        M.AutoInit()
+    },
 }
 
 </script>
