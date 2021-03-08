@@ -6,11 +6,11 @@
           <h3>Welcome</h3>
           <form @submit.prevent=start id="signup-form">
             <div class="input-field">
-              <input type="text" placeholder="Please Enter Your Name" />
+              <input type="text" v-model="username" placeholder="Please Enter Your Name" />
             </div>
             <p>Who would you like to date with?</p>
             <br>
-            <button class="btn">Start</button>
+            <button class="btn" @click="addName">Start</button>
           </form>
             <button class="btn" @click="logout">Logout</button>
         </div>
@@ -24,13 +24,15 @@
 import M from 'materialize-css';
 import firebase from "firebase";
 import "firebase/auth";
-
+import "firebase/firestore";
 
 export default {
     data(){
         return{
             email:"",
             password:"",
+            id:[],
+            username:null,
             error:""
         };
 
@@ -51,6 +53,9 @@ export default {
         })
         .catch(error => (this.error = error));
         }},
+        addName(){
+            
+        }
         /* start(){
             const name = (this.text);
             this.$router.push({
