@@ -24,17 +24,30 @@
 import M from 'materialize-css';
 import firebase from "firebase";
 import "firebase/auth";
-import "firebase/firestore";
+const db = firebase.firestore();
 
 export default {
     data(){
         return{
             email:"",
             password:"",
-            id:[],
+            id:"",
             username:null,
             error:""
         };
+
+    },
+    firestore:{
+        username:db.collection('username').doc(uid),
+        userid: "",
+        getUsername(){return db.runTransaction((t) =>{
+            return.t.get(username).then((doc)=>{
+                if(!doc.exists) return;
+                userArry = doc.get('users').push(userid);
+                t,set(username, {users:userArray}, {merge: true});
+            })
+        }).catch(console.log);
+        }
 
     },
     mounted () {
