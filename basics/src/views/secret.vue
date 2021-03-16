@@ -6,11 +6,11 @@
           <h3>Welcome</h3>
           <form @submit.prevent=start id="signup-form">
             <div class="input-field">
-              <input type="text" v-model="username" placeholder="Please Enter Your Name" />
+              <input type="text" v-model="usernameInput" placeholder="Please Enter Your Name" />
             </div>
-            <p>Who would you like to date with?</p>
+<!--             <p>Who would you like to date with?</p> -->
             <br>
-            <button class="btn" @click="addName">Start</button>
+            <button class="btn" @click="addName()">Start</button>
           </form>
             <button class="btn" @click="logout">Logout</button>
         </div>
@@ -23,33 +23,20 @@
 <script>
 import M from 'materialize-css';
 import firebase from "firebase";
-import "firebase/auth";
-const db = firebase.firestore();
+const observer = observer();
 
 export default {
     data(){
         return{
             email:"",
             password:"",
-            id:"",
-            username:null,
+            userid:"",
+            username:this.name,
             error:""
         };
 
     },
-    firestore:{
-        username:db.collection('username').doc(uid),
-        userid: "",
-        getUsername(){return db.runTransaction((t) =>{
-            return.t.get(username).then((doc)=>{
-                if(!doc.exists) return;
-                userArry = doc.get('users').push(userid);
-                t,set(username, {users:userArray}, {merge: true});
-            })
-        }).catch(console.log);
-        }
-
-    },
+    
     mounted () {
         M.AutoInit();
     },
@@ -65,18 +52,18 @@ export default {
             });
         })
         .catch(error => (this.error = error));
-        }},
+        },
+            },
         addName(){
-            
-        }
-        /* start(){
-            const name = (this.text);
+
+        },
+        start(){
             this.$router.push({
                 name:"Home",
                 query: { redirect: '/about' }
             });
-        } */
-    }
+        } 
+}
 </script>
 
 <style lang = "scss">

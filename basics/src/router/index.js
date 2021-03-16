@@ -5,6 +5,7 @@ import Login from "../views/login.vue";
 import Register from "../views/register.vue";
 import FindPassword from "../views/findPassword.vue";
 import Secret from "../views/secret.vue";
+import test from "../views/test.vue";
 
 Vue.use(VueRouter);
 
@@ -35,6 +36,11 @@ const routes = [
     component: Secret
   },
   {
+    path: "/test",
+    name: "test",
+    component: test
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting
@@ -43,6 +49,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
   }
+  
 ];
 
 const router = new VueRouter({
