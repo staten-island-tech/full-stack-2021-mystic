@@ -67,28 +67,7 @@ import M from 'materialize-css';
             err => {
                 alert(err);
             }
-        },
-        observer(){
-            firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                console.log(
-                    `displayName: user.displayName;
-                    email: user.email;
-                    emailVerified: user.emailVerified;
-                    isAnonymous: user.isAnonymous;
-                    uid: user.uid;
-                    providerData: user.providerData;`
-                )
-                // User is signed in.
-                
-                // ...
-            } else {
-                // User is signed out.
-                // ...
-            }
-        });
-        }
-        
+        },        
         
     }
     }
