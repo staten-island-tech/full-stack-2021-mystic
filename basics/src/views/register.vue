@@ -6,11 +6,13 @@
           <h3>Sign Up</h3>
           <form @submit.prevent="pressed" id="signup-form">
             <div class="input-field">
-              <input type="email" placeholder="email" v-model="email" id="signup-email" required />
-              <br>
-              <input type="password" placeholder="password" v-model="password" id="signup-password" required />
+            <input type="text" placeholder="name" v-model="usernameTxt" id="usernameTxt" required />
+            <br>
+            <input type="email" placeholder="email" v-model="email" id="signup-email" required />
+            <br>
+            <input type="password" placeholder="password" v-model="password" id="signup-password" required />
             </div>
-            <button class="btn">Sign Up</button>
+            <button class="btn" @click="getUsername">Sign Up</button>
           </form>
         </div>
     </div>
@@ -55,6 +57,23 @@ export default {
             err => {
                 alert(err);
             }
+        },
+        getUsername(){
+            firebase.auth().onAuthStateChanged(function(user) {
+            const username = usernameTxt.value;
+            if (user) {
+                firebaseDataBase.ref('users/' + user.uid).set({
+                    email: user.email,
+                    uid : user.uid,
+                    username: username
+                });
+
+                console.log("User is signed in.");
+            } else {
+                console.log("No user is signed in.");
+
+            }
+            });
         }
     }
 };

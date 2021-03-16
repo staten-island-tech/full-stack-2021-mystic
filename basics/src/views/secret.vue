@@ -6,11 +6,11 @@
           <h3>Welcome</h3>
           <form @submit.prevent=start id="signup-form">
             <div class="input-field">
-              <input type="text" v-model="usernameTxt" placeholder="Please Enter Your Name" />
+              <input type="text" v-model="usernameTxt" id="usernameTxt" placeholder="Please Enter Your Name" />
             </div>
 <!--             <p>Who would you like to date with?</p> -->
             <br>
-            <button class="btn" @click="observe">Start</button>
+            <button class="btn" @click="getUsername">Start</button>
           </form>
             <button class="btn" @click="logout">Logout</button>
         </div>
@@ -52,7 +52,7 @@ export default {
         })
         .catch(error => (this.error = error));
         },
-        observe(){
+        getUsername(){
             firebase.auth().onAuthStateChanged(function(user) {
             const username = usernameTxt.value;
             if (user) {

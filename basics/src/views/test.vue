@@ -3,7 +3,7 @@
     <div>
       <input type="text"
         v-model="username"
-        @keyup.enter="addUsername">
+        @keyup.enter="add">
       <button  @click="addUsername">
         Add Name
       </button>
@@ -20,9 +20,9 @@
 </template>
 
 <script>
-  import { db } from './main';
+//import { db } from './main';
 
-  export default {
+export default {
     name: 'profile',
     data() {
       return {
@@ -36,7 +36,7 @@
       }
     },
     methods: {
-      addReptile: function() {
+      addName: function() {
         this.$firestore.users.add(
           {
             name: this.username,
@@ -45,9 +45,9 @@
         );
         this.username = '';
       },
-      deleteName: function(user) {
-        this.$firestore.users.doc(user['.key']).delete();
+      changeName: function(user) {
+        this.$firestore.users.doc(user['.key']).replace();
       }
     }
   }
-</script>
+</script> 

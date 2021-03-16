@@ -5,7 +5,7 @@ import router from "./router";
 import store from "./store";
 import axios from "axios";
 import firebase from "firebase";
-import VueFirestore from 'vue-firestore';
+//import VueFirestore from 'vue-firestore';
 import "firebase/auth";
 import 'firebase/firestore';
 import 'materialize-css/dist/css/materialize.min.css';
@@ -14,7 +14,7 @@ import 'materialize-css/dist/css/materialize.min.css';
 
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
-Vue.use(VueFirestore);
+//Vue.use(VueFirestore);
 
 const firebaseConfig = {
   apiKey: "AIzaSyC27AFP-OCOKuf9DN_ZndnERnnB4SyJmek",
@@ -31,7 +31,7 @@ const firebaseConfig = {
 const fb = firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-export const db = fb.firestore();
+export const db = fb.database();
 
 //Vue.use(VueFire);
 
