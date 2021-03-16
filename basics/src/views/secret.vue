@@ -6,9 +6,7 @@
           <h3>Welcome</h3>
           <form @submit.prevent=start id="signup-form">
             <div class="input-field">
-              <input type="text" v-model="username" id="username" placeholder="Please Enter Your Name" />
-            <input type="text" v-model="pronoun" id="pronoun" placeholder="Preffered Prounoun" />
-            
+              <input type="text" v-model="username" id="username" placeholder="Please Enter Your Name" />            
             </div>
 <!--             <p>Who would you like to date with?</p> -->
             <br>
@@ -65,10 +63,9 @@ export default {
             .collection("profile")
             .add({
                 username:this.username,
-                pronoun:this.pronoun,
                 email: fb.email,
                 uid:fb.uid,
-            })
+            }).catch(error => (this.error = error));
         },
         start(){
             this.$router.push({

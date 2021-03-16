@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     
-      <div class="welcome-message">
+      <header class="welcome-message">
       <h1>
         Welcome to Mystic
       </h1>
@@ -14,7 +14,7 @@
       </button>
       
       </div>
-    </div>
+    </header>
   </div>
 </template>
 

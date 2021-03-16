@@ -6,7 +6,7 @@
           <h3>Sign Up</h3>
           <form @submit.prevent="pressed" id="signup-form">
             <div class="input-field">
-            <input type="text" placeholder="name" v-model="usernameTxt" id="usernameTxt" required />
+            <input type="text" placeholder="name" v-model="usernameTxt" id="usernameTxt" />
             <br>
             <input type="email" placeholder="email" v-model="email" id="signup-email" required />
             <br>
@@ -59,21 +59,7 @@ export default {
             }
         },
         getUsername(){
-            firebase.auth().onAuthStateChanged(function(user) {
-            const username = usernameTxt.value;
-            if (user) {
-                firebaseDataBase.ref('users/' + user.uid).set({
-                    email: user.email,
-                    uid : user.uid,
-                    username: username
-                });
-
-                console.log("User is signed in.");
-            } else {
-                console.log("No user is signed in.");
-
-            }
-            });
+            c
         }
     }
 };
