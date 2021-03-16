@@ -6,11 +6,15 @@
           <h3>Welcome</h3>
           <form @submit.prevent=start id="signup-form">
             <div class="input-field">
-              <input type="text" v-model="usernameTxt" id="usernameTxt" placeholder="Please Enter Your Name" />
+              <input type="text" v-model="username" id="username" placeholder="Please Enter Your Name" />
+            <input type="text" v-model="pronoun" id="pronoun" placeholder="Preffered Prounoun" />
+            
             </div>
 <!--             <p>Who would you like to date with?</p> -->
             <br>
-            <button class="btn" @click="getUsername">Start</button>
+            <button class="btn" @click="getUsername">
+             Start   <!-- <router-link to="/game">Start</router-link> -->
+            </button>
           </form>
             <button class="btn" @click="logout">Logout</button>
         </div>
@@ -29,8 +33,8 @@ export default {
         return{
             email:"",
             password:"",
-            userid:"",
-            username:this.name,
+            uid:"",
+            username:"",
             error:""
         };
 
@@ -53,21 +57,18 @@ export default {
         .catch(error => (this.error = error));
         },
         getUsername(){
-            firebase.auth().onAuthStateChanged(function(user) {
-            const username = usernameTxt.value;
-            if (user) {
-                firebaseDataBase.ref('users/' + user.uid).set({
-                    email: user.email,
-                    uid : user.uid,
-                    username: username
-                });
-
-                console.log("User is signed in.");
-            } else {
-                console.log("No user is signed in.");
-
-            }
-            });
+            const fb = firebase.auth().currentUser;
+            firebase
+            .firestore()
+            .collection("users")
+            .doc(fb.uid)
+            .collection("profile")
+            .add({
+                username:this.username,
+                pronoun:this.pronoun,
+                email: fb.email,
+                uid:fb.uid,
+            })
         },
         start(){
             this.$router.push({

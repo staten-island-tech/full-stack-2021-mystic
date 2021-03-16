@@ -33,7 +33,18 @@ const routes = [
   {
     path: "/secret",
     name: "Secret",
-    component: Secret
+    component: Secret,
+    meta:{
+      auth:true
+    }
+  },
+  {
+    path: "/game",
+    name: "game",
+    component: test,
+    meta:{
+      auth:true
+    }
   },
   {
     path: "/test",
