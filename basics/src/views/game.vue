@@ -8,6 +8,10 @@
                 {{this.dialogue}}
             </p>
         </div>
+        <div class="dialogue">
+
+        </div>
+
     </section>
 </template>
 
@@ -22,26 +26,27 @@ export default {
     },
     methods:{
         next(){
-            firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                firebase
-               .firestore()
-                .collection("users")
-                .doc(fb.uid)
-                .collection("profile")
-                .add({
-                    username:this.username,
-                    email: fb.email,
-                    uid:fb.uid,
-                }).catch(error => (this.error = error));
-                    console.log("User is signed in.");
-            } else {
-                console.log("No user is signed in.");
-
-            }
-            });
+            const userArr = firebase.collection('users');
+            userArr.onSnapshot((userInfo) => {
+                const users = [];
+                userInfo.forEach((doc) => {
+                    const user = doc.data();
+                    user.id = firebase.auth.currentUser.uid;
+                    users.push(user);
+                });
+                store.userInFiles = users;
+            })
         }
     }   
 }
 
 </script>
+
+<style>
+
+.dialogue{
+    background: gray;
+    font-size: 5rem;
+    border: solid black;
+}
+</style>

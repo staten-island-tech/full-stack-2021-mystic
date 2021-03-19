@@ -28,10 +28,11 @@ const firebaseConfig = {
 }
 //const db = firebase.firestore();
 
-const fb = firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+firebase.firestore();
 
-export const db = fb.database();
+
 
 //Vue.use(VueFire);
 

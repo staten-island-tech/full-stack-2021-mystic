@@ -59,7 +59,7 @@ import M from 'materialize-css';
             .then((user) => {
                 console.log(user.data);
                 this.$router.push({
-                    name:"Secret",
+                    name:"secret",
                     query: { redirect: '/secret' }
                 });
             })

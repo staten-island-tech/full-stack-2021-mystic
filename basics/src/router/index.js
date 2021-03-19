@@ -5,7 +5,7 @@ import Login from "../views/login.vue";
 import Register from "../views/register.vue";
 import FindPassword from "../views/findPassword.vue";
 import Secret from "../views/secret.vue";
-import test from "../views/test.vue";
+import Game from "../views/game.vue";
 
 Vue.use(VueRouter);
 
@@ -32,25 +32,17 @@ const routes = [
   },
   {
     path: "/secret",
-    name: "Secret",
+    name: "secret",
     component: Secret,
-    meta:{
-      auth:true
-    }
   },
-  {
+/*   {
     path: "/game",
     name: "game",
-    component: test,
+    component: Game,
     meta:{
       auth:true
     }
-  },
-  {
-    path: "/test",
-    name: "test",
-    component: test
-  },
+  },  */
   {
     path: "/about",
     name: "About",
