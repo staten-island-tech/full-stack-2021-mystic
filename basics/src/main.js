@@ -5,11 +5,16 @@ import router from "./router";
 import store from "./store";
 import axios from "axios";
 import firebase from "firebase";
+//import VueFirestore from 'vue-firestore';
+import "firebase/auth";
+import 'firebase/firestore';
 import 'materialize-css/dist/css/materialize.min.css';
+//import VueFire from 'vuefire';
 
 
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
+//Vue.use(VueFirestore);
 
 const firebaseConfig = {
   apiKey: "AIzaSyC27AFP-OCOKuf9DN_ZndnERnnB4SyJmek",
@@ -21,9 +26,15 @@ const firebaseConfig = {
   appId: "1:21368777674:web:e42054f3c80c71a51d3d33",
   measurementId: "G-LKPXRVV57E"
 }
+//const db = firebase.firestore();
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+firebase.firestore();
+
+
+
+//Vue.use(VueFire);
 
 new Vue({
   router,

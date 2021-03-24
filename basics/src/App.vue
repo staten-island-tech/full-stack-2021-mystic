@@ -61,12 +61,27 @@ body{
 </style>
 
 <script>
-import M from 'materialize-css'
+import M from 'materialize-css';
+//import {db} from './main';
 
 export default {
+   data() {
+    return {
+      users: {}
+    }
+  },
     mounted () {
         M.AutoInit()
     },
+    /* firebase: {
+    users: {
+      source: db.ref('users'),
+      // Optional, allows you to handle any errors.
+      cancelCallback(err) {
+        console.error(err);
+      }
+    }, 
+  }*/
 }
 
 </script>

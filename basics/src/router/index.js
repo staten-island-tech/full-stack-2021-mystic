@@ -5,6 +5,7 @@ import Login from "../views/login.vue";
 import Register from "../views/register.vue";
 import FindPassword from "../views/findPassword.vue";
 import Secret from "../views/secret.vue";
+import Game from "../views/game.vue";
 
 Vue.use(VueRouter);
 
@@ -31,9 +32,17 @@ const routes = [
   },
   {
     path: "/secret",
-    name: "Secret",
-    component: Secret
+    name: "secret",
+    component: Secret,
   },
+/*   {
+    path: "/game",
+    name: "game",
+    component: Game,
+    meta:{
+      auth:true
+    }
+  },  */
   {
     path: "/about",
     name: "About",
@@ -43,6 +52,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
   }
+  
 ];
 
 const router = new VueRouter({

@@ -6,9 +6,10 @@
           <h3>Sign Up</h3>
           <form @submit.prevent="pressed" id="signup-form">
             <div class="input-field">
-              <input type="email" placeholder="email" v-model="email" id="signup-email" required />
-              <br>
-              <input type="password" placeholder="password" v-model="password" id="signup-password" required />
+            <br>
+            <input type="email" placeholder="email" v-model="email" id="signup-email" required />
+            <br>
+            <input type="password" placeholder="password" v-model="password" id="signup-password" required />
             </div>
             <button class="btn">Sign Up</button>
           </form>
@@ -41,21 +42,60 @@ export default {
         M.AutoInit();
     },
     methods:{
-        pressed(){
+        signIn(){
             firebase
             .auth()
-            .createUserWithEmailAndPassword(this.email, this.password)
+            .signInWithEmailAndPassword(this.email, this.password)
             .then((user) => {
                 console.log(user.data);
-                this.$router.replace({
-                    name:"secret"
+                this.$router.push({
+                    name:"secret",
+                    query: { redirect: '/secret' }
                 });
             })
             .catch(error => (this.error = error));
             err => {
                 alert(err);
             }
-        }
+        },
+        pressed(){
+            firebase
+            .auth()
+            .createUserWithEmailAndPassword(this.email, this.password)
+            .then((user) => {
+                this.signIn();
+                console.log(user.data);
+                this.$router.replace({
+                    name:"secret",
+                    query: { redirect: '/secret' }
+                });
+            })
+            .catch(error => (this.error = error));
+            err => {
+                alert(err);
+            }
+        },
+        /* getUserinfo(){
+            firebase.auth().onAuthStateChanged((user) => {
+            if(user){
+            firebase
+            .firestore()
+            .collection("users")
+            .doc(firebase.auth().currentUser.uid)
+            .collection("info")
+            .add({
+                username:"",
+                email: firebase.auth().currentUser.email,
+                uid:firebase.auth().currentUser.uid,
+            }).then(() => {
+            console.log("You've successfully created an account")
+            })
+            .catch(error => (this.error = error));
+            }else{
+                alert("Please try again")
+            }
+            });
+        } */
     }
 };
 </script>

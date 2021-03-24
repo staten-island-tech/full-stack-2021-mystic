@@ -4,13 +4,17 @@
     <div>
         <div>
           <h3>Welcome</h3>
-          <form @submit.prevent=start id="signup-form">
+          <form @submit.prevent=getUsername id="signup-form">
             <div class="input-field">
-              <input type="text" placeholder="Please Enter Your Name" />
+              <input type="text" v-model="username" id="username" placeholder="Please Enter Your Name" />            
             </div>
-            <p>Who would you like to date with?</p>
+<!--             <p>Who would you like to date with?</p> -->
             <br>
-            <button class="btn">Start</button>
+            <!-- <button @click="startGame" class="btn"> -->
+             <button class="btn">
+                 Start  
+            </button>
+            
           </form>
             <button class="btn" @click="logout">Logout</button>
         </div>
@@ -23,18 +27,19 @@
 <script>
 import M from 'materialize-css';
 import firebase from "firebase";
-import "firebase/auth";
-
 
 export default {
     data(){
         return{
             email:"",
             password:"",
+            uid:"",
+            username:"",
             error:""
         };
 
     },
+    
     mounted () {
         M.AutoInit();
     },
@@ -50,15 +55,49 @@ export default {
             });
         })
         .catch(error => (this.error = error));
-        }},
-        /* start(){
-            const name = (this.text);
-            this.$router.push({
-                name:"Home",
-                query: { redirect: '/about' }
+        },
+        getUsername(){
+            firebase
+            .firestore()
+            .collection("users")
+            .doc(firebase.auth().currentUser.uid)
+            .collection("info")
+            .add({
+                username:this.username,
+                email: firebase.auth().currentUser.email,
+                uid:firebase.auth().currentUser.uid,
+            })/* .then(() => {
+                this.startGame();
+            }) */.catch(error => (this.error = error));
+        },
+        /* startGame(){
+            firebase
+            .firestore()
+            .collection('Current paths')
+            .doc("ogpath")
+            .collection('L1')
+            .doc('Og')
+            .get()
+            .then(querySnapshot => {
+                const documents = querySnapshot.docs.map(doc => doc.data())
+                // do something with documents
             });
-        } */
-    }
+            firestoreAction(({ Og }) => {
+            return Og('Current paths',
+            firebase
+            .firestore()
+            .collection('Current paths')
+            .doc("ogpath")
+            .collection('L1')
+            .doc('Og')
+            .orderBy('createdAt')
+            )
+            })
+        }
+ */
+        } 
+
+}
 </script>
 
 <style lang = "scss">
