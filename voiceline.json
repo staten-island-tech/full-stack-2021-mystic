@@ -1,0 +1,261 @@
+[
+    {
+        "id": "00",
+        "name": "",
+        "dialogue": "*Autumn leaves flutter around, it's the first day of school*"
+    },
+    
+    {
+        "id": "01",
+        "name": "",
+        "dialogue": "*Bell rings*"
+    },
+
+    {
+        "id": "02",
+        "name": "Player",
+        "dialogue": "Wow, it’s finally the first day of senior year. I can’t believe time has passed by so quickly."
+    },
+
+    {
+        "id": "03",
+        "name": "Teacher",
+        "dialogue": "Welcome everyone, to our first day of school."
+    },
+
+    {
+        "id": "04",
+        "name": "Teacher",
+        "dialogue": "So over the summer, I’m sure many of you forgot the basics to JavaScript and CSS."
+    },
+
+    {
+        "id": "05",
+        "name": "Teacher",
+        "dialogue": "Let’s have a quick review, and then I’ll assign you all a small project."
+    },
+
+    {
+        "id": "06",
+        "name": "",
+        "dialogue": "*BANG* "
+    },
+
+    {
+        "id": "07",
+        "name": "",
+        "dialogue": "*door opens*"
+    },
+
+    {
+        "id": "08",
+        "name": "???",
+        "dialogue": "Sorry Teacher! Got caught up in the main office."
+    },
+
+    {
+        "id": "09",
+        "name": "Teacher",
+        "dialogue": "No problem. Take a seat wherever you want."
+    },
+
+    {
+        "id": "10",
+        "name": "???",
+        "dialogue": "Thank you."
+    },
+
+    {
+        "id": "11",
+        "name": "Teacher",
+        "dialogue": "Anyways, everyone, please log into your accounts."
+    },
+
+    {
+        "id": "12",
+        "name": "???",
+        "dialogue": "Hey. Did I miss anything?"
+    },
+
+    {
+        "id": "13",
+        "name": "Player",
+        "dialogue": "Nope, we just started."
+    },
+
+    {
+        "id": "14",
+        "name": "???",
+        "dialogue": "Ah good. I’m LI1 by the way."
+    },
+
+    {
+        "id": "15",
+        "name": "Player",
+        "dialogue": "I’m [name]."
+    },
+
+    {
+        "id": "16",
+        "name": "Player",
+        "dialogue": "By the way, I’ve never seen you around. Are you new?"
+    },
+
+    {
+        "id": "17",
+        "name": "LI1",
+        "dialogue": "Oh yeah. I transferred here for my last year."
+    },
+
+    {
+        "id": "18",
+        "name": "LI1",
+        "dialogue": "I didn’t really like my old school. Didn’t suit me."
+    },
+
+    {
+        "id": "19",
+        "name": "Player",
+        "dialogue": "I see. Well, welcome to our school."
+    },
+
+    {
+        "id": "20",
+        "name": "LI1",
+        "dialogue": "Thank you!"
+    },
+
+    {
+        "id": "21",
+        "name": "Teacher",
+        "dialogue": "Okay, so now for a quick partner project…."
+    },
+
+    {
+        "id": "22",
+        "name": "Teacher",
+        "dialogue": "Here are the pairings."
+    },
+
+    {
+        "id": "23",
+        "name": "LI1",
+        "dialogue": "Oh wow. Looks like we’re together."
+    },
+
+    {
+        "id": "24",
+        "name": "Player",
+        "dialogue": "Yeah. Want to start today?"
+    },
+
+    {
+        "id": "25",
+        "name": "LI1",
+        "dialogue": "Sure. After school at Starbucks?"
+    },
+
+    {
+        "id": "26",
+        "name": "Player",
+        "dialogue": "Okay. See you then."
+    },
+
+    {
+        "id": "27",
+        "name": "",
+        "dialogue": "*3pm*"
+    },
+
+    {
+        "id": "28",
+        "name": "LI1",
+        "dialogue": "HEY [name}. Wanna sit here or the back?"
+    },
+
+    {
+        "id": "29a",
+        "name": "Choice 1",
+        "dialogue": "Here is fine."
+    },
+
+    {
+        "id": "29b",
+        "name": "Choice 2",
+        "dialogue": "Let’s move to the back. "
+    },
+
+    {
+        "id": "30",
+        "name": "",
+        "dialogue": "*Sits*"
+    },
+
+    {
+        "id": "31",
+        "name": "Player",
+        "dialogue": "So I was thinking our project could be a video game."
+    },
+
+    {
+        "id": "32",
+        "name": "LI1",
+        "dialogue": "I’m down for anything!"
+    },
+
+    {
+        "id": "33",
+        "name": "Player",
+        "dialogue": "Let’s get started then!"
+    },
+
+    {
+        "id": "34",
+        "name": "",
+        "dialogue": "*two hours pass*"
+    },
+
+    {
+        "id": "35",
+        "name": "LI1",
+        "dialogue": "Wow we’ve been working for a while."
+    },
+
+    {
+        "id": "36",
+        "name": "LI1",
+        "dialogue": "Think it’s time to call it a day?"
+    },
+
+    {
+        "id": "37",
+        "name": "Player",
+        "dialogue": "Yeah. I should get going."
+    },
+
+    {
+        "id": "38",
+        "name": "LI1",
+        "dialogue": "Should we meet again tomorrow or through text?"
+    },
+
+    {
+        "id": "39a",
+        "name": "Choice 1",
+        "dialogue": "We can meet tomorrow."
+    },
+
+    {
+        "id": "39b",
+        "name": "Choice 2",
+        "dialogue": "I prefer through text."
+    },
+
+    {
+        "id": "40",
+        "name": "",
+        "dialogue": "*Autumn leaves flutter around, it's the first day of school*"
+    }
+
+    
+]
