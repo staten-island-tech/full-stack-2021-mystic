@@ -35,14 +35,14 @@ const routes = [
     name: "secret",
     component: Secret,
   },
-/*   {
+  {
     path: "/game",
     name: "game",
     component: Game,
     meta:{
       auth:true
     }
-  },  */
+  }, 
   {
     path: "/about",
     name: "About",

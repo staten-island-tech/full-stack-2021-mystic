@@ -1,31 +1,32 @@
 <template>
-    <section>
-        <h1>
-            {{this.name}}
-        </h1>
-        <div @click ="next">
+    <section class="dialogue">
+            <h6 class="name">
+                {{username.username}}
+            </h6>
+        <!-- <div @click ="next">
             <p>
                 {{this.dialogue}}
             </p>
-        </div>
-        <div class="dialogue">
-
+        </div> -->
+        <div>
+            <p> Hello</p>
         </div>
 
     </section>
 </template>
 
 <script>
+import firebase from "firebase";
+import "../assets/voicelines.json";
+
 export default {
     data(){
         return{
-            uid:firebase.auth().currentUser.uid,
             username:'',
-
         }
     },
     methods:{
-        next(){
+        /* next(){
             const userArr = firebase.collection('users');
             userArr.onSnapshot((userInfo) => {
                 const users = [];
@@ -36,6 +37,28 @@ export default {
                 });
                 store.userInFiles = users;
             })
+        } */
+        startGame(){
+            fetch("../assets/voicelines.json")
+            .then(function(response){
+                return voicelines.json();
+            })
+            .then (function (data){
+                appendData(data);
+            })
+            .catch(function(err){
+                console.log(err);
+            })
+        },
+        diaplayUsername(){
+            return{
+                username:  
+                firebase
+                .firestore()
+                .collection("users")
+                .doc(firebase.auth().currentUser.uid)
+                .collection("info")
+            }
         }
     }   
 }
@@ -44,9 +67,27 @@ export default {
 
 <style>
 
+section{
+    height: 90vh;
+}
+
 .dialogue{
-    background: gray;
-    font-size: 5rem;
-    border: solid black;
+    display: block;
+    background: rgb(100, 96, 96);
+    color: white;
+    font-size: 1.8rem;
+    border: solid green 1px;
+    height: 20vh;
+    margin-top: 70vh;
+    align-content: left;
+    align-items: left;
+
+}
+
+.name{
+    width:10vw;
+    height: 3vh;
+    align-items: left;
+    border: red 1px solid;
 }
 </style>

@@ -8,13 +8,10 @@
             <div class="input-field">
               <input type="text" v-model="username" id="username" placeholder="Please Enter Your Name" />            
             </div>
-<!--             <p>Who would you like to date with?</p> -->
             <br>
-            <!-- <button @click="startGame" class="btn"> -->
              <button class="btn">
                  Start  
-            </button>
-            
+            </button>  
           </form>
             <button class="btn" @click="logout">Logout</button>
         </div>
@@ -66,37 +63,14 @@ export default {
                 username:this.username,
                 email: firebase.auth().currentUser.email,
                 uid:firebase.auth().currentUser.uid,
-            })/* .then(() => {
-                this.startGame();
-            }) */.catch(error => (this.error = error));
-        },
-        /* startGame(){
-            firebase
-            .firestore()
-            .collection('Current paths')
-            .doc("ogpath")
-            .collection('L1')
-            .doc('Og')
-            .get()
-            .then(querySnapshot => {
-                const documents = querySnapshot.docs.map(doc => doc.data())
-                // do something with documents
+            }).then(() => {
+                this.$router.push({
+                name:"game",
+                query: { redirect: '/game' }
             });
-            firestoreAction(({ Og }) => {
-            return Og('Current paths',
-            firebase
-            .firestore()
-            .collection('Current paths')
-            .doc("ogpath")
-            .collection('L1')
-            .doc('Og')
-            .orderBy('createdAt')
-            )
-            })
+            }).catch(error => (this.error = error));
         }
- */
-        } 
-
+    }
 }
 </script>
 
