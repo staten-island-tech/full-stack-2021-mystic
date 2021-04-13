@@ -17,7 +17,7 @@
 
 <script>
 import firebase from "firebase";
-import "../assets/voicelines.json";
+import dialogue from "@/assets/voicelines.json";
 
 export default {
     data(){
@@ -39,9 +39,9 @@ export default {
             })
         } */
         startGame(){
-            fetch("../assets/voicelines.json")
+            fetch(dialogue)
             .then(function(response){
-                return voicelines.json();
+                return dialogue(response);
             })
             .then (function (data){
                 appendData(data);
