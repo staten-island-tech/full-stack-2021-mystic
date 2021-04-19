@@ -59,8 +59,8 @@ import M from 'materialize-css';
             .then((user) => {
                 console.log(user.data);
                 this.$router.push({
-                    name:"secret",
-                    query: { redirect: '/secret' }
+                    name:"game",
+                    query: { redirect: '/game' }
                 });
             })
             .catch(error => (this.error = error));

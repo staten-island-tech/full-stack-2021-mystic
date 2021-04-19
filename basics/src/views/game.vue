@@ -1,30 +1,35 @@
 <template>
     <section class="dialogue">
-            <h6 class="name">
-                {{username.username}}
-            </h6>
-        <!-- <div @click ="next">
-            <p>
-                {{this.dialogue}}
-            </p>
-        </div> -->
-        <div>
-            <p> Hello</p>
+        <button v-on:click="data">Start</button>
+        <div v-for="dialogue in dialogues" :key="dialogue.id" class="text">
+        <h6 class="name">
+            {{dialogue.name}}
+        </h6>
+        <p class="text">
+            {{dialogue.dialogue}}
+        </p>
+        <!--<h6 v-if="path1.name" class="name">
+            {{path1.name}}
+        </h6>
+        <h6 v-else v-on:click="diaplayUsername">
+            {{this.username}}
+        </h6>
+         -->
         </div>
-
     </section>
 </template>
 
 <script>
 import firebase from "firebase";
-import dialogue from "@/assets/voicelines.json";
 
 export default {
     data(){
         return{
-            username:'',
-        }
+            dialogues:[],
+            username:''
+        };
     },
+    
     methods:{
         /* next(){
             const userArr = firebase.collection('users');
@@ -38,18 +43,12 @@ export default {
                 store.userInFiles = users;
             })
         } */
-        startGame(){
-            fetch(dialogue)
-            .then(function(response){
-                return dialogue(response);
-            })
-            .then (function (data){
-                appendData(data);
-            })
-            .catch(function(err){
-                console.log(err);
-            })
-        },
+        data(){
+            fetch('http://localhost:3000/dialogues')
+                .then((res) => res.json())
+                .then((data) => this.dialogues[0] = data)
+                .catch(err =>console.log(err.message))
+            },
         diaplayUsername(){
             return{
                 username:  
@@ -74,16 +73,18 @@ section{
 .dialogue{
     display: block;
     background: rgb(100, 96, 96);
-    color: white;
-    font-size: 1.8rem;
-    border: solid green 1px;
+    color: black;
     height: 20vh;
     margin-top: 70vh;
     align-content: left;
     align-items: left;
 
 }
-
+.text{
+    display: block;
+    font-size: 1.8rem;
+    border: solid green 1px;
+}
 .name{
     width:10vw;
     height: 3vh;
