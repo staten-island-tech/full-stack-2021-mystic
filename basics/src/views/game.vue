@@ -1,13 +1,12 @@
 <template>
     <section class="dialogue">
-        <button class="btn-small" @click="data">Start</button>
 <!--    <div @click="listId" class="text"> <div v-for="dialogue in dialogues" :key="dialogue.id" class="text"></div> -->
         <div class="text">
         <h6 class="name">
-            {{dialogues.name}}
+            {{dialogues[index].name}}
         </h6>
         <p class="text">
-            {{dialogues.dialogue}}
+            {{dialogues[index].dialogue}}
         </p>
         <button @click="listId">Next</button>
         <!--<h6 v-if="path1.name" class="name">
@@ -27,12 +26,17 @@ import firebase from "firebase";
 export default {
     data(){
         return{
-            index:0,
+            index:5,
             dialogues:[],
             username:'',
         };
     },
-    
+    mounted(){
+        fetch('http://localhost:3000/dialogues')
+                .then((res) => res.json())
+                .then((data) => this.dialogues = data)
+                .catch(err =>console.log(err.message))
+    },
     methods:{
         /* next(){
             const userArr = firebase.collection('users');
@@ -46,7 +50,7 @@ export default {
                 store.userInFiles = users;
             })
         } */
-        data(){
+        db(){
             fetch('http://localhost:3000/dialogues')
                 .then((res) => res.json())
                 .then((data) => this.dialogues = data)
