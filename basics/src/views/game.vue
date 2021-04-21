@@ -27,7 +27,7 @@ import firebase from "firebase";
 export default {
     data(){
         return{
-            listID:0,
+            index:0,
             dialogues:[],
             username:'',
         };
@@ -62,11 +62,12 @@ export default {
                 .collection("info")
             }
         },
-        listId(index){
-            index == this.dialogues[index];
-            this.dialogue.name = this.dialogue[index].name;
-            this.dialogue.dialogue = this.dialogues[index].dialogue;
-            return index++;
+        listId(){
+            for(const index = this.dialogues.index; index <= this.dialogues.length; index++){
+            this.dialogues.name = this.dialogues[index].name;
+            this.dialogues.dialogue = this.dialogues[index].dialogue;
+            return this.dialogues.dialogue.id++
+            }
             /* const i = this.listID;
             for (i <= this.dialogues.length; i++;){
                 this.dialogue.name = this.dialogue[i].name;
@@ -106,4 +107,4 @@ section{
     align-items: left;
     border: red 1px solid;
 }
-</style>
+</style>y
