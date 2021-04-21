@@ -8,14 +8,7 @@
         <p class="text">
             {{dialogues[index].dialogue}}
         </p>
-        <button @click="listId">Next</button>
-        <!--<h6 v-if="path1.name" class="name">
-            {{path1.name}}
-        </h6>
-        <h6 v-else v-on:click="diaplayUsername">
-            {{this.username}}
-        </h6>
-         -->
+        <button class="btn-small" @click="listId">Next</button>
         </div>
     </section>
 </template>
@@ -67,17 +60,9 @@ export default {
             }
         },
         listId(){
-            for(const index = this.dialogues.index; index <= this.dialogues.length; index++){
-            this.dialogues.name = this.dialogues[index].name;
-            this.dialogues.dialogue = this.dialogues[index].dialogue;
-            return this.dialogues.dialogue.id++
+            for(this.index <= this.dialogues.length; this.index++;){
+            return this.index
             }
-            /* const i = this.listID;
-            for (i <= this.dialogues.length; i++;){
-                this.dialogue.name = this.dialogue[i].name;
-                this.dialogue.dialogue = this.dialogues[i].dialogue;
-            }
-            console.log("i"); */
         }
     }   
 }
@@ -92,8 +77,8 @@ section{
 
 .dialogue{
     display: block;
-    background: rgb(100, 96, 96);
-    color: black;
+    background: rgb(99, 98, 98);
+    color: rgb(255, 255, 255);
     height: 20vh;
     margin-top: 70vh;
     align-content: left;
@@ -110,5 +95,12 @@ section{
     height: 3vh;
     align-items: left;
     border: red 1px solid;
+}
+
+.btn-small{
+    align-content: right;
+    align-items: right;
+    font-size: 2rem;
+    color: black;
 }
 </style>y
