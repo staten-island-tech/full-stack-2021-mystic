@@ -1,13 +1,15 @@
 <template>
     <section class="dialogue">
-        <button v-on:click="data">Start</button>
-        <div v-for="dialogue in dialogues" :key="dialogue.id" class="text">
+        <button class="btn-small" @click="data">Start</button>
+<!--    <div @click="listId" class="text"> <div v-for="dialogue in dialogues" :key="dialogue.id" class="text"></div> -->
+        <div class="text">
         <h6 class="name">
-            {{dialogue.name}}
+            {{dialogues.name}}
         </h6>
         <p class="text">
-            {{dialogue.dialogue}}
+            {{dialogues.dialogue}}
         </p>
+        <button @click="listId">Next</button>
         <!--<h6 v-if="path1.name" class="name">
             {{path1.name}}
         </h6>
@@ -25,8 +27,9 @@ import firebase from "firebase";
 export default {
     data(){
         return{
+            listID:0,
             dialogues:[],
-            username:''
+            username:'',
         };
     },
     
@@ -46,7 +49,7 @@ export default {
         data(){
             fetch('http://localhost:3000/dialogues')
                 .then((res) => res.json())
-                .then((data) => this.dialogues[0] = data)
+                .then((data) => this.dialogues = data)
                 .catch(err =>console.log(err.message))
             },
         diaplayUsername(){
@@ -58,6 +61,18 @@ export default {
                 .doc(firebase.auth().currentUser.uid)
                 .collection("info")
             }
+        },
+        listId(index){
+            index == this.dialogues[index];
+            this.dialogue.name = this.dialogue[index].name;
+            this.dialogue.dialogue = this.dialogues[index].dialogue;
+            return index++;
+            /* const i = this.listID;
+            for (i <= this.dialogues.length; i++;){
+                this.dialogue.name = this.dialogue[i].name;
+                this.dialogue.dialogue = this.dialogues[i].dialogue;
+            }
+            console.log("i"); */
         }
     }   
 }
@@ -83,7 +98,7 @@ section{
 .text{
     display: block;
     font-size: 1.8rem;
-    border: solid green 1px;
+    border: solid green 2px;
 }
 .name{
     width:10vw;
