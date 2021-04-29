@@ -85,6 +85,7 @@ export default {
 }
 .btn{
     margin:5%;
+   
 }
 
 </style>

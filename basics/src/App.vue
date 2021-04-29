@@ -16,16 +16,22 @@
 </template>
 
 <style lang="scss">
+
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=New+Tegomin&family=Original+Surfer&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Original Surfer', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   text-align: center;
+ 
   color: #2c3e50;
 }
 body{
-    background-image: url('../src/assets/animal-crossing-wallpaper-tempBackground.webp');
+    background-image: url('../src/assets/school.jpg');
     margin:0;
+    background-position: center;
+    background-attachment: fixed;
 }
 #nav {
   padding: 30px;
@@ -48,16 +54,20 @@ body{
 
 .nav-wrapper{
   width:100vw;
-  background-color: coral;
+  height: 9vh;
+  background-color: #2b2d42;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  align-items: center;
 }
 .wrapper{
-  padding-right:2%;
+  padding-right:5%;
   width:auto;
   color:white;
+  font-size: 1.3rem;
 }
+
 </style>
 
 <script>

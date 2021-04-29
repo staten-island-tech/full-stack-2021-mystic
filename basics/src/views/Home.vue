@@ -2,7 +2,7 @@
   <div class="home">
     
       <header class="welcome-message">
-      <h1>
+      <h1 class= "title">
         Welcome to Mystic
       </h1>
       <div>
@@ -32,6 +32,12 @@ export default {
 
 <style lang="scss">
 
+.title{
+  display: flex;
+  justify-content: center;
+  color: black;
+  padding-top: 7rem;
+}
 
 .btn-large{
   margin:2%;
