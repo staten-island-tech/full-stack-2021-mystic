@@ -1,5 +1,7 @@
-//import player name, replace {{name}} w/ name variable
+//import player name, replace ${name} w/ name variable
 //same thing with LI's name, make it a variable and import it
+
+export { gameDialogue };
 
 const gameDialogue = [
   {
@@ -15,7 +17,7 @@ const gameDialogue = [
   {
     eventIndex: 2,
     dialogue:
-      "{{name}}: Wow, it’s finally the first day of senior year. I can’t believe time has passed by so quickly.",
+      "${name}: Wow, it’s finally the first day of senior year. I can’t believe time has passed by so quickly.",
     choices: [{ 1: "Next", answerIndex: 3 }, { 2: "" }],
   },
   {
@@ -82,12 +84,12 @@ const gameDialogue = [
   },
   {
     eventIndex: 15,
-    dialogue: "{{name}}: I’m {{name}}.",
+    dialogue: "${name}: I’m ${name}.",
     choices: [{ 1: "Next", answerIndex: 16 }, { 2: "" }],
   },
   {
     eventIndex: 16,
-    dialogue: "{{name}}: I’ve never seen you around. Are you new?",
+    dialogue: "${name}: I’ve never seen you around. Are you new?",
     choices: [{ 1: "Next", answerIndex: 17 }, { 2: "" }],
   },
   {
@@ -102,7 +104,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 19,
-    dialogue: "{{name}}: I see. Well, welcome to our school.",
+    dialogue: "${name}: I see. Well, welcome to our school.",
     choices: [{ 1: "Next", answerIndex: 20 }, { 2: "" }],
   },
   {
@@ -127,7 +129,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 24,
-    dialogue: "{{name}}: Yeah. Want to start today?",
+    dialogue: "${name}: Yeah. Want to start today?",
     choices: [{ 1: "Next", answerIndex: 25 }, { 2: "" }],
   },
   {
@@ -137,7 +139,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 26,
-    dialogue: "{{name}}: Okay. See you then.",
+    dialogue: "${name}: Okay. See you then.",
     choices: [{ 1: "Next", answerIndex: 27 }, { 2: "" }],
   },
   {
@@ -147,7 +149,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 28,
-    dialogue: "{{LI1}}: Hey {{name}}, do you want to sit here or the back?",
+    dialogue: "{{LI1}}: Hey ${name}, do you want to sit here or the back?",
     choices: [
       { 1: "Here is fine.", answerIndex: 29 },
       { 2: "Let's move to the back", answerIndex: 31 },
@@ -155,7 +157,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 29,
-    dialogue: "{{name}}: I'm fine with sitting here.",
+    dialogue: "${name}: I'm fine with sitting here.",
     choices: [{ 1: "Next", answerIndex: 30 }, { 2: "" }],
   },
   {
@@ -165,7 +167,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 31,
-    dialogue: "{{name}}: I'd prefer to sit in the back.",
+    dialogue: "${name}: I'd prefer to sit in the back.",
     choices: [{ 1: "Next", answerIndex: 32 }, { 2: "" }],
   },
   {
@@ -175,7 +177,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 33,
-    dialogue: "{{name}}: So I was thinking our project could be a video game.",
+    dialogue: "${name}: So I was thinking our project could be a video game.",
     choices: [{ 1: "Next", answerIndex: 34 }, { 2: "" }],
   },
   {
@@ -185,7 +187,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 35,
-    dialogue: "{{name}}: Let’s get started then!",
+    dialogue: "${name}: Let’s get started then!",
     choices: [{ 1: "Next", answerIndex: 36 }, { 2: "" }],
   },
   {
@@ -200,7 +202,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 38,
-    dialogue: "{{name}}: Yeah. I should get going.",
+    dialogue: "${name}: Yeah. I should get going.",
     choices: [{ 1: "Next", answerIndex: 39 }, { 2: "" }],
   },
   {
@@ -214,7 +216,7 @@ const gameDialogue = [
   //branch 1, choice 1
   {
     eventIndex: 40,
-    dialogue: "{{name}}: We can meet again tomorrow.",
+    dialogue: "${name}: We can meet again tomorrow.",
     choices: [{ 1: "Next", answerIndex: 41 }, { 2: "" }],
   },
   {
@@ -234,47 +236,58 @@ const gameDialogue = [
   },
   {
     eventIndex: 44,
-    dialogue: "{{name}}: Yup.",
+    dialogue: "${name}: Yup.",
     choices: [{ 1: "Next", answerIndex: 45 }, { 2: "" }],
   },
   {
     eventIndex: 45,
     dialogue: "{{LI1}}: So how was your day?",
-    choices: [{ 1: "It was good!", answerIndex: 46 }, { 2: "Boring. School is such a drag.", answerIndex: 47 }],
+    choices: [
+      { 1: "It was good!", answerIndex: 46 },
+      { 2: "Boring. School is such a drag.", answerIndex: 47 },
+    ],
   },
   {
     eventIndex: 46,
-    dialogue: "{{name}}: It was good! I got all my work done and cleared up my schedule so we could work on this project. How was your day?",
+    dialogue:
+      "${name}: It was good! I got all my work done and cleared up my schedule so we could work on this project. How was your day?",
     choices: [{ 1: "Next", answerIndex: 48 }, { 2: "" }],
   },
   {
     eventIndex: 47,
-    dialogue: "{{name}}: Boring. School was a total drag. How was your day?",
+    dialogue: "${name}: Boring. School was a total drag. How was your day?",
     choices: [{ 1: "Next", answerIndex: 48 }, { 2: "" }],
   },
   {
     eventIndex: 48,
-    dialogue: "{{LI1}}: Ah, it was alright I guess. One of my classes gave me a bit of trouble, but it's okay.",
+    dialogue:
+      "{{LI1}}: Ah, it was alright I guess. One of my classes gave me a bit of trouble, but it's okay.",
     choices: [{ 1: "Next", answerIndex: 49 }, { 2: "" }],
   },
   {
     eventIndex: 49,
-    dialogue: "{{name}}: Oh, what happened?",
+    dialogue: "${name}: Oh, what happened?",
     choices: [{ 1: "Next", answerIndex: 50 }, { 2: "" }],
   },
   {
     eventIndex: 50,
-    dialogue: "{{LI1}}: Group projects stress me out! This kid I was working with was so frustrating.",
-    choices: [{ 1: "Aw, I hope I’m not stressing you out even more.", answerIndex: 51 }, { 2: "Who are they? I’ll teach them a lesson.", answerIndex: 52, }], 
+    dialogue:
+      "{{LI1}}: Group projects stress me out! This kid I was working with was so frustrating.",
+    choices: [
+      { 1: "Aw, I hope I’m not stressing you out even more.", answerIndex: 51 },
+      { 2: "Who are they? I’ll teach them a lesson.", answerIndex: 52 },
+    ],
   },
   {
     eventIndex: 51,
-    dialogue: "Nah, don't worry. If anything, working with you is calming. Anyway, let's get back to work.",
+    dialogue:
+      "Nah, don't worry. If anything, working with you is calming. Anyway, let's get back to work.",
     choices: [{ 1: "Next", answerIndex: 53 }, { 2: "" }],
   },
   {
     eventIndex: 52,
-    dialogue: "Haha thanks for the offer but it's alright, it's not that serious. Let's get back to work.",
+    dialogue:
+      "Haha thanks for the offer but it's alright, it's not that serious. Let's get back to work.",
     choices: [{ 1: "Next", answerIndex: 53 }, { 2: "" }],
   },
   {
@@ -284,8 +297,15 @@ const gameDialogue = [
   },
   {
     eventIndex: 54,
-    dialogue: "{{LI1}}: Y’know, we’ve been at this for a while. Want me to get you something to eat?",
-    choices: [{ 1: "How chivalrous of you. I'll have a coffee, please.", answerIndex: 55 }, { 2: "I'm alright, but thanks for the offer!", answerIndex: 58 }],
+    dialogue:
+      "{{LI1}}: Y’know, we’ve been at this for a while. Want me to get you something to eat?",
+    choices: [
+      {
+        1: "How chivalrous of you. I'll have a coffee, please.",
+        answerIndex: 55,
+      },
+      { 2: "I'm alright, but thanks for the offer!", answerIndex: 58 },
+    ],
   },
   {
     eventIndex: 55,
@@ -299,7 +319,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 57,
-    dialogue: "{{name}}: Thank you so much! So, how did you get into coding?",
+    dialogue: "${name}: Thank you so much! So, how did you get into coding?",
     choices: [{ 1: "Next", answerIndex: 61 }, { 2: "" }],
   },
   {
@@ -319,32 +339,40 @@ const gameDialogue = [
   },
   {
     eventIndex: 61,
-    dialogue: "{{LI1}}: Ah, well. My mom is a computer engineer, so I kinda got into that as a kid. She always signed me up for bootcamps and whatnot haha. What about you?",
+    dialogue:
+      "{{LI1}}: Ah, well. My mom is a computer engineer, so I kinda got into that as a kid. She always signed me up for bootcamps and whatnot haha. What about you?",
     choices: [{ 1: "Next", answerIndex: 62 }, { 2: "" }],
   },
   {
     eventIndex: 62,
-    dialogue: "{{name}}: Oh I just thought it’d be cool to learn about this kind of stuff. I’ve never really liked any type of technology but I really wanted to try something out.",
+    dialogue:
+      "${name}: Oh I just thought it’d be cool to learn about this kind of stuff. I’ve never really liked any type of technology but I really wanted to try something out.",
     choices: [{ 1: "Next", answerIndex: 63 }, { 2: "" }],
   },
   {
     eventIndex: 63,
     dialogue: "{{LI1}}: That’s really cool. Do you like it so far?",
-    choices: [{ 1: "Oh, I love it!", answerIndex: 64 }, { 2: "Eh, it's alright.", answerIndex: 65 }],
+    choices: [
+      { 1: "Oh, I love it!", answerIndex: 64 },
+      { 2: "Eh, it's alright.", answerIndex: 65 },
+    ],
   },
   {
     eventIndex: 64,
-    dialogue: "{{name}}: I don't just like it, I love it! Plus, getting to spend more time with you is always a plus.",
+    dialogue:
+      "${name}: I don't just like it, I love it! Plus, getting to spend more time with you is always a plus.",
     choices: [{ 1: "Next", answerIndex: 66 }, { 2: "" }],
   },
   {
     eventIndex: 65,
-    dialogue: "{{name}}: I was on the fence about it at first, but  you’ve definitely made it more enjoyable.",
+    dialogue:
+      "${name}: I was on the fence about it at first, but  you’ve definitely made it more enjoyable.",
     choices: [{ 1: "Next", answerIndex: 66 }, { 2: "" }],
   },
   {
     eventIndex: 66,
-    dialogue: "{{LI1}}: Haha thanks, I like working with you too! We should meet up the day after tomorrow to continue.",
+    dialogue:
+      "{{LI1}}: Haha thanks, I like working with you too! We should meet up the day after tomorrow to continue.",
     choices: [{ 1: "Next", answerIndex: 67 }, { 2: "" }],
   },
   {
@@ -354,7 +382,8 @@ const gameDialogue = [
   },
   {
     eventIndex: 69,
-    dialogue: "{{name}}: Hm.. so English is over, I have Calculus, and then Comp Sci… and then I’m free to go!",
+    dialogue:
+      "${name}: Hm.. so English is over, I have Calculus, and then Comp Sci… and then I’m free to go!",
     choices: [{ 1: "Next", answerIndex: 70 }, { 2: "" }],
   },
   {
@@ -364,17 +393,18 @@ const gameDialogue = [
   },
   {
     eventIndex: 71,
-    dialogue: "{{name}}: Hey, yep.",
+    dialogue: "${name}: Hey, yep.",
     choices: [{ 1: "Next", answerIndex: 72 }, { 2: "" }],
   },
   {
     eventIndex: 72,
-    dialogue: "???: I’m LI2, I saw you in English and I was wondering if I could meet up with you some time? I really need help with the homework.",
+    dialogue:
+      "???: I’m LI2, I saw you in English and I was wondering if I could meet up with you some time? I really need help with the homework.",
     choices: [{ 1: "Next", answerIndex: 73 }, { 2: "" }],
   },
   {
     eventIndex: 73,
-    dialogue: "{{name}}: Yeah of course! I’m free right now if you need help?",
+    dialogue: "${name}: Yeah of course! I’m free right now if you need help?",
     choices: [{ 1: "Next", answerIndex: 74 }, { 2: "" }],
   },
   {
@@ -384,7 +414,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 75,
-    dialogue: "{{name}}: Of course—",
+    dialogue: "${name}: Of course—",
     choices: [{ 1: "Next", answerIndex: 76 }, { 2: "" }],
   },
   {
@@ -394,17 +424,19 @@ const gameDialogue = [
   },
   {
     eventIndex: 77,
-    dialogue: "{{name}}: This is just LI2, they just need help with English homework.",
+    dialogue:
+      "${name}: This is just LI2, they just need help with English homework.",
     choices: [{ 1: "Next", answerIndex: 78 }, { 2: "" }],
   },
   {
     eventIndex: 78,
-    dialogue: "{{LI1}}: Ah, sorry LI2. {{name}} and I need to work with our project.",
+    dialogue:
+      "{{LI1}}: Ah, sorry LI2. ${name} and I need to work with our project.",
     choices: [{ 1: "Next", answerIndex: 79 }, { 2: "" }],
   },
   {
     eventIndex: 79,
-    dialogue: "{{name}}: But I thought we weren’t meeting up until later—",
+    dialogue: "${name}: But I thought we weren’t meeting up until later—",
     choices: [{ 1: "Next", answerIndex: 80 }, { 2: "" }],
   },
   {
@@ -414,7 +446,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 81,
-    dialogue: "{{name}}: I’m sorry I can’t, I promised LI2 I’d help them.",
+    dialogue: "${name}: I’m sorry I can’t, I promised LI2 I’d help them.",
     choices: [{ 1: "Next", answerIndex: 82 }, { 2: "" }],
   },
   {
@@ -424,7 +456,8 @@ const gameDialogue = [
   },
   {
     eventIndex: 83,
-    dialogue: "{{LI1}}: Are you sure? What is this, Honors English? Shouldn’t be that hard. I’m sure there’s a brain in there somewhere.",
+    dialogue:
+      "{{LI1}}: Are you sure? What is this, Honors English? Shouldn’t be that hard. I’m sure there’s a brain in there somewhere.",
     choices: [{ 1: "Next", answerIndex: 84 }, { 2: "" }],
   },
   {
@@ -434,8 +467,18 @@ const gameDialogue = [
   },
   {
     eventIndex: 85,
-    dialogue: "{{LI1}}: Why don’t you do so first? {{name}} and I have an important project that we work on. They can’t focus on your homework.",
-    choices: [{ 1: "Hey wait a minute. I did tell LI2 I can help, and we weren’t even supposed to meet until tomorrow. There’s time before our due date. We’ll continue tomorrow.", answerIndex: 86 }, { 2: "Hey wait a minute. I did tell LI2 I can help, and we weren’t even supposed to meet until tomorrow. There’s time before our due date. We’ll continue tomorrow.", answerIndex: 111 }],
+    dialogue:
+      "{{LI1}}: Why don’t you do so first? ${name} and I have an important project that we work on. They can’t focus on your homework.",
+    choices: [
+      {
+        1: "Hey wait a minute. I did tell LI2 I can help, and we weren’t even supposed to meet until tomorrow. There’s time before our due date. We’ll continue tomorrow.",
+        answerIndex: 86,
+      },
+      {
+        2: "Hey wait a minute. I did tell LI2 I can help, and we weren’t even supposed to meet until tomorrow. There’s time before our due date. We’ll continue tomorrow.",
+        answerIndex: 111,
+      },
+    ],
   },
   //branch 2, choice 1
   {
@@ -455,7 +498,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 89,
-    dialogue: "{{name}}: I have no idea. Let’s get going?",
+    dialogue: "${name}: I have no idea. Let’s get going?",
     choices: [{ 1: "Next", answerIndex: 90 }, { 2: "" }],
   },
   {
@@ -475,7 +518,8 @@ const gameDialogue = [
   },
   {
     eventIndex: 93,
-    dialogue: "{{name}}: Hm… the introduction is alright, but the rest of it is wordy and contains a lot of purple prose. You should get more to the point.",
+    dialogue:
+      "${name}: Hm… the introduction is alright, but the rest of it is wordy and contains a lot of purple prose. You should get more to the point.",
     choices: [{ 1: "Next", answerIndex: 94 }, { 2: "" }],
   },
   {
@@ -485,7 +529,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 95,
-    dialogue: "{{name}}: Yeah, that’s fine.",
+    dialogue: "${name}: Yeah, that’s fine.",
     choices: [{ 1: "Next", answerIndex: 96 }, { 2: "" }],
   },
   {
@@ -495,17 +539,20 @@ const gameDialogue = [
   },
   {
     eventIndex: 97,
-    dialogue: "{{name}}: You actually aren’t a bad writer, do you write in your free time?",
+    dialogue:
+      "${name}: You actually aren’t a bad writer, do you write in your free time?",
     choices: [{ 1: "Next", answerIndex: 98 }, { 2: "" }],
   },
   {
     eventIndex: 98,
-    dialogue: "LI2: No, that’s really nice of you though. I do write comics when I’m free though, so maybe that’s why?",
+    dialogue:
+      "LI2: No, that’s really nice of you though. I do write comics when I’m free though, so maybe that’s why?",
     choices: [{ 1: "Next", answerIndex: 99 }, { 2: "" }],
   },
   {
     eventIndex: 99,
-    dialogue: "{{name}}: Wait really? You can draw? Are you producing these whole comics by yourself?",
+    dialogue:
+      "${name}: Wait really? You can draw? Are you producing these whole comics by yourself?",
     choices: [{ 1: "Next", answerIndex: 100 }, { 2: "" }],
   },
   {
@@ -515,7 +562,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 101,
-    dialogue: "{{name}}: Sure!",
+    dialogue: "${name}: Sure!",
     choices: [{ 1: "Next", answerIndex: 102 }, { 2: "" }],
   },
   {
@@ -525,7 +572,7 @@ const gameDialogue = [
   },
   {
     eventIndex: 103,
-    dialogue: "{{name}}: Wow… this is really beautiful. You’re really talented.",
+    dialogue: "${name}: Wow… this is really beautiful. You’re really talented.",
     choices: [{ 1: "Next", answerIndex: 104 }, { 2: "" }],
   },
   {
@@ -540,7 +587,8 @@ const gameDialogue = [
   },
   {
     eventIndex: 106,
-    dialogue: "{{name}}: This character looks really familiar. I feel like I’ve seen them before.",
+    dialogue:
+      "${name}: This character looks really familiar. I feel like I’ve seen them before.",
     choices: [{ 1: "Next", answerIndex: 107 }, { 2: "" }],
   },
   {
@@ -550,7 +598,8 @@ const gameDialogue = [
   },
   {
     eventIndex: 108,
-    dialogue: "{{name}}: (they look like {{LI1}}.... was I too harsh on them before?)",
+    dialogue:
+      "${name}: (they look like {{LI1}}.... was I too harsh on them before?)",
     choices: [{ 1: "Next", answerIndex: 109 }, { 2: "" }],
   },
   {
@@ -560,18 +609,19 @@ const gameDialogue = [
   },
   {
     eventIndex: 110,
-    dialogue: "{{name}}: (Crap!) Oh it’s nothing! Should we get back to work?",
-    choices: [{ 1: "Next", answerIndex:  }, { 2: "" }],
+    dialogue: "${name}: (Crap!) Oh it’s nothing! Should we get back to work?",
+    choices: [{ 1: "Next", answerIndex: 111 }, { 2: "" }],
   },
   //branch 2, choice 2
   {
     eventIndex: 111,
-    dialogue: "Hey {{LI1}}, relax. It’s fine, we can work on it today. LI2, how about I give you my number so you can text me?",
+    dialogue:
+      "Hey {{LI1}}, relax. It’s fine, we can work on it today. LI2, how about I give you my number so you can text me?",
     choices: [{ 1: "Next", answerIndex: 112 }, { 2: "" }],
   },
   {
     eventIndex: 112,
-    dialogue: "LI2: Alright… see you later {{name}}.",
+    dialogue: "LI2: Alright… see you later ${name}.",
     choices: [{ 1: "Next", answerIndex: 113 }, { 2: "" }],
   },
   {
@@ -586,23 +636,12 @@ const gameDialogue = [
   },
   {
     eventIndex: 115,
-    dialogue: "{{name}}: Okay….",
+    dialogue: "${name}: Okay….",
     choices: [{ 1: "Next", answerIndex: 116 }, { 2: "" }],
   },
   {
     eventIndex: 116,
-    dialogue: "{{name}}: (What the heck just happened?)",
+    dialogue: "${name}: (What the heck just happened?)",
     choices: [{ 1: "Next", answerIndex: 117 }, { 2: "" }],
   },
-  {
-    eventIndex: ,
-    dialogue: "",
-    choices: [{ 1: "Next", answerIndex:  }, { 2: "" }],
-  },
-  {
-    eventIndex: ,
-    dialogue: "",
-    choices: [{ 1: "Next", answerIndex:  }, { 2: "" }],
-  },
-
 ];
