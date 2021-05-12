@@ -1,31 +1,37 @@
 <template>
-    <section>
-        <h1>
-            {{this.name}}
-        </h1>
-        <div @click ="next">
-            <p>
-                {{this.dialogue}}
-            </p>
+    <section class="dialogue">
+<!--    <div @click="listId" class="text"> <div v-for="dialogue in dialogues" :key="dialogue.id" class="text"></div> -->
+        <div class="text">
+        <h6 class="name">
+            {{dialogues[index].name}}
+        </h6>
+        <p class="text">
+            {{dialogues[index].dialogue}}
+        </p>
+        <button class="btn-small" @click="listId">Next</button>
         </div>
-        <div class="dialogue">
-
-        </div>
-
     </section>
 </template>
 
 <script>
+import firebase from "firebase";
+
 export default {
     data(){
         return{
-            uid:firebase.auth().currentUser.uid,
+            index:5,
+            dialogues:[],
             username:'',
-
-        }
+        };
+    },
+    mounted(){
+        fetch('http://localhost:3000/dialogues')
+                .then((res) => res.json())
+                .then((data) => this.dialogues = data)
+                .catch(err =>console.log(err.message))
     },
     methods:{
-        next(){
+        /* next(){
             const userArr = firebase.collection('users');
             userArr.onSnapshot((userInfo) => {
                 const users = [];
@@ -36,6 +42,27 @@ export default {
                 });
                 store.userInFiles = users;
             })
+        } */
+        db(){
+            fetch('http://localhost:3000/dialogues')
+                .then((res) => res.json())
+                .then((data) => this.dialogues = data)
+                .catch(err =>console.log(err.message))
+            },
+        diaplayUsername(){
+            return{
+                username:  
+                firebase
+                .firestore()
+                .collection("users")
+                .doc(firebase.auth().currentUser.uid)
+                .collection("info")
+            }
+        },
+        listId(){
+            for(this.index <= this.dialogues.length; this.index++;){
+            return this.index
+            }
         }
     }   
 }
@@ -44,9 +71,36 @@ export default {
 
 <style>
 
-.dialogue{
-    background: gray;
-    font-size: 5rem;
-    border: solid black;
+section{
+    height: 90vh;
 }
-</style>
+
+.dialogue{
+    display: block;
+    background: rgb(99, 98, 98);
+    color: rgb(255, 255, 255);
+    height: 20vh;
+    margin-top: 70vh;
+    align-content: left;
+    align-items: left;
+
+}
+.text{
+    display: block;
+    font-size: 1.8rem;
+    border: solid green 2px;
+}
+.name{
+    width:10vw;
+    height: 3vh;
+    align-items: left;
+    border: red 1px solid;
+}
+
+.btn-small{
+    align-content: right;
+    align-items: right;
+    font-size: 2rem;
+    color: black;
+}
+</style>y

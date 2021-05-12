@@ -1,0 +1,460 @@
+{   
+    "dialogues":[
+        {
+            "id": "00",
+            "name": "",
+            "dialogue": "*Autumn leaves flutter around, it's the first day of school*"
+        },
+        
+        {
+            "id": "01",
+            "name": "",
+            "dialogue": "*Bell rings*"
+        },
+
+        {
+            "id": "02",
+            "name": "Player",
+            "dialogue": "Wow, it’s finally the first day of senior year. I can’t believe time has passed by so quickly."
+        },
+
+        {
+            "id": "03",
+            "name": "Teacher",
+            "dialogue": "Welcome everyone, to our first day of school."
+        },
+
+        {
+            "id": "04",
+            "name": "Teacher",
+            "dialogue": "So over the summer, I’m sure many of you forgot the basics to JavaScript and CSS."
+        },
+
+        {
+            "id": "05",
+            "name": "Teacher",
+            "dialogue": "Let’s have a quick review, and then I’ll assign you all a small project."
+        },
+
+        {
+            "id": "06",
+            "name": "",
+            "dialogue": "*BANG* "
+        },
+
+        {
+            "id": "07",
+            "name": "",
+            "dialogue": "*door opens*"
+        },
+
+        {
+            "id": "08",
+            "name": "???",
+            "dialogue": "Sorry Teacher! Got caught up in the main office."
+        },
+
+        {
+            "id": "09",
+            "name": "Teacher",
+            "dialogue": "No problem. Take a seat wherever you want."
+        },
+
+        {
+            "id": "10",
+            "name": "???",
+            "dialogue": "Thank you."
+        },
+
+        {
+            "id": "11",
+            "name": "Teacher",
+            "dialogue": "Anyways, everyone, please log into your accounts."
+        },
+
+        {
+            "id": "12",
+            "name": "???",
+            "dialogue": "Hey. Did I miss anything?"
+        },
+
+        {
+            "id": "13",
+            "name": "Player",
+            "dialogue": "Nope, we just started."
+        },
+
+        {
+            "id": "14",
+            "name": "???",
+            "dialogue": "Ah good. I’m LI1 by the way."
+        },
+
+        {
+            "id": "15",
+            "name": "Player",
+            "dialogue": "I’m [name]."
+        },
+
+        {
+            "id": "16",
+            "name": "Player",
+            "dialogue": "By the way, I’ve never seen you around. Are you new?"
+        },
+
+        {
+            "id": "17",
+            "name": "LI1",
+            "dialogue": "Oh yeah. I transferred here for my last year."
+        },
+
+        {
+            "id": "18",
+            "name": "LI1",
+            "dialogue": "I didn’t really like my old school. Didn’t suit me."
+        },
+
+        {
+            "id": "19",
+            "name": "Player",
+            "dialogue": "I see. Well, welcome to our school."
+        },
+
+        {
+            "id": "20",
+            "name": "LI1",
+            "dialogue": "Thank you!"
+        },
+
+        {
+            "id": "21",
+            "name": "Teacher",
+            "dialogue": "Okay, so now for a quick partner project…."
+        },
+
+        {
+            "id": "22",
+            "name": "Teacher",
+            "dialogue": "Here are the pairings."
+        },
+
+        {
+            "id": "23",
+            "name": "LI1",
+            "dialogue": "Oh wow. Looks like we’re together."
+        },
+
+        {
+            "id": "24",
+            "name": "Player",
+            "dialogue": "Yeah. Want to start today?"
+        },
+
+        {
+            "id": "25",
+            "name": "LI1",
+            "dialogue": "Sure. After school at Starbucks?"
+        },
+
+        {
+            "id": "26",
+            "name": "Player",
+            "dialogue": "Okay. See you then."
+        },
+
+        {
+            "id": "27",
+            "name": "",
+            "dialogue": "*3pm*"
+        },
+
+        {
+            "id": "28",
+            "name": "LI1",
+            "dialogue": "HEY [name}. Wanna sit here or the back?"
+        },
+
+        {
+            "id": "29a",
+            "name": "Choice 1",
+            "dialogue": "Here is fine."
+        },
+
+        {
+            "id": "29b",
+            "name": "Choice 2",
+            "dialogue": "Let’s move to the back. "
+        },
+
+        {
+            "id": "30",
+            "name": "",
+            "dialogue": "*Sits*"
+        },
+
+        {
+            "id": "31",
+            "name": "Player",
+            "dialogue": "So I was thinking our project could be a video game."
+        },
+
+        {
+            "id": "32",
+            "name": "LI1",
+            "dialogue": "I’m down for anything!"
+        },
+
+        {
+            "id": "33",
+            "name": "Player",
+            "dialogue": "Let’s get started then!"
+        },
+
+        {
+            "id": "34",
+            "name": "",
+            "dialogue": "*two hours pass*"
+        },
+
+        {
+            "id": "35",
+            "name": "LI1",
+            "dialogue": "Wow we’ve been working for a while."
+        },
+
+        {
+            "id": "36",
+            "name": "LI1",
+            "dialogue": "Think it’s time to call it a day?"
+        },
+
+        {
+            "id": "37",
+            "name": "Player",
+            "dialogue": "Yeah. I should get going."
+        },
+
+        {
+            "id": "38",
+            "name": "LI1",
+            "dialogue": "Should we meet again tomorrow or through text?"
+        },
+
+        {
+            "id": "39a",
+            "name": "Choice 1",
+            "dialogue": "We can meet tomorrow."
+        },
+
+        {
+            "id": "39b",
+            "name": "Choice 2",
+            "dialogue": "I prefer through text."
+        },
+
+        {
+            "id": "40",
+            "name": "",
+            "dialogue": "*Next day at the cafe*"
+        },
+
+        {
+            "id": "41",
+            "name": "LI1",
+            "dialogue": "Hey! Same place as yesterday?"
+        },
+
+        {
+            "id": "42",
+            "name": "Player",
+            "dialogue": "Yup."
+        },
+
+        {
+            "id": "43",
+            "name": "LI1",
+            "dialogue": "So how was your day?"
+        },
+
+        {
+            "id": "44a",
+            "name": "Choice 1",
+            "dialogue": "It was good!"
+        },
+
+        {
+            "id": "44b",
+            "name": "Choice 2",
+            "dialogue": "Boring. School is a drag."
+        },
+
+        {
+            "id": "45",
+            "name": "Player",
+            "dialogue": "How was your day?"
+        },
+
+        {
+            "id": "46",
+            "name": "LI1",
+            "dialogue": "AH, it was alright I guess. One of my classes gave me a bit of trouble, but it is okay."
+        },
+
+        {
+            "id": "47",
+            "name": "Player",
+            "dialogue": "Oh, what happened?"
+        },
+
+        {
+            "id": "48",
+            "name": "LI1",
+            "dialogue": "Group projects stress me out! This kid I was working with was so frustrating."
+        },
+
+        {
+            "id": "49a",
+            "name": "Choice 1",
+            "dialogue": "Aw, I hope I’m not stressing you out."
+        },
+
+        {
+            "id": "49b",
+            "name": "Choice 2",
+            "dialogue": "Who are they? I’ll teach them a lesson."
+        },
+
+        {
+            "id": "50",
+            "name": "LI1",
+            "dialogue": "Nah, it’s good. Let’s get to work."
+        },
+
+        {
+            "id": "51",
+            "name": "",
+            "dialogue": "*They work for a bit*"
+        },
+
+        {
+            "id": "52",
+            "name": "LI1",
+            "dialogue": "Y’know, we’ve been at this for a while. Want me to get you something to eat?"
+        },
+
+        {
+            "id": "53a",
+            "name": "Choice 1",
+            "dialogue": "How chivalrous of you. One coffee please."
+        },
+
+        {
+            "id": "53b",
+            "name": "Choice 2",
+            "dialogue": "Aw sure thanks!"
+        },
+
+        {
+            "id": "54",
+            "name": "",
+            "dialogue": "*leaves and returns*"
+        },
+
+        {
+            "id": "55",
+            "name": "LI1",
+            "dialogue": "Here you go. One piping hot coffee."
+        },
+
+        {
+            "id": "56",
+            "name": "Player",
+            "dialogue": "Thank you so much! So, how did you get into coding?"
+        },
+
+        {
+            "id": "57",
+            "name": "LI1",
+            "dialogue": "Ah, well. My mom is a computer engineer, so I kinda got into that as a kid. She always signed me up for bootcamps and whatnot haha. What about you?"
+        },
+
+        {
+            "id": "58",
+            "name": "Player",
+            "dialogue": "Oh I just thought it’d be cool to learn about this kind of stuff. I’ve never really liked any type of technology but I really wanted to try something out."
+        },
+
+        {
+            "id": "59",
+            "name": "LI1",
+            "dialogue": "That’s really cool. Do you like it so far?"
+        },
+
+        {
+            "id": "60a",
+            "name": "Choice 1",
+            "dialogue": "You’ve definitely made it more enjoyable."
+        },
+
+        {
+            "id": "60b",
+            "name": "Choice 2",
+            "dialogue": "Eh, it’s okay. I’m glad we get to work together though."
+        },
+
+        {
+            "id": "61",
+            "name": "LI1",
+            "dialogue": "Haha thanks, I like working with you too! We should meet up the day after tomorrow to continue."
+        },
+
+        {
+            "id": "62",
+            "name": "",
+            "dialogue": "*Next day at school*"
+        },
+
+        {
+            "id": "63",
+            "name": "Player",
+            "dialogue": "Hm.. so English is over, I have Calculus, and then Comp Sci… and then I’m free to go!"
+        },
+
+        {
+            "id": "64",
+            "name": "???",
+            "dialogue": "Hey you’re [name] right?"
+        },
+
+        {
+            "id": "65",
+            "name": "Player",
+            "dialogue": "Hey, yep."
+        },
+
+        {
+            "id": "66",
+            "name": "???",
+            "dialogue": "I’m LI2, I saw you in English and I was wondering if I could meet up with you some time? I really need help with the homework."
+        },
+
+        {
+            "id": "67",
+            "name": "Player",
+            "dialogue": "Yeah of course! I’m free right now if you need help?"
+        },
+
+        {
+            "id": "68",
+            "name": "LI2",
+            "dialogue": "OH that’s perfect. Thank you so much!"
+        },
+
+        {
+            "id": "69",
+            "name": "Player",
+            "dialogue": "Of course—"
+        }
+        
+    ]
+}

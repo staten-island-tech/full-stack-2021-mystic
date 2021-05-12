@@ -59,8 +59,8 @@ import M from 'materialize-css';
             .then((user) => {
                 console.log(user.data);
                 this.$router.push({
-                    name:"secret",
-                    query: { redirect: '/secret' }
+                    name:"game",
+                    query: { redirect: '/game' }
                 });
             })
             .catch(error => (this.error = error));
@@ -77,10 +77,13 @@ import M from 'materialize-css';
 
 .login{
     margin:35%;
-    margin-top:4%;
+    margin-top:6%;
     align-items: center;
     text-align: center;
     margin:none;
+    color:#2b2d42;
+   
 }
+
 
 </style>
