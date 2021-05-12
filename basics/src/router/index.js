@@ -6,6 +6,7 @@ import Register from "../views/register.vue";
 import FindPassword from "../views/findPassword.vue";
 import Secret from "../views/secret.vue";
 import Interface from "../views/Interface.vue";
+import Dialogue from "../views/dialogue.vue";
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,12 @@ const routes = [
     path: "/Interface",
     name: "Interface",
     component: Interface,
+    props: true,
+  },
+  {
+    path: "/dialogue",
+    name: "Dialogue",
+    component: Dialogue,
     props: true,
   },
   {

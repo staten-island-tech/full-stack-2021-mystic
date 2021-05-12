@@ -45,7 +45,7 @@ export default {
       let data = {
         name: this.name,
       };
-      this.$router.push({ name: "Interface", params: { data } });
+      this.$router.push({ name: "Dialogue", params: { data } });
     },
   },
 };
