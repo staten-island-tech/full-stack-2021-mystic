@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     
-      <header class="welcome-message">
-      <h1 class= "title">
+      <div class="welcome-message">
+      <h1>
         Welcome to Mystic
       </h1>
       <div>
@@ -14,14 +14,13 @@
       </button>
       
       </div>
-    </header>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "Home",
   components: {
@@ -31,14 +30,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-.title{
-  display: flex;
-  justify-content: center;
-  color: black;
-  padding-top: 7rem;
-}
-
 .btn-large{
   margin:2%;
 }

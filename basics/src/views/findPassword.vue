@@ -55,7 +55,6 @@ import firebase from "firebase"
 </script>
 
 <style lang="scss" scoped>
-
 .findPass{
     margin:35%;
     margin-top:5%;

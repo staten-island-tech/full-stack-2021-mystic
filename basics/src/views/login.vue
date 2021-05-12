@@ -28,17 +28,6 @@
 <script>
 import firebase from "firebase";
 import M from 'materialize-css';
-
-/* router.beforeEach((to, from, next) => {
-  const requiresAuth = to.matched.some(x => x.meta.requiresAuth)
-  const currentUser = firebase.auth.currentUser
-
-  if (requiresAuth && !currentUser) next({ path: '/login', query: { redirect: to.fullPath } })
-  else if (!requiresAuth && currentUser) next('/')
-  else if (!requiresAuth && !currentUser) next()
-  else next()
-}); */
-
     export default {
         name:"Login",
         data(){
@@ -59,31 +48,26 @@ import M from 'materialize-css';
             .then((user) => {
                 console.log(user.data);
                 this.$router.push({
-                    name:"game",
-                    query: { redirect: '/game' }
+                    name:"Secret",
+                    query: { redirect: '/secret' }
                 });
             })
             .catch(error => (this.error = error));
             err => {
                 alert(err);
             }
-        },        
+        },
         
     }
     }
 </script>
 
 <style lang="scss">
-
 .login{
     margin:35%;
-    margin-top:6%;
+    margin-top:4%;
     align-items: center;
     text-align: center;
     margin:none;
-    color:#2b2d42;
-   
 }
-
-
 </style>

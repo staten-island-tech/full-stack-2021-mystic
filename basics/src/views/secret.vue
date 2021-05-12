@@ -4,18 +4,19 @@
     <div>
         <div>
           <h3>Welcome</h3>
-          <form @submit.prevent=getUsername id="signup-form">
+          <form @submit.prevent="pressed" id="signup-form">
             <div class="input-field">
-              <input type="text" v-model="username" id="username" placeholder="Please Enter Your Name" />            
+              <input type="text" placeholder="Please Enter Your Name" required />
             </div>
+            <p>Who would you like to date with?</p>
             <br>
-             <button class="btn">
-                 Start  
-            </button>  
+            <button class="btn">Start</button>
           </form>
-            <button class="btn" @click="logout">Logout</button>
         </div>
     </div>
+    <p>Already have an account?
+        <router-link to="/login">Login</router-link>
+    </p>
 </div>
       
     
@@ -24,58 +25,39 @@
 <script>
 import M from 'materialize-css';
 import firebase from "firebase";
-
+import "firebase/auth";
 export default {
     data(){
         return{
             email:"",
             password:"",
-            uid:"",
-            username:"",
             error:""
         };
-
     },
-    
     mounted () {
         M.AutoInit();
     },
     methods:{
-        logout(){
-        firebase
-            .auth()
-            .signOut()
-            .then(() => {
-            this.$router.push({
-                name:"Home",
-                query: { redirect: '/about' }
-            });
-        })
-        .catch(error => (this.error = error));
-        },
-        getUsername(){
+        pressed(){
             firebase
-            .firestore()
-            .collection("users")
-            .doc(firebase.auth().currentUser.uid)
-            .collection("info")
-            .add({
-                username:this.username,
-                email: firebase.auth().currentUser.email,
-                uid:firebase.auth().currentUser.uid,
-            }).then(() => {
-                this.$router.push({
-                name:"game",
-                query: { redirect: '/game' }
-            });
-            }).catch(error => (this.error = error));
+            .auth()
+            .createUserWithEmailAndPassword(this.email, this.password)
+            .then((user) => {
+                console.log(user.data);
+                this.$router.replace({
+                    name:"secret"
+                });
+            })
+            .catch(error => (this.error = error));
+            err => {
+                alert(err);
+            }
         }
     }
-}
+};
 </script>
 
 <style lang = "scss">
-
 .secret{
     margin:35%;
     margin-top:4%;
@@ -83,9 +65,4 @@ export default {
     text-align: center;
     margin:none;
 }
-.btn{
-    margin:5%;
-   
-}
-
 </style>
