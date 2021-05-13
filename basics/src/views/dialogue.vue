@@ -82,7 +82,7 @@ export default {
       },
       {
         eventIndex: 13,
-        dialogue: `Player: Nope, we just started.`,
+        dialogue: `${this.name}: Nope, we just started.`,
         choices: [{ statements: `Next`, answerIndex: 14 }],
       },
       {
@@ -393,7 +393,7 @@ export default {
       },
       {
         eventIndex: 70,
-        dialogue: `???: Hey, you’re [name] right?`,
+        dialogue: `???: Hey, you’re ${this.name} right?`,
         choices: [{ statements: `Next`, answerIndex: 71 }],
       },
       {

@@ -18,7 +18,7 @@ export default {
     return {
       gameDialogue: [],
       name: "",
-      eventIndex: 27,
+      eventIndex: 0,
       secondChoice: false,
     };
   },
@@ -57,6 +57,7 @@ export default {
 }
 .dialogue-text {
   font-size: 2rem;
-  background-color: white;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 </style>
