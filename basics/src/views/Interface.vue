@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <div class="dialogue-text">
       {{ gameDialogue[eventIndex].dialogue }}
     </div>
     <button @click="next" class="btn">
@@ -18,7 +18,7 @@ export default {
     return {
       gameDialogue: [],
       name: "",
-      eventIndex: 0,
+      eventIndex: 27,
       secondChoice: false,
     };
   },
@@ -54,5 +54,9 @@ export default {
 <style lang="scss" scoped>
 .btn {
   font-size: 1rem;
+}
+.dialogue-text {
+  font-size: 2rem;
+  background-color: white;
 }
 </style>
