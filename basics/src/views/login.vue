@@ -48,8 +48,8 @@ import M from 'materialize-css';
             .then((user) => {
                 console.log(user.data);
                 this.$router.push({
-                    name:"Secret",
-                    query: { redirect: '/secret' }
+                    name:"Interface",
+                    query: { redirect: '/Interface' }
                 });
             })
             .catch(error => (this.error = error));
