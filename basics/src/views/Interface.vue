@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import firebase from "firebase";
+import "firebase/auth";
 export default {
   data() {
     return {
@@ -45,8 +47,8 @@ export default {
     },
   },
   mounted() {
-    this.name = this.$route.params.data.name;
-    this.gameDialogue = this.$route.params.data.gameDialogue;
+      this.name = this.$route.params.data.name;
+      this.gameDialogue = this.$route.params.data.gameDialogue;
   },
 };
 </script>

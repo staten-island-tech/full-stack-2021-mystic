@@ -3,19 +3,18 @@
     <div v-if="error" class="error">{{error.message}}</div>
     <div>
         <div>
-          <h3>Reset Password</h3>
+          <h4>Reset Password</h4>
           <form @submit.prevent="sendEmail" id="lost-form">
             <div class="input-field">
               <input type="email" placeholder="email" v-model="email" id="lost-email" required />
             </div>
             <button class="btn">Reset</button>
           </form>
-        </div>
+          </div>
+        <button class="btn">
+            <router-link class="routerLink" to="/login">Login</router-link>
+        </button>
     </div>
-    <p>
-        <router-link to="/login">Login</router-link>
-    </p>
-
 </div>
 </template>
 
@@ -61,5 +60,11 @@ import firebase from "firebase"
     align-items: center;
     text-align: center;
     margin:none;
+    background-color: white;
+    padding:10%;
+}
+.routerLink{
+    text-decoration: none; 
+    color: inherit;
 }
 </style>

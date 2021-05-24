@@ -5,13 +5,13 @@
         <img class="logo" src="../src/assets/logo.png" />
       </a>
       <ul class="wrapper">
-        <router-link to="/">Home</router-link>
+        <router-link class="routerLink" to="/">Home</router-link>
         |
-        <router-link to="/about">About</router-link>
+        <router-link class="routerLink" to="/about">About</router-link>
         |
-        <router-link to="/login">Login</router-link>
+        <router-link class="routerLink" to="/login">Login</router-link>
         |
-        <router-link to="/register">Register</router-link>
+        <router-link class="routerLink" to="/register">Register</router-link>
       </ul>
     </div>
     <router-view />
@@ -55,15 +55,40 @@ body {
 .wrapper {
   padding-right: 2%;
   width: auto;
-  color: white;
+  text-decoration: none; 
+  color: rgb(83, 62, 158);
+  font-weight: bold;
+}
+.routerLink{
+  text-decoration: none; 
+  color: black;
+  font-weight: bold;
 }
 </style>
 
 <script>
 import M from "materialize-css";
+import firebase from "firebase";
+import "firebase/auth";
+
 export default {
-  mounted() {
+  data(){
+    return {
+      Login:''
+    }
+  },
+    mounted() {
     M.AutoInit();
   },
-};
+  methods:{
+  login(){
+    if(firebase.auth.currentUser){
+      this.Login=Logout
+    }
+    else{
+      login
+    }
+  }
+}
+}
 </script>

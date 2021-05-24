@@ -45,7 +45,7 @@ export default {
             .then((user) => {
                 console.log(user.data);
                 this.$router.replace({
-                    name:"secret"
+                    name:"Secret"
                 });
             })
             .catch(error => (this.error = error));
@@ -64,5 +64,7 @@ export default {
     align-items: center;
     text-align: center;
     margin:none;
+    background-color: white;
+    padding:3%;
 }
 </style>

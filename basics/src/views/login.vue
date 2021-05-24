@@ -47,9 +47,8 @@ import M from 'materialize-css';
             .signInWithEmailAndPassword(this.email, this.password)
             .then((user) => {
                 console.log(user.data);
-                this.$router.push({
+                this.$router.replace({
                     name:"Interface",
-                    query: { redirect: '/Interface' }
                 });
             })
             .catch(error => (this.error = error));
@@ -69,5 +68,7 @@ import M from 'materialize-css';
     align-items: center;
     text-align: center;
     margin:none;
+    background-color: white;
+    padding:3%;
 }
 </style>

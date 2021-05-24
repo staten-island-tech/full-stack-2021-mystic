@@ -4,7 +4,7 @@
     <div>
       <div>
         <h3>Welcome</h3>
-        <form @submit.prevent="pressed" id="signup-form">
+        <form @submit.prevent="getUsername" id="signup-form">
           <div class="input-field">
             <input
               type="text"
@@ -24,6 +24,7 @@
     </p>
   </div>
 </template>
+
 <script>
 import M from "materialize-css";
 import firebase from "firebase";
@@ -42,11 +43,37 @@ export default {
   },
   methods: {
     start() {
-      let data = {
-        name: this.name,
-      };
-      this.$router.push({ name: "Dialogue", params: { data } });
+      firebase
+      .firestore()
+      .collection("users")
+      .doc(firebase.auth().currentUser.uid)
+      .get()
+      .then(doc=>{
+        let username = doc.data().username;
+        this.name = username;
+        console.log(this.name);
+        let data = { name:this.name };
+        this.$router.push({ 
+          name: "Dialogue", params: { data } 
+        });
+      })    
     },
+    getUsername(){
+      firebase
+      .firestore()
+      .collection("users")
+      .doc(firebase.auth().currentUser.uid)
+      .set({
+          username:this.name,
+          email: firebase.auth().currentUser.email,
+          uid:firebase.auth().currentUser.uid,
+      }).then(() => {
+        start();
+          this.$router.replace({
+          name:"Interface",
+      });
+      }).catch(error => (this.error = error));
+    }
   },
 };
 </script>
@@ -58,5 +85,7 @@ export default {
   align-items: center;
   text-align: center;
   margin: none;
+  background-color: white;
+  padding:3%;
 }
 </style>
