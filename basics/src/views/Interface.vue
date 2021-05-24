@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="dialogue-text">
+  <div class="dialogue-text">
+    <div>
       {{ gameDialogue[eventIndex].dialogue }}
     </div>
     <button @click="next" class="btn">
@@ -24,6 +24,10 @@ export default {
       secondChoice: false,
     };
   },
+  mounted() {
+      this.name = this.$route.params.data.name;
+      this.gameDialogue = this.$route.params.data.gameDialogue;
+  },
   methods: {
     next() {
       this.eventIndex = this.gameDialogue[
@@ -46,20 +50,19 @@ export default {
       }
     },
   },
-  mounted() {
-      this.name = this.$route.params.data.name;
-      this.gameDialogue = this.$route.params.data.gameDialogue;
-  },
+  
 };
 </script>
 
 <style lang="scss" scoped>
 .btn {
   font-size: 1rem;
+  margin:2%;
 }
 .dialogue-text {
   font-size: 2rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
+  margin-TOP: 78vh;
 }
 </style>

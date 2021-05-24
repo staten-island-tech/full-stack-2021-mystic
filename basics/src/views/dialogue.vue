@@ -10,6 +10,8 @@ export default {
     return {
       gameDialogue: [],
       name: "",
+      Li1:"Natsume",
+      Li2:"Aoi"
     };
   },
   mounted() {
@@ -87,7 +89,7 @@ export default {
       },
       {
         eventIndex: 14,
-        dialogue: `???: Ah good. I’m {{LI1}} by the way.`,
+        dialogue: `???: Ah good. I’m ${this.Li1} by the way.`,
         choices: [{ statements: `Next`, answerIndex: 15 }],
       },
       {
@@ -102,12 +104,12 @@ export default {
       },
       {
         eventIndex: 17,
-        dialogue: `{{LI1}}: Oh yeah. I transferred here for my last year.`,
+        dialogue: `${this.Li1}: Oh yeah. I transferred here for my last year.`,
         choices: [{ statements: `Next`, answerIndex: 18 }],
       },
       {
         eventIndex: 18,
-        dialogue: `{{LI1}}: I didn’t really like my old school. Didn’t suit me.`,
+        dialogue: `${this.Li1}: I didn’t really like my old school. Didn’t suit me.`,
         choices: [{ statements: `Next`, answerIndex: 19 }],
       },
       {
@@ -117,7 +119,7 @@ export default {
       },
       {
         eventIndex: 20,
-        dialogue: `{{LI1}}: Thank you!`,
+        dialogue: `${this.Li1}: Thank you!`,
         choices: [{ statements: `Next`, answerIndex: 21 }],
       },
       {
@@ -132,7 +134,7 @@ export default {
       },
       {
         eventIndex: 23,
-        dialogue: `{{LI1}}: Oh wow. Looks like we’re together.`,
+        dialogue: `${this.Li1}: Oh wow. Looks like we’re together.`,
         choices: [{ statements: `Next`, answerIndex: 24 }],
       },
       {
@@ -142,7 +144,7 @@ export default {
       },
       {
         eventIndex: 25,
-        dialogue: `{{LI1}}: Sure. After school at Starbucks?`,
+        dialogue: `${this.Li1}: Sure. After school at Starbucks?`,
         choices: [{ statements: `Next`, answerIndex: 26 }],
       },
       {
@@ -157,7 +159,7 @@ export default {
       },
       {
         eventIndex: 28,
-        dialogue: `{{LI1}}: Hey ${this.name}, do you want to sit here or the back?`,
+        dialogue: `${this.Li1}: Hey ${this.name}, do you want to sit here or the back?`,
         choices: [
           { statements: `Here is fine.`, answerIndex: 29 },
           { statements: `Let's move to the back`, answerIndex: 31 },
@@ -190,7 +192,7 @@ export default {
       },
       {
         eventIndex: 34,
-        dialogue: `{{LI1}}: I’m down for anything!`,
+        dialogue: `${this.Li1}: I’m down for anything!`,
         choices: [{ statements: `Next`, answerIndex: 35 }],
       },
       {
@@ -205,7 +207,7 @@ export default {
       },
       {
         eventIndex: 37,
-        dialogue: `{{LI1}}: Think it’s time to call it a day?`,
+        dialogue: `${this.Li1}: Think it’s time to call it a day?`,
         choices: [{ statements: `Next`, answerIndex: 38 }],
       },
       {
@@ -215,7 +217,7 @@ export default {
       },
       {
         eventIndex: 39,
-        dialogue: `{{LI1}}: Should we meet again tomorrow or through text?`,
+        dialogue: `${this.Li1}: Should we meet again tomorrow or through text?`,
         choices: [
           { statements: `We can meet tomorrow.`, answerIndex: 40 },
           { statements: `I prefer through text.`, answerIndex: 100 },
@@ -229,7 +231,7 @@ export default {
       },
       {
         eventIndex: 41,
-        dialogue: `{{LI1}}: Sounds good! see you then.`,
+        dialogue: `${this.Li1}: Sounds good! see you then.`,
         choices: [{ statements: `Next`, answerIndex: 42 }],
       },
       {
@@ -239,7 +241,7 @@ export default {
       },
       {
         eventIndex: 43,
-        dialogue: `{{LI1}}: Hey! Same place as yesterday?`,
+        dialogue: `${this.Li1}: Hey! Same place as yesterday?`,
         choices: [{ statements: `Next`, answerIndex: 44 }],
       },
       {
@@ -249,7 +251,7 @@ export default {
       },
       {
         eventIndex: 45,
-        dialogue: `{{LI1}}: So how was your day?`,
+        dialogue: `${this.Li1}: So how was your day?`,
         choices: [
           { statements: `It was good!`, answerIndex: 46 },
           { statements: `Boring. School is such a drag.`, answerIndex: 47 },
@@ -267,7 +269,7 @@ export default {
       },
       {
         eventIndex: 48,
-        dialogue: `{{LI1}}: Ah, it was alright I guess. One of my classes gave me a bit of trouble, but it's okay.`,
+        dialogue: `${this.Li1}: Ah, it was alright I guess. One of my classes gave me a bit of trouble, but it's okay.`,
         choices: [{ statements: `Next`, answerIndex: 49 }],
       },
       {
@@ -277,7 +279,7 @@ export default {
       },
       {
         eventIndex: 50,
-        dialogue: `{{LI1}}: Group projects stress me out! This kid I was working with was so frustrating.`,
+        dialogue: `${this.Li1}: Group projects stress me out! This kid I was working with was so frustrating.`,
         choices: [
           {
             statements: `Aw, I hope I’m not stressing you out even more.`,
@@ -306,7 +308,7 @@ export default {
       },
       {
         eventIndex: 54,
-        dialogue: `{{LI1}}: Y’know, we’ve been at this for a while. Want me to get you something to eat?`,
+        dialogue: `${this.Li1}: Y’know, we’ve been at this for a while. Want me to get you something to eat?`,
         choices: [
           {
             statements: `How chivalrous of you. I'll have a coffee, please.`,
@@ -320,12 +322,12 @@ export default {
       },
       {
         eventIndex: 55,
-        dialogue: `*{{LI1}}leaves and returns*`,
+        dialogue: `*${this.Li1}leaves and returns*`,
         choices: [{ statements: `Next`, answerIndex: 56 }],
       },
       {
         eventIndex: 56,
-        dialogue: `{{LI1}}: Here you go. One piping hot coffee.`,
+        dialogue: `${this.Li1}: Here you go. One piping hot coffee.`,
         choices: [{ statements: `Next`, answerIndex: 57 }],
       },
       {
@@ -335,12 +337,12 @@ export default {
       },
       {
         eventIndex: 58,
-        dialogue: `*{{LI1}}leaves and returns*`,
+        dialogue: `*${this.Li1}leaves and returns*`,
         choices: [{ statements: `Next`, answerIndex: 59 }],
       },
       {
         eventIndex: 59,
-        dialogue: `{{LI1}}: I'm back and I got myself a sandwich.`,
+        dialogue: `${this.Li1}: I'm back and I got myself a sandwich.`,
         choices: [{ statements: `Next`, answerIndex: 60 }],
       },
       {
@@ -350,7 +352,7 @@ export default {
       },
       {
         eventIndex: 61,
-        dialogue: `{{LI1}}: Ah, well. My mom is a computer engineer, so I kinda got into that as a kid. She always signed me up for bootcamps and whatnot haha. What about you?`,
+        dialogue: `${this.Li1}: Ah, well. My mom is a computer engineer, so I kinda got into that as a kid. She always signed me up for bootcamps and whatnot haha. What about you?`,
         choices: [{ statements: `Next`, answerIndex: 62 }],
       },
       {
@@ -360,7 +362,7 @@ export default {
       },
       {
         eventIndex: 63,
-        dialogue: `{{LI1}}: That’s really cool. Do you like it so far?`,
+        dialogue: `${this.Li1}: That’s really cool. Do you like it so far?`,
         choices: [
           { statements: `Oh, I love it!`, answerIndex: 64 },
           { statements: `Eh, it's alright.`, answerIndex: 65 },
@@ -378,7 +380,7 @@ export default {
       },
       {
         eventIndex: 66,
-        dialogue: `{{LI1}}: Haha thanks, I like working with you too! We should meet up the day after tomorrow to continue.`,
+        dialogue: `${this.Li1}: Haha thanks, I like working with you too! We should meet up the day after tomorrow to continue.`,
         choices: [{ statements: `Next`, answerIndex: 67 }],
       },
       {
@@ -403,7 +405,7 @@ export default {
       },
       {
         eventIndex: 72,
-        dialogue: `???: I’m LI2, I saw you in English and I was wondering if I could meet up with you some time? I really need help with the homework.`,
+        dialogue: `???: I’m ${this.Li2}, I saw you in English and I was wondering if I could meet up with you some time? I really need help with the homework.`,
         choices: [{ statements: `Next`, answerIndex: 73 }],
       },
       {
@@ -413,7 +415,7 @@ export default {
       },
       {
         eventIndex: 74,
-        dialogue: `LI1: OH that’s perfect. Thank you so much!`,
+        dialogue: `${this.Li1}: OH that’s perfect. Thank you so much!`,
         choices: [{ statements: `Next`, answerIndex: 75 }],
       },
       {
@@ -423,17 +425,17 @@ export default {
       },
       {
         eventIndex: 76,
-        dialogue: `{{LI1}}: Hey. Who is this?`,
+        dialogue: `${this.Li1}: Hey. Who is this?`,
         choices: [{ statements: `Next`, answerIndex: 77 }],
       },
       {
         eventIndex: 77,
-        dialogue: `${this.name}: This is just LI2, they just need help with English homework.`,
+        dialogue: `${this.name}: This is just ${this.Li2}, they just need help with English homework.`,
         choices: [{ statements: `Next`, answerIndex: 78 }],
       },
       {
         eventIndex: 78,
-        dialogue: `{{LI1}}: Ah, sorry LI2. ${this.name} and I need to work with our project.`,
+        dialogue: `${this.Li1}: Ah, sorry ${this.Li2}. ${this.name} and I need to work with our project.`,
         choices: [{ statements: `Next`, answerIndex: 79 }],
       },
       {
@@ -443,32 +445,32 @@ export default {
       },
       {
         eventIndex: 80,
-        dialogue: `{{LI1}}: No, we should meet up now.`,
+        dialogue: `${this.Li1}: No, we should meet up now.`,
         choices: [{ statements: `Next`, answerIndex: 81 }],
       },
       {
         eventIndex: 81,
-        dialogue: `${this.name}: I’m sorry I can’t, I promised LI2 I’d help them.`,
+        dialogue: `${this.name}: I’m sorry I can’t, I promised ${this.Li2} I’d help them.`,
         choices: [{ statements: `Next`, answerIndex: 82 }],
       },
       {
         eventIndex: 82,
-        dialogue: `LI1: Yeah I’m really sorry. I really need help with this.`,
+        dialogue: `${this.Li1}: Yeah I’m really sorry. I really need help with this.`,
         choices: [{ statements: `Next`, answerIndex: 83 }],
       },
       {
         eventIndex: 83,
-        dialogue: `{{LI1}}: Are you sure? What is this, Honors English? Shouldn’t be that hard. I’m sure there’s a brain in there somewhere.`,
+        dialogue: `${this.Li1}: Are you sure? What is this, Honors English? Shouldn’t be that hard. I’m sure there’s a brain in there somewhere.`,
         choices: [{ statements: `Next`, answerIndex: 84 }],
       },
       {
         eventIndex: 84,
-        dialogue: `LI1: Dude, what the heck? Can you back off?`,
+        dialogue: `${this.Li1}: Dude, what the heck? Can you back off?`,
         choices: [{ statements: `Next`, answerIndex: 85 }],
       },
       {
         eventIndex: 85,
-        dialogue: `{{LI1}}: Why don’t you do so first? ${this.name} and I have an important project that we work on. They can’t focus on your homework.`,
+        dialogue: `${this.Li1}: Why don’t you do so first? ${this.name} and I have an important project that we work on. They can’t focus on your homework.`,
         choices: [
           {
             statements: `Hey wait a minute. I did tell LI2 I can help, and we weren’t even supposed to meet until tomorrow. There’s time before our due date. We’ll continue tomorrow.`,
@@ -484,7 +486,7 @@ export default {
       //branch 2, choice 1
       {
         eventIndex: 86,
-        dialogue: `{{LI1}}: Fine. See you.`,
+        dialogue: `${this.Li1}: Fine. See you.`,
         choices: [{ statements: `Next`, answerIndex: 87 }],
       },
       {
@@ -494,7 +496,7 @@ export default {
       },
       {
         eventIndex: 88,
-        dialogue: `LI1: Jesus. What’s their deal?`,
+        dialogue: `${this.Li1}: Jesus. What’s their deal?`,
         choices: [{ statements: `Next`, answerIndex: 89 }],
       },
       {
@@ -504,7 +506,7 @@ export default {
       },
       {
         eventIndex: 90,
-        dialogue: `LI1: Sure!`,
+        dialogue: `${this.Li1}: Sure!`,
         choices: [{ statements: `Next`, answerIndex: 91 }],
       },
       {
@@ -514,7 +516,7 @@ export default {
       },
       {
         eventIndex: 92,
-        dialogue: `LI1: So I’m not too sure about this paper I’ve written so far.`,
+        dialogue: `${this.Li1}: So I’m not too sure about this paper I’ve written so far.`,
         choices: [{ statements: `Next`, answerIndex: 93 }],
       },
       {
@@ -524,7 +526,7 @@ export default {
       },
       {
         eventIndex: 94,
-        dialogue: `LI1: Like this? Should I take this out?`,
+        dialogue: `${this.Li1}: Like this? Should I take this out?`,
         choices: [{ statements: `Next`, answerIndex: 95 }],
       },
       {
@@ -534,7 +536,7 @@ export default {
       },
       {
         eventIndex: 96,
-        dialogue: `LI1: Alright, I’m getting the hang of this now.`,
+        dialogue: `${this.Li1}: Alright, I’m getting the hang of this now.`,
         choices: [{ statements: `Next`, answerIndex: 97 }],
       },
       {
@@ -544,7 +546,7 @@ export default {
       },
       {
         eventIndex: 98,
-        dialogue: `LI1: No, that’s really nice of you though. I do write comics when I’m free though, so maybe that’s why?`,
+        dialogue: `${this.Li1}: No, that’s really nice of you though. I do write comics when I’m free though, so maybe that’s why?`,
         choices: [{ statements: `Next`, answerIndex: 99 }],
       },
       {
@@ -554,7 +556,7 @@ export default {
       },
       {
         eventIndex: 100,
-        dialogue: `LI1: Yeah, haha. I could show you some right now if you want.`,
+        dialogue: `${this.Li1}: Yeah, haha. I could show you some right now if you want.`,
         choices: [{ statements: `Next`, answerIndex: 101 }],
       },
       {
@@ -574,7 +576,7 @@ export default {
       },
       {
         eventIndex: 104,
-        dialogue: `LI1: Haha thank you!`,
+        dialogue: `${this.Li1}: Haha thank you!`,
         choices: [{ statements: `Next`, answerIndex: 105 }],
       },
       {
@@ -589,17 +591,17 @@ export default {
       },
       {
         eventIndex: 107,
-        dialogue: `LI1: Do they? Ah maybe, I just thought of them in my head.`,
+        dialogue: `${this.Li1}: Do they? Ah maybe, I just thought of them in my head.`,
         choices: [{ statements: `Next`, answerIndex: 108 }],
       },
       {
         eventIndex: 108,
-        dialogue: `${this.name}: (they look like {{LI1}}.... was I too harsh on them before?)`,
+        dialogue: `${this.name}: (they look like ${this.Li1}.... was I too harsh on them before?)`,
         choices: [{ statements: `Next`, answerIndex: 109 }],
       },
       {
         eventIndex: 109,
-        dialogue: `LI1: Hey, what’s wrong? You look a little sad.`,
+        dialogue: `${this.Li1}: Hey, what’s wrong? You look a little sad.`,
         choices: [{ statements: `Next`, answerIndex: 110 }],
       },
       {
@@ -610,12 +612,12 @@ export default {
       //branch 2, choice 2
       {
         eventIndex: 111,
-        dialogue: `Hey {{LI1}}, relax. It’s fine, we can work on it today. LI2, how about I give you my number so you can text me?`,
+        dialogue: `Hey ${this.Li1}, relax. It’s fine, we can work on it today. ${this.Li2}, how about I give you my number so you can text me?`,
         choices: [{ statements: `Next`, answerIndex: 112 }],
       },
       {
         eventIndex: 112,
-        dialogue: `LI1: Alright… see you later ${this.name}.`,
+        dialogue: `${this.Li1}: Alright… see you later ${this.name}.`,
         choices: [{ statements: `Next`, answerIndex: 113 }],
       },
       {
@@ -625,7 +627,7 @@ export default {
       },
       {
         eventIndex: 114,
-        dialogue: `{{LI1}}: Should we get going then?`,
+        dialogue: `${this.Li1}: Should we get going then?`,
         choices: [{ statements: `Next`, answerIndex: 115 }],
       },
       {
