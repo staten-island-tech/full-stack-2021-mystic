@@ -87,7 +87,7 @@ export default {
       },
       {
         eventIndex: 14,
-        dialogue: `???: Ah good. I’m {{LI1}} by the way.`,
+        dialogue: `???: Ah good. I’m Natsume by the way.`,
         choices: [{ statements: `Next`, answerIndex: 15 }],
       },
       {
@@ -102,12 +102,12 @@ export default {
       },
       {
         eventIndex: 17,
-        dialogue: `{{LI1}}: Oh yeah. I transferred here for my last year.`,
+        dialogue: `Natsume: Oh yeah. I transferred here for my last year.`,
         choices: [{ statements: `Next`, answerIndex: 18 }],
       },
       {
         eventIndex: 18,
-        dialogue: `{{LI1}}: I didn’t really like my old school. Didn’t suit me.`,
+        dialogue: `Natsume: I didn’t really like my old school. Didn’t suit me.`,
         choices: [{ statements: `Next`, answerIndex: 19 }],
       },
       {
@@ -117,7 +117,7 @@ export default {
       },
       {
         eventIndex: 20,
-        dialogue: `{{LI1}}: Thank you!`,
+        dialogue: `Natsume: Thank you!`,
         choices: [{ statements: `Next`, answerIndex: 21 }],
       },
       {
@@ -132,7 +132,7 @@ export default {
       },
       {
         eventIndex: 23,
-        dialogue: `{{LI1}}: Oh wow. Looks like we’re together.`,
+        dialogue: `Natsume: Oh wow. Looks like we’re together.`,
         choices: [{ statements: `Next`, answerIndex: 24 }],
       },
       {
@@ -142,7 +142,7 @@ export default {
       },
       {
         eventIndex: 25,
-        dialogue: `{{LI1}}: Sure. After school at Starbucks?`,
+        dialogue: `Natsume: Sure. After school at Starbucks?`,
         choices: [{ statements: `Next`, answerIndex: 26 }],
       },
       {
@@ -157,7 +157,7 @@ export default {
       },
       {
         eventIndex: 28,
-        dialogue: `{{LI1}}: Hey ${this.name}, do you want to sit here or the back?`,
+        dialogue: `Natsume: Hey ${this.name}, do you want to sit here or the back?`,
         choices: [
           { statements: `Here is fine.`, answerIndex: 29 },
           { statements: `Let's move to the back`, answerIndex: 31 },
@@ -190,7 +190,7 @@ export default {
       },
       {
         eventIndex: 34,
-        dialogue: `{{LI1}}: I’m down for anything!`,
+        dialogue: `Natsume: I’m down for anything!`,
         choices: [{ statements: `Next`, answerIndex: 35 }],
       },
       {
@@ -205,7 +205,7 @@ export default {
       },
       {
         eventIndex: 37,
-        dialogue: `{{LI1}}: Think it’s time to call it a day?`,
+        dialogue: `Natsume: Think it’s time to call it a day?`,
         choices: [{ statements: `Next`, answerIndex: 38 }],
       },
       {
@@ -215,7 +215,7 @@ export default {
       },
       {
         eventIndex: 39,
-        dialogue: `{{LI1}}: Should we meet again tomorrow or through text?`,
+        dialogue: `Natsume: Should we meet again tomorrow or through text?`,
         choices: [
           { statements: `We can meet tomorrow.`, answerIndex: 40 },
           { statements: `I prefer through text.`, answerIndex: 100 },
@@ -229,7 +229,7 @@ export default {
       },
       {
         eventIndex: 41,
-        dialogue: `{{LI1}}: Sounds good! see you then.`,
+        dialogue: `Natsume: Sounds good! see you then.`,
         choices: [{ statements: `Next`, answerIndex: 42 }],
       },
       {
@@ -239,7 +239,7 @@ export default {
       },
       {
         eventIndex: 43,
-        dialogue: `{{LI1}}: Hey! Same place as yesterday?`,
+        dialogue: `Natsume: Hey! Same place as yesterday?`,
         choices: [{ statements: `Next`, answerIndex: 44 }],
       },
       {
@@ -249,7 +249,7 @@ export default {
       },
       {
         eventIndex: 45,
-        dialogue: `{{LI1}}: So how was your day?`,
+        dialogue: `Natsume: So how was your day?`,
         choices: [
           { statements: `It was good!`, answerIndex: 46 },
           { statements: `Boring. School is such a drag.`, answerIndex: 47 },
@@ -267,7 +267,7 @@ export default {
       },
       {
         eventIndex: 48,
-        dialogue: `{{LI1}}: Ah, it was alright I guess. One of my classes gave me a bit of trouble, but it's okay.`,
+        dialogue: `Natsume: Ah, it was alright I guess. One of my classes gave me a bit of trouble, but it's okay.`,
         choices: [{ statements: `Next`, answerIndex: 49 }],
       },
       {
@@ -277,7 +277,7 @@ export default {
       },
       {
         eventIndex: 50,
-        dialogue: `{{LI1}}: Group projects stress me out! This kid I was working with was so frustrating.`,
+        dialogue: `Natsume: Group projects stress me out! This kid I was working with was so frustrating.`,
         choices: [
           {
             statements: `Aw, I hope I’m not stressing you out even more.`,
@@ -306,7 +306,7 @@ export default {
       },
       {
         eventIndex: 54,
-        dialogue: `{{LI1}}: Y’know, we’ve been at this for a while. Want me to get you something to eat?`,
+        dialogue: `Natsume: Y’know, we’ve been at this for a while. Want me to get you something to eat?`,
         choices: [
           {
             statements: `How chivalrous of you. I'll have a coffee, please.`,
@@ -320,12 +320,12 @@ export default {
       },
       {
         eventIndex: 55,
-        dialogue: `*{{LI1}}leaves and returns*`,
+        dialogue: `*Natsumeleaves and returns*`,
         choices: [{ statements: `Next`, answerIndex: 56 }],
       },
       {
         eventIndex: 56,
-        dialogue: `{{LI1}}: Here you go. One piping hot coffee.`,
+        dialogue: `Natsume: Here you go. One piping hot coffee.`,
         choices: [{ statements: `Next`, answerIndex: 57 }],
       },
       {
@@ -335,12 +335,12 @@ export default {
       },
       {
         eventIndex: 58,
-        dialogue: `*{{LI1}}leaves and returns*`,
+        dialogue: `*Natsumeleaves and returns*`,
         choices: [{ statements: `Next`, answerIndex: 59 }],
       },
       {
         eventIndex: 59,
-        dialogue: `{{LI1}}: I'm back and I got myself a sandwich.`,
+        dialogue: `Natsume: I'm back and I got myself a sandwich.`,
         choices: [{ statements: `Next`, answerIndex: 60 }],
       },
       {
@@ -350,7 +350,7 @@ export default {
       },
       {
         eventIndex: 61,
-        dialogue: `{{LI1}}: Ah, well. My mom is a computer engineer, so I kinda got into that as a kid. She always signed me up for bootcamps and whatnot haha. What about you?`,
+        dialogue: `Natsume: Ah, well. My mom is a computer engineer, so I kinda got into that as a kid. She always signed me up for bootcamps and whatnot haha. What about you?`,
         choices: [{ statements: `Next`, answerIndex: 62 }],
       },
       {
@@ -360,7 +360,7 @@ export default {
       },
       {
         eventIndex: 63,
-        dialogue: `{{LI1}}: That’s really cool. Do you like it so far?`,
+        dialogue: `Natsume: That’s really cool. Do you like it so far?`,
         choices: [
           { statements: `Oh, I love it!`, answerIndex: 64 },
           { statements: `Eh, it's alright.`, answerIndex: 65 },
@@ -378,7 +378,7 @@ export default {
       },
       {
         eventIndex: 66,
-        dialogue: `{{LI1}}: Haha thanks, I like working with you too! We should meet up the day after tomorrow to continue.`,
+        dialogue: `Natsume: Haha thanks, I like working with you too! We should meet up the day after tomorrow to continue.`,
         choices: [{ statements: `Next`, answerIndex: 67 }],
       },
       {
@@ -403,7 +403,7 @@ export default {
       },
       {
         eventIndex: 72,
-        dialogue: `???: I’m LI2, I saw you in English and I was wondering if I could meet up with you some time? I really need help with the homework.`,
+        dialogue: `???: I’m ${this.Li2}, I saw you in English and I was wondering if I could meet up with you some time? I really need help with the homework.`,
         choices: [{ statements: `Next`, answerIndex: 73 }],
       },
       {
@@ -413,7 +413,7 @@ export default {
       },
       {
         eventIndex: 74,
-        dialogue: `LI1: OH that’s perfect. Thank you so much!`,
+        dialogue: `Natsume: OH that’s perfect. Thank you so much!`,
         choices: [{ statements: `Next`, answerIndex: 75 }],
       },
       {
@@ -423,17 +423,17 @@ export default {
       },
       {
         eventIndex: 76,
-        dialogue: `{{LI1}}: Hey. Who is this?`,
+        dialogue: `Natsume: Hey. Who is this?`,
         choices: [{ statements: `Next`, answerIndex: 77 }],
       },
       {
         eventIndex: 77,
-        dialogue: `${this.name}: This is just LI2, they just need help with English homework.`,
+        dialogue: `${this.name}: This is just ${this.Li2}, they just need help with English homework.`,
         choices: [{ statements: `Next`, answerIndex: 78 }],
       },
       {
         eventIndex: 78,
-        dialogue: `{{LI1}}: Ah, sorry LI2. ${this.name} and I need to work with our project.`,
+        dialogue: `Natsume: Ah, sorry ${this.Li2}. ${this.name} and I need to work with our project.`,
         choices: [{ statements: `Next`, answerIndex: 79 }],
       },
       {
@@ -443,32 +443,32 @@ export default {
       },
       {
         eventIndex: 80,
-        dialogue: `{{LI1}}: No, we should meet up now.`,
+        dialogue: `Natsume: No, we should meet up now.`,
         choices: [{ statements: `Next`, answerIndex: 81 }],
       },
       {
         eventIndex: 81,
-        dialogue: `${this.name}: I’m sorry I can’t, I promised LI2 I’d help them.`,
+        dialogue: `${this.name}: I’m sorry I can’t, I promised ${this.Li2} I’d help them.`,
         choices: [{ statements: `Next`, answerIndex: 82 }],
       },
       {
         eventIndex: 82,
-        dialogue: `LI1: Yeah I’m really sorry. I really need help with this.`,
+        dialogue: `Natsume: Yeah I’m really sorry. I really need help with this.`,
         choices: [{ statements: `Next`, answerIndex: 83 }],
       },
       {
         eventIndex: 83,
-        dialogue: `{{LI1}}: Are you sure? What is this, Honors English? Shouldn’t be that hard. I’m sure there’s a brain in there somewhere.`,
+        dialogue: `Natsume: Are you sure? What is this, Honors English? Shouldn’t be that hard. I’m sure there’s a brain in there somewhere.`,
         choices: [{ statements: `Next`, answerIndex: 84 }],
       },
       {
         eventIndex: 84,
-        dialogue: `LI1: Dude, what the heck? Can you back off?`,
+        dialogue: `Natsume: Dude, what the heck? Can you back off?`,
         choices: [{ statements: `Next`, answerIndex: 85 }],
       },
       {
         eventIndex: 85,
-        dialogue: `{{LI1}}: Why don’t you do so first? ${this.name} and I have an important project that we work on. They can’t focus on your homework.`,
+        dialogue: `Natsume: Why don’t you do so first? ${this.name} and I have an important project that we work on. They can’t focus on your homework.`,
         choices: [
           {
             statements: `Hey wait a minute. I did tell LI2 I can help, and we weren’t even supposed to meet until tomorrow. There’s time before our due date. We’ll continue tomorrow.`,
@@ -484,7 +484,7 @@ export default {
       //branch 2, choice 1
       {
         eventIndex: 86,
-        dialogue: `{{LI1}}: Fine. See you.`,
+        dialogue: `Natsume: Fine. See you.`,
         choices: [{ statements: `Next`, answerIndex: 87 }],
       },
       {
@@ -494,7 +494,7 @@ export default {
       },
       {
         eventIndex: 88,
-        dialogue: `LI1: Jesus. What’s their deal?`,
+        dialogue: `Natsume: Jesus. What’s their deal?`,
         choices: [{ statements: `Next`, answerIndex: 89 }],
       },
       {
@@ -504,7 +504,7 @@ export default {
       },
       {
         eventIndex: 90,
-        dialogue: `LI1: Sure!`,
+        dialogue: `Natsume: Sure!`,
         choices: [{ statements: `Next`, answerIndex: 91 }],
       },
       {
@@ -514,7 +514,7 @@ export default {
       },
       {
         eventIndex: 92,
-        dialogue: `LI1: So I’m not too sure about this paper I’ve written so far.`,
+        dialogue: `Natsume: So I’m not too sure about this paper I’ve written so far.`,
         choices: [{ statements: `Next`, answerIndex: 93 }],
       },
       {
@@ -524,7 +524,7 @@ export default {
       },
       {
         eventIndex: 94,
-        dialogue: `LI1: Like this? Should I take this out?`,
+        dialogue: `Natsume: Like this? Should I take this out?`,
         choices: [{ statements: `Next`, answerIndex: 95 }],
       },
       {
@@ -534,7 +534,7 @@ export default {
       },
       {
         eventIndex: 96,
-        dialogue: `LI1: Alright, I’m getting the hang of this now.`,
+        dialogue: `Natsume: Alright, I’m getting the hang of this now.`,
         choices: [{ statements: `Next`, answerIndex: 97 }],
       },
       {
@@ -544,7 +544,7 @@ export default {
       },
       {
         eventIndex: 98,
-        dialogue: `LI1: No, that’s really nice of you though. I do write comics when I’m free though, so maybe that’s why?`,
+        dialogue: `Natsume: No, that’s really nice of you though. I do write comics when I’m free though, so maybe that’s why?`,
         choices: [{ statements: `Next`, answerIndex: 99 }],
       },
       {
@@ -554,7 +554,7 @@ export default {
       },
       {
         eventIndex: 100,
-        dialogue: `LI1: Yeah, haha. I could show you some right now if you want.`,
+        dialogue: `Natsume: Yeah, haha. I could show you some right now if you want.`,
         choices: [{ statements: `Next`, answerIndex: 101 }],
       },
       {
@@ -574,7 +574,7 @@ export default {
       },
       {
         eventIndex: 104,
-        dialogue: `LI1: Haha thank you!`,
+        dialogue: `Natsume: Haha thank you!`,
         choices: [{ statements: `Next`, answerIndex: 105 }],
       },
       {
@@ -589,17 +589,17 @@ export default {
       },
       {
         eventIndex: 107,
-        dialogue: `LI1: Do they? Ah maybe, I just thought of them in my head.`,
+        dialogue: `Natsume: Do they? Ah maybe, I just thought of them in my head.`,
         choices: [{ statements: `Next`, answerIndex: 108 }],
       },
       {
         eventIndex: 108,
-        dialogue: `${this.name}: (they look like {{LI1}}.... was I too harsh on them before?)`,
+        dialogue: `${this.name}: (they look like Natsume.... was I too harsh on them before?)`,
         choices: [{ statements: `Next`, answerIndex: 109 }],
       },
       {
         eventIndex: 109,
-        dialogue: `LI1: Hey, what’s wrong? You look a little sad.`,
+        dialogue: `Natsume: Hey, what’s wrong? You look a little sad.`,
         choices: [{ statements: `Next`, answerIndex: 110 }],
       },
       {
@@ -610,12 +610,12 @@ export default {
       //branch 2, choice 2
       {
         eventIndex: 111,
-        dialogue: `Hey {{LI1}}, relax. It’s fine, we can work on it today. LI2, how about I give you my number so you can text me?`,
+        dialogue: `Hey Natsume, relax. It’s fine, we can work on it today. ${this.Li2}, how about I give you my number so you can text me?`,
         choices: [{ statements: `Next`, answerIndex: 112 }],
       },
       {
         eventIndex: 112,
-        dialogue: `LI1: Alright… see you later ${this.name}.`,
+        dialogue: `Natsume: Alright… see you later ${this.name}.`,
         choices: [{ statements: `Next`, answerIndex: 113 }],
       },
       {
@@ -625,7 +625,7 @@ export default {
       },
       {
         eventIndex: 114,
-        dialogue: `{{LI1}}: Should we get going then?`,
+        dialogue: `Natsume: Should we get going then?`,
         choices: [{ statements: `Next`, answerIndex: 115 }],
       },
       {
@@ -637,6 +637,642 @@ export default {
         eventIndex: 116,
         dialogue: `${this.name}: (What the heck just happened?)`,
         choices: [{ statements: `Next`, answerIndex: 117 }],
+      },
+      {
+        eventIndex: 117,
+        dialogue: `Natsume: Want to go somewhere else besides the cafe today?`,
+        choices: [{ statements: `Next`, answerIndex: 118 }],
+      },
+      {
+        eventIndex: 118,
+        dialogue: `${this.name}: Where?`,
+        choices: [{ statements: `Next`, answerIndex: 119 }],
+      },
+      {
+        eventIndex: 119,
+        dialogue: `Natsume: We can work at my house. I live close and I can make you dinner.`,
+        choices: [{ statements: `Next`, answerIndex: 120 }],
+      },
+      {
+        eventIndex: 120,
+        dialogue: `${this.name}: Oh sure.`,
+        choices: [{ statements: `Next`, answerIndex: 121 }],
+      },
+      {
+        eventIndex: 121,
+        dialogue: `Natsume: Great! Let’s walk this way.`,
+        choices: [{ statements: `Next`, answerIndex: 122 }],
+      },
+      {
+        eventIndex: 122,
+        dialogue: `*You arrive at the front of Natsume's house*`,
+        choices: [{ statements: `Next`, answerIndex: 123 }],
+      },
+      {
+        eventIndex: 123,
+        dialogue: `${this.name}: Wow… your house is kind of big.`,
+        choices: [{ statements: `Next`, answerIndex: 124 }],
+      },
+      {
+        eventIndex: 124,
+        dialogue: `Natsume: Haha yeah, let’s go inside.`,
+        choices: [{ statements: `Next`, answerIndex: 125 }],
+      },
+      {
+        eventIndex: 125,
+        dialogue: `${this.name}: Jesus, it’s even bigger inside. What do your parents do for a living?`,
+        choices: [{ statements: `Next`, answerIndex: 126 }],
+      },
+      {
+        eventIndex: 126,
+        dialogue: `Natsume: My mom is a lawyer and my dad is the CEO of some big company. They’re never home though.`,
+        choices: [{ statements: `Next`, answerIndex: 127 }],
+      },
+      {
+        eventIndex: 127,
+        dialogue: `${this.name}: Oh I see. Do you have any siblings?`,
+        choices: [{ statements: `Next`, answerIndex: 128 }],
+      },
+      {
+        eventIndex: 128,
+        dialogue: `Natsume: Nope. Just me in this big, lonely house.`,
+        choices: [{ statements: `Next`, answerIndex: 129 }],
+      },
+      {
+        eventIndex: 129,
+        dialogue: `Natsume: Let’s go to my room.`,
+        choices: [{ statements: `Next`, answerIndex: 130 }],
+      },
+      {
+        eventIndex: 130,
+        dialogue: `*You arrive in Natsume's room*`,
+        choices: [
+          {
+            statements: `Look at their pictures.`,
+            answerIndex: 131,
+          },
+
+          {
+            statements: `Look at their desk.`,
+            answerIndex: 133,
+          },
+        ],
+      },
+      {
+        eventIndex: 131,
+        dialogue: `${this.name}: (There’s no photos of their family…)`,
+        choices: [{ statements: `Next`, answerIndex: 132 }],
+      },
+      {
+        eventIndex: 132,
+        dialogue: `${this.name}: (It’s just photos of nature.)`,
+        choices: [{ statements: `Next`, answerIndex: 135 }],
+      },
+      {
+        eventIndex: 133,
+        dialogue: `${this.name}: (There’s not much on their desk.)`,
+        choices: [{ statements: `Next`, answerIndex: 134 }],
+      },
+      {
+        eventIndex: 134,
+        dialogue: `${this.name}: (Only stationary…)`,
+        choices: [{ statements: `Next`, answerIndex: 135 }],
+      },
+      {
+        eventIndex: 135,
+        dialogue: `Natsume: Anything interest you?`,
+        choices: [{ statements: `Next`, answerIndex: 136 }],
+      },
+      {
+        eventIndex: 136,
+        dialogue: `${this.name}: Your room is so meticulously clean. `,
+        choices: [{ statements: `Next`, answerIndex: 137 }],
+      },
+      {
+        eventIndex: 137,
+        dialogue: `Natsume: Thanks haha. I just like to be organized.`,
+        choices: [{ statements: `Next`, answerIndex: 138 }],
+      },
+      {
+        eventIndex: 138,
+        dialogue: `${this.name}: You’re way neater than me at least. My room is full of random things.`,
+        choices: [{ statements: `Next`, answerIndex: 139 }],
+      },
+      {
+        eventIndex: 139,
+        dialogue: `Natsume: Oh? Like what?`,
+        choices: [
+          {
+            statements: `I have a lot of sports equipment laying around.`,
+            answerIndex: 140,
+          },
+
+          {
+            statements: `A lot of musical instruments.`,
+            answerIndex: 141,
+          },
+        ],
+      },
+      {
+        eventIndex: 140,
+        dialogue: `Natsume: Oh? What do you play?`,
+        choices: [
+          {
+            statements: `Soccer! I’ve been playing for ten years.`,
+            answerIndex: 142,
+          },
+
+          {
+            statements: `Ballet. It’s my favorite thing to do.`,
+            answerIndex: 142,
+          },
+        ],
+      },
+      {
+        eventIndex: 141,
+        dialogue: `Natsume: You play music??`,
+        choices: [
+          {
+            statements: `Yeah I do a lot of musical covers.`,
+            answerIndex: 142,
+          },
+
+          {
+            statements: `Mhm, I play competitively.`,
+            answerIndex: 142,
+          },
+        ],
+      },
+      {
+        eventIndex: 142,
+        dialogue: `Natsume: Wow, that’s so cool! What’s it like? I want to know more about you.`,
+        choices: [{ statements: `Next`, answerIndex: 143 }],
+      },
+      {
+        eventIndex: 143,
+        dialogue: `*You talk about your hobby for a while.*`,
+        choices: [{ statements: `Next`, answerIndex: 144 }],
+      },
+      {
+        eventIndex: 144,
+        dialogue: `${this.name}: Man, we’ve been talking for a while, huh? Do you think it's time to finally start the project?`,
+        choices: [{ statements: `Next`, answerIndex: 145 }],
+      },
+      {
+        eventIndex: 145,
+        dialogue: `Natsume: Bwahaha yeah. Let’s get to work.`,
+        choices: [{ statements: `Next`, answerIndex: 146 }],
+      },
+      {
+        eventIndex: 146,
+        dialogue: `*You work on the project for a while.*`,
+        choices: [{ statements: `Next`, answerIndex: 147 }],
+      },
+      {
+        eventIndex: 147,
+        dialogue: `${this.name}: Ahhh, we’re almost done.`,
+        choices: [{ statements: `Next`, answerIndex: 148 }],
+      },
+      {
+        eventIndex: 148,
+        dialogue: `Natsume: Yeah, honestly I’m tired. `,
+        choices: [{ statements: `Next`, answerIndex: 149 }],
+      },
+      {
+        eventIndex: 149,
+        dialogue: `${this.name}: Me too. We can finish another day.`,
+        choices: [{ statements: `Next`, answerIndex: 150 }],
+      },
+      {
+        eventIndex: 150,
+        dialogue: `Natsume: Alright. You hungry? I can make dinner.`,
+        choices: [{ statements: `Next`, answerIndex: 151 }],
+      },
+      {
+        eventIndex: 151,
+        dialogue: `${this.name}: What can you make?`,
+        choices: [{ statements: `Next`, answerIndex: 152 }],
+      },
+      {
+        eventIndex: 152,
+        dialogue: `Natsume: Anything you want! I’m a hella good chef.`,
+        choices: [{ statements: `Next`, answerIndex: 153 }],
+      },
+      {
+        eventIndex: 153,
+        dialogue: `${this.name}: OKAY then, make me your best dish.`,
+        choices: [{ statements: `Next`, answerIndex: 154 }],
+      },
+      {
+        eventIndex: 154,
+        dialogue: `Natsume: Can do!`,
+        choices: [{ statements: `Next`, answerIndex: 155 }],
+      },
+      {
+        eventIndex: 155,
+        dialogue: `*Thirty minutes pass.*`,
+        choices: [{ statements: `Next`, answerIndex: 156 }],
+      },
+      {
+        eventIndex: 156,
+        dialogue: `${this.name}: Wow, this smells amazing.`,
+        choices: [{ statements: `Next`, answerIndex: 157 }],
+      },
+      {
+        eventIndex: 157,
+        dialogue: `Natsume: Of course it does, I made it.`,
+        choices: [{ statements: `Next`, answerIndex: 158 }],
+      },
+      {
+        eventIndex: 158,
+        dialogue: `${this.name}: Haha, this is great! How can I thank you? I feel like you’ve been so nice to me.`,
+        choices: [{ statements: `Next`, answerIndex: 159 }],
+      },
+      {
+        eventIndex: 159,
+        dialogue: `Natsume: Don’t worry about it. I want to treat you.`,
+        choices: [{ statements: `Next`, answerIndex: 160 }],
+      },
+      {
+        eventIndex: 160,
+        dialogue: `${this.name}: Oh...thank you!`,
+        choices: [{ statements: `Next`, answerIndex: 161 }],
+      },
+      {
+        eventIndex: 161,
+        dialogue: `*Next day, at the lockers.*`,
+        choices: [{ statements: `Next`, answerIndex: 162 }],
+      },
+      {
+        eventIndex: 162,
+        dialogue: `Natsume: Hey ${this.name}!`,
+        choices: [{ statements: `Next`, answerIndex: 163 }],
+      },
+      {
+        eventIndex: 163,
+        dialogue: `${this.name}: Oh hey! What’s up?`,
+        choices: [{ statements: `Next`, answerIndex: 164 }],
+      },
+      {
+        eventIndex: 164,
+        dialogue: `Natsume: Wanna work on the project today after school? You can come over again if you’d like.`,
+        choices: [{ statements: `Next`, answerIndex: 165 }],
+      },
+      {
+        eventIndex: 165,
+        dialogue: `${this.name}: Sure.`,
+        choices: [{ statements: `Next`, answerIndex: 166 }],
+      },
+      {
+        eventIndex: 166,
+        dialogue: `Natsume: Great, see you then!`,
+        choices: [{ statements: `Next`, answerIndex: 167 }],
+      },
+      {
+        eventIndex: 167,
+        dialogue: `*Later that afternoon.*`,
+        choices: [{ statements: `Next`, answerIndex: 168 }],
+      },
+      {
+        eventIndex: 168,
+        dialogue: `${this.name}: We’re almost done with our project.`,
+        choices: [{ statements: `Next`, answerIndex: 169 }],
+      },
+      {
+        eventIndex: 169,
+        dialogue: `Natsume: Thank god, this thing is taking so long.`,
+        choices: [{ statements: `Next`, answerIndex: 170 }],
+      },
+      {
+        eventIndex: 170,
+        dialogue: `${this.name}: I don’t think it’s that bad!`,
+        choices: [
+          {
+            statements: `I mean, at least I got to meet you.`,
+            answerIndex: 171,
+          },
+
+          {
+            statements: `I mean, at least you got to meet me.`,
+            answerIndex: 171,
+          },
+        ],
+      },
+      {
+        eventIndex: 171,
+        dialogue: `Natsume: Haha, you’re cute.`,
+        choices: [{ statements: `Next`, answerIndex: 172 }],
+      },
+      {
+        eventIndex: 172,
+        dialogue: `${this.name}: I know.`,
+        choices: [{ statements: `Next`, answerIndex: 173 }],
+      },
+      {
+        eventIndex: 173,
+        dialogue: `Natsume: *laughs*`,
+        choices: [{ statements: `Next`, answerIndex: 174 }],
+      },
+      {
+        eventIndex: 174,
+        dialogue: `Natsume: Well, we are done with our work.`,
+        choices: [{ statements: `Next`, answerIndex: 175 }],
+      },
+      {
+        eventIndex: 175,
+        dialogue: `Natsume: It was nice working with you.`,
+        choices: [{ statements: `Next`, answerIndex: 176 }],
+      },
+      {
+        eventIndex: 176,
+        dialogue: `${this.name}: Same here. Think we can get a 100?`,
+        choices: [{ statements: `Next`, answerIndex: 177 }],
+      },
+      {
+        eventIndex: 177,
+        dialogue: `Natsume: Totally, and if not, you can seduce the teacher with your pretty face.`,
+        choices: [{ statements: `Next`, answerIndex: 178 }],
+      },
+      {
+        eventIndex: 178,
+        dialogue: `${this.name}: You think I’m pretty?`,
+        choices: [{ statements: `Next`, answerIndex: 179 }],
+      },
+      {
+        eventIndex: 179,
+        dialogue: `Natsume:...maybe.`,
+        choices: [
+          {
+            statements: `Aw, thanks.`,
+            answerIndex: 180,
+          },
+          {
+            statements: `Well, you’re pretty cute too.`,
+            answerIndex: 180,
+          },
+        ],
+      },
+      {
+        eventIndex: 180,
+        dialogue: `Natsume: *smiles*`,
+        choices: [{ statements: `Next`, answerIndex: 181 }],
+      },
+      {
+        eventIndex: 181,
+        dialogue: `${this.name}: I should get going now. It is pretty late.`,
+        choices: [{ statements: `Next`, answerIndex: 182 }],
+      },
+      {
+        eventIndex: 182,
+        dialogue: `Natsume: Wait. Stay for dinner.`,
+        choices: [{ statements: `Next`, answerIndex: 183 }],
+      },
+      {
+        eventIndex: 183,
+        dialogue: `${this.name}: You sure? I don’t want to disrupt.`,
+        choices: [{ statements: `Next`, answerIndex: 184 }],
+      },
+      {
+        eventIndex: 184,
+        dialogue: `Natsume: No, don’t worry. You aren’t interrupting anything.`,
+        choices: [{ statements: `Next`, answerIndex: 185 }],
+      },
+      {
+        eventIndex: 185,
+        dialogue: `${this.name}: Hehe, thanks.`,
+        choices: [{ statements: `Next`, answerIndex: 186 }],
+      },
+      {
+        eventIndex: 186,
+        dialogue: `Natsume: Yup. Here’s your food.`,
+        choices: [{ statements: `Next`, answerIndex: 187 }],
+      },
+      {
+        eventIndex: 187,
+        dialogue: `*You eat your meals.*`,
+        choices: [{ statements: `Next`, answerIndex: 188 }],
+      },
+      {
+        eventIndex: 188,
+        dialogue: `${this.name}: Wow. Thank you for the meal! I really should get going before my parents start to worry.`,
+        choices: [{ statements: `Next`, answerIndex: 189 }],
+      },
+      {
+        eventIndex: 189,
+        dialogue: `Natsume: Yeah of course! Where do you live? I’ll take you home.`,
+        choices: [{ statements: `Next`, answerIndex: 190 }],
+      },
+      {
+        eventIndex: 190,
+        dialogue: `${this.name}: Oh I don’t live too far. About 10 blocks from here?`,
+        choices: [{ statements: `Next`, answerIndex: 191 }],
+      },
+      {
+        eventIndex: 191,
+        dialogue: `Natsume: I’ll walk you.`,
+        choices: [{ statements: `Next`, answerIndex: 192 }],
+      },
+      {
+        eventIndex: 192,
+        dialogue: `${this.name}: Are you sure? It might be dangerous coming back alone.`,
+        choices: [{ statements: `Next`, answerIndex: 193 }],
+      },
+      {
+        eventIndex: 193,
+        dialogue: `Natsume: Really, I insist.`,
+        choices: [{ statements: `Next`, answerIndex: 194 }],
+      },
+      {
+        eventIndex: 194,
+        dialogue: `${this.name}: Okay. Thanks.`,
+        choices: [{ statements: `Next`, answerIndex: 195 }],
+      },
+      {
+        eventIndex: 195,
+        dialogue: `Natsume: So tell me more about yourself.`,
+        choices: [
+          {
+            statements: `Talk about family.`,
+            answerIndex: 196,
+          },
+          {
+            statements: `Talk about life goals.`,
+            answerIndex: 201,
+          },
+        ],
+      },
+      {
+        eventIndex: 196,
+        dialogue: `${this.name}: Hm. Well. I am an only child. I live with my mom and my grandparents. My dad works overseas in Japan.`,
+        choices: [{ statements: `Next`, answerIndex: 197 }],
+      },
+      {
+        eventIndex: 197,
+        dialogue: `Natsume: Damn. Japan?? That’s so far. What does he do?`,
+        choices: [{ statements: `Next`, answerIndex: 198 }],
+      },
+      {
+        eventIndex: 198,
+        dialogue: `${this.name}: He’s a businessman! But he should be back soon. My mom is a teacher at an elementary school.`,
+        choices: [{ statements: `Next`, answerIndex: 199 }],
+      },
+      {
+        eventIndex: 199,
+        dialogue: `Natsume: Aw that’s so cool.`,
+        choices: [{ statements: `Next`, answerIndex: 200 }],
+      },
+      {
+        eventIndex: 200,
+        dialogue: `${this.name}: Thanks.`,
+        choices: [{ statements: `Next`, answerIndex: 209 }],
+      },
+      {
+        eventIndex: 201,
+        dialogue: `${this.name}: Hm. Well I want to be an engineer when I grow up.`,
+        choices: [{ statements: `Next`, answerIndex: 202 }],
+      },
+      {
+        eventIndex: 202,
+        dialogue: `Natsume: Really, what kind?`,
+        choices: [{ statements: `Next`, answerIndex: 203 }],
+      },
+      {
+        eventIndex: 203,
+        dialogue: `${this.name}: Mechanical engineering probably. I just think it’s really interesting.`,
+        choices: [{ statements: `Next`, answerIndex: 204 }],
+      },
+      {
+        eventIndex: 204,
+        dialogue: `Natsume: That’s so cool!`,
+        choices: [{ statements: `Next`, answerIndex: 205 }],
+      },
+      {
+        eventIndex: 205,
+        dialogue: `${this.name}: What about you?`,
+        choices: [{ statements: `Next`, answerIndex: 206 }],
+      },
+      {
+        eventIndex: 206,
+        dialogue: `Natsume: Ah. I’m not too sure yet. There isn’t really much I want to pursue.`,
+        choices: [{ statements: `Next`, answerIndex: 207 }],
+      },
+      {
+        eventIndex: 207,
+        dialogue: `${this.name}: Oh okay, well you still have time.`,
+        choices: [{ statements: `Next`, answerIndex: 208 }],
+      },
+      {
+        eventIndex: 208,
+        dialogue: `Natsume: Yeah.`,
+        choices: [{ statements: `Next`, answerIndex: 209 }],
+      },
+      {
+        eventIndex: 209,
+        dialogue: `${this.name}: Oh we’re here. Thanks for walking me.`,
+        choices: [{ statements: `Next`, answerIndex: 210 }],
+      },
+      {
+        eventIndex: 210,
+        dialogue: `Natsume: Of course! Oh, and also… can I ask you something?`,
+        choices: [{ statements: `Next`, answerIndex: 211 }],
+      },
+      {
+        eventIndex: 211,
+        dialogue: `${this.name}: Sure.`,
+        choices: [{ statements: `Next`, answerIndex: 212 }],
+      },
+      {
+        eventIndex: 212,
+        dialogue: `Natsume: I was wondering… if you’d like to go out with me sometime?`,
+        choices: [
+          {
+            statements: `Yeah of course.`,
+            answerIndex: 213,
+          },
+          {
+            statements: `Sure...`,
+            answerIndex: 213,
+          },
+        ],
+      },
+      {
+        eventIndex: 213,
+        dialogue: `Natsume: Really?? That makes me so happy. I’m glad. Well, I’ll talk to you later. See you tomorrow.`,
+        choices: [{ statements: `Next`, answerIndex: 214 }],
+      },
+      {
+        eventIndex: 214,
+        dialogue: `Natsume: Really?? That makes me so happy. I’m glad. Well, I’ll talk to you later. See you tomorrow.`,
+        choices: [{ statements: `Next`, answerIndex: 215 }],
+      },
+      {
+        eventIndex: 215,
+        dialogue: `${this.name}: See you.`,
+        choices: [{ statements: `Next`, answerIndex: 216 }],
+      },
+      {
+        eventIndex: 216,
+        dialogue: ``,
+        choices: [{ statements: `Next`, answerIndex: 217 }],
+      },
+      {
+        eventIndex: 217,
+        dialogue: `*The next day.*`,
+        choices: [{ statements: `Next`, answerIndex: 218 }],
+      },
+      {
+        eventIndex: 218,
+        dialogue: `Natsume: Hey!`,
+        choices: [{ statements: `Next`, answerIndex: 219 }],
+      },
+      {
+        eventIndex: 219,
+        dialogue: `${this.name}: Hey.`,
+        choices: [{ statements: `Next`, answerIndex: 220 }],
+      },
+      {
+        eventIndex: 219,
+        dialogue: `Natsume: Wanna get food with me after school? My treat.`,
+        choices: [{ statements: `Next`, answerIndex: 220 }],
+      },
+      {
+        eventIndex: 220,
+        dialogue: `${this.name}: Sure. Where do you want to eat?`,
+        choices: [{ statements: `Next`, answerIndex: 221 }],
+      },
+      {
+        eventIndex: 221,
+        dialogue: `Natsume: Whatever you want.`,
+        choices: [
+          {
+            statements: `Kinda craving Japanese food right now.`,
+            answerIndex: 222,
+          },
+          {
+            statements: `I really want to eat Chinese food!`,
+            answerIndex: 222,
+          },
+        ],
+      },
+      {
+        eventIndex: 222,
+        dialogue: `*Bell rings*`,
+        choices: [{ statements: `Next`, answerIndex: 223 }],
+      },
+      {
+        eventIndex: 223,
+        dialogue: `Natsume: That sounds great! I’ll meet with you later.`,
+        choices: [{ statements: `Next`, answerIndex: 224 }],
+      },
+      {
+        eventIndex: 224,
+        dialogue: `${this.name}: Alright, I'll get to class.`,
+        choices: [{ statements: `Next`, answerIndex: 225 }],
+      },
+      {
+        eventIndex: 225,
+        dialogue: `*In class*`,
+        choices: [{ statements: `Next`, answerIndex: 226 }],
       },
     ];
     let data = {
