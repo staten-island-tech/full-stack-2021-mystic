@@ -12,7 +12,6 @@
               v-model="name"
             />
           </div>
-          <p>Who would you like to date with?</p>
           <br />
           <button class="btn" @click="start">Start</button>
         </form>
@@ -51,10 +50,10 @@ export default {
       .then(doc=>{
         let username = doc.data().username;
         this.name = username;
-        console.log(this.name);
         let data = { name:this.name };
         this.$router.push({ 
-          name: "Dialogue", params: { data } 
+          name: "Dialogue", 
+          params: { data } 
         });
       })    
     },

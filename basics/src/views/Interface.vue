@@ -25,10 +25,24 @@ export default {
     };
   },
   mounted() {
-      this.name = this.$route.params.data.name;
-      this.gameDialogue = this.$route.params.data.gameDialogue;
+    if(firebase.auth().currentUser == true){firebase.firestore().collection("users")
+      .doc(firebase.auth().currentUser.uid)
+      .get()
+      .then(doc=>{
+        let username = doc.data().username;
+        this.name = username;
+        let data = { name:this.name };
+        this.$router.push({ 
+          name: "Dialogue", 
+          params: { data } 
+        });
+        this.name = this.$route.params.data.name;
+        this.gameDialogue = this.$route.params.data.gameDialogue;
+      })
+    };
+    
   },
-  methods: {
+  methods:{
     next() {
       this.eventIndex = this.gameDialogue[
         this.eventIndex

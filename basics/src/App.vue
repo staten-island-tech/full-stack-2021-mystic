@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <div class="nav-wrapper">
-      <a href="#">
+      <!-- <a href="#">
         <img class="logo" src="../src/assets/logo.png" />
+      </a> -->
+      <a href="#" class="logo">
+        <h6>Mystics</h6>
       </a>
       <ul class="wrapper">
         <router-link class="routerLink" to="/">Home</router-link>
@@ -41,9 +44,12 @@ body {
   }
 }
 .logo {
-  margin-top: 1%;
-  width: 5vw;
-  height: 4vh;
+  width: 8vw;
+  height: 5vh;
+  text-decoration: none; 
+  color: rgb(83, 62, 158);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:bold;
 }
 .nav-wrapper {
   width: 100vw;

@@ -34,7 +34,8 @@ import M from 'materialize-css';
         return{
             email:"",
             password:"",
-            error:""
+            error:"",
+            name:""
         };
     },
     methods:{
