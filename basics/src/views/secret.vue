@@ -13,7 +13,7 @@
             />
           </div>
           <br />
-          <button class="btn" @click="start">Start</button>
+          <button class="btn" >Start</button>
         </form>
       </div>
     </div>
@@ -26,8 +26,7 @@
 
 <script>
 import M from "materialize-css";
-import firebase from "firebase";
-import "firebase/auth";
+import {db,user} from "../main";
 export default {
   data() {
     return {
@@ -42,8 +41,7 @@ export default {
   },
   methods: {
     start() {
-      firebase
-      .firestore()
+      db
       .collection("users")
       .doc(firebase.auth().currentUser.uid)
       .get()
@@ -58,8 +56,7 @@ export default {
       })    
     },
     getUsername(){
-      firebase
-      .firestore()
+      db
       .collection("users")
       .doc(firebase.auth().currentUser.uid)
       .set({
@@ -67,7 +64,7 @@ export default {
           email: firebase.auth().currentUser.email,
           uid:firebase.auth().currentUser.uid,
       }).then(() => {
-        start();
+        this.start();
           this.$router.replace({
           name:"Interface",
       });

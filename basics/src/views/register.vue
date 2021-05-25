@@ -39,11 +39,9 @@ export default {
     },
     methods:{
         pressed(){
-            firebase
-            .auth()
+            user
             .createUserWithEmailAndPassword(this.email, this.password)
             .then((user) => {
-                console.log(user.data);
                 this.$router.replace({
                     name:"Secret"
                 });

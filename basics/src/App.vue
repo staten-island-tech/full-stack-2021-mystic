@@ -14,6 +14,8 @@
         |
         <router-link class="routerLink" to="/login">Login</router-link>
         |
+        <p @click="logout" class="routerLink" to="/login">Logout</p>
+        |
         <router-link class="routerLink" to="/register">Register</router-link>
       </ul>
     </div>
@@ -64,6 +66,8 @@ body {
   text-decoration: none; 
   color: rgb(83, 62, 158);
   font-weight: bold;
+  display:flex;
+  flex-direction: row;
 }
 .routerLink{
   text-decoration: none; 
@@ -87,14 +91,19 @@ export default {
     M.AutoInit();
   },
   methods:{
-  login(){
-    if(firebase.auth.currentUser){
-      this.Login=Logout
-    }
-    else{
-      login
-    }
-  }
+  logout(){
+        firebase
+            .auth()
+            .signOut()
+            .then(() => {
+              console.log("user logged out")
+            this.$router.push({
+                name:"Home",
+                query: { redirect: '/about' }
+            });
+        })
+        .catch(error => (this.error = error));
+        },
 }
 }
 </script>

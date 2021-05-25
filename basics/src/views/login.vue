@@ -26,10 +26,10 @@
 </template>
 
 <script>
-import firebase from "firebase";
+import {db,user} from "../main";
 import M from 'materialize-css';
+
     export default {
-        name:"Login",
         data(){
         return{
             email:"",
@@ -38,19 +38,55 @@ import M from 'materialize-css';
             name:""
         };
     },
+    mounted () {
+        M.AutoInit();
+    },
     methods:{
-        mounted () {
-            M.AutoInit();
-        },
-        pressed(){
+        /* start() {
+        firebase.auth().onAuthStateChanged(
+        function(user){
+            if(user != null){
             firebase
-            .auth()
-            .signInWithEmailAndPassword(this.email, this.password)
-            .then((user) => {
-                console.log(user.data);
-                this.$router.replace({
-                    name:"Interface",
+            .firestore()
+            .collection("users")
+            .doc(firebase.auth().currentUser.uid)
+            .get()
+            .then(doc=>{
+                this.name = doc.data().username;
+                let data = { name:this.name };
+                this.$router.push({ 
+                name: "Dialogue", 
+                params: { data } 
                 });
+            })   
+            } })
+        }, */
+        pressed(){
+            const initializeAuth = new Promise(resolve => {
+                firebase.auth().onAuthStateChanged(user => {
+                    authService.setUser(user)
+                    resolve(user)
+                })
+                });
+            user
+            .signInWithEmailAndPassword(this.email, this.password)
+            .then(data => {
+                user.onAuthStateChanged((user) => {
+                console.log("On Auth State Changed")
+                if (!user) {
+                    console.log("No existe usuario. Redireccionando a login");
+                    router.replace('/login'); 
+                } else{
+                    console.log("user logged in -> "+ user.email);
+                    this.$router.replace({
+                    name:"Interface",
+                    });
+                    }
+                });
+                //this.start();
+                console.log("user logged in")
+                
+                
             })
             .catch(error => (this.error = error));
             err => {

@@ -646,6 +646,7 @@ export default {
       name: this.name,
     };
     this.$router.push({ name: "Interface", params: { data } });
+    
   },
 };
 </script>

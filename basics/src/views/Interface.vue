@@ -9,6 +9,9 @@
     <button v-if="secondChoice" @click="alsoNext" class="btn">
       {{ gameDialogue[eventIndex].choices[1].statements }}
     </button>
+    <button @click="save" class="btn">
+      save
+    </button>
   </div>
 </template>
 
@@ -25,7 +28,9 @@ export default {
     };
   },
   mounted() {
-    if(firebase.auth().currentUser == true){firebase.firestore().collection("users")
+    if(firebase.auth().currentUser == true){
+       console.log(firebase.auth().currentUser.uid);
+      /*  firebase.firestore().collection("users")
       .doc(firebase.auth().currentUser.uid)
       .get()
       .then(doc=>{
@@ -35,13 +40,13 @@ export default {
         this.$router.push({ 
           name: "Dialogue", 
           params: { data } 
-        });
-        this.name = this.$route.params.data.name;
-        this.gameDialogue = this.$route.params.data.gameDialogue;
-      })
-    };
-    
-  },
+        })        ; */
+        //this.name = this.$route.params.data.name;
+        //this.gameDialogue = this.$route.params.data.gameDialogue;
+    }else{
+      alert("Please Log in")
+    }
+    },
   methods:{
     next() {
       this.eventIndex = this.gameDialogue[
@@ -63,9 +68,32 @@ export default {
         this.secondChoice = false;
       }
     },
-  },
-  
-};
+    save(){
+      if (this.gameDialogue[this.eventIndex].choices.length > 1){
+        firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid)
+        .set({
+          eventIndex:this.eventIndex
+        })
+      }else if(eventindex){
+        firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid)
+        .update({
+          "eventIndex":new this.eventIndex
+        });
+      }
+    },
+    load(){
+      if(user){
+      firebase
+      .firestore()
+      .collection("users")
+      .doc(firebase.auth().currentUser.uid)
+      .get()
+      .then(doc=>{
+        this.eventIndex = doc.data().eventIndex;
+        });
+      }}
+    }
+  };
 </script>
 
 <style lang="scss" scoped>
