@@ -1,8 +1,7 @@
 <template>
   <div class="home">
-    
       <div class="welcome-message">
-      <h1>
+      <h1 class="welcomelogo">
         Welcome to Mystic
       </h1>
       <button class='btn-large black center'> 
@@ -16,12 +15,8 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 export default {
   name: "Home",
-  components: {
-    HelloWorld
-  }
 };
 </script>
 
@@ -52,7 +47,6 @@ img{
   display: block;
   z-index: -99;
 }
-
 #L1{
   position: absolute;
   right: 0px;

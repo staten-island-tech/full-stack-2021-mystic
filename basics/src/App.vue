@@ -1,33 +1,36 @@
 <template>
+<html lang="en">
   <div id="app">
      <nav class="nav-wrapper green lighten-4"> 
        <p class="logo">Mystics</p>
       <ul class="wrapper">
-        <router-link class="routerLink" to="/">Home</router-link>
-        |
-        <router-link class="routerLink" to="/about">About</router-link>
-        |
-        <router-link class="routerLink" to="/login">Login</router-link>
-        |
-        <p @click="logout" class="routerLink" to="/login">Logout</p>
-        |
-        <router-link class="routerLink" to="/register">Register</router-link>
+       <li>
+         <router-link class="routerLink" to="/">Home</router-link>
+       </li>
+      <li>
+        <router-link class="routerLink loginTag" to="/login">Login</router-link>
+      </li>  
+      <li  @click="logout" >
+        <a class="routerLink logoutTag">Logout</a>
+      </li>
+        
+<!-- v-if="userIsAuthenticated" -->
+      <li>
+      <router-link class="routerLink" to="/register">Register</router-link>
+      </li>
       </ul>
-    </div>
-    <router-view />
+    </nav>
+    <router-view></router-view>
   </div>
+</html>
 </template>
 
 <style lang="scss">
-
-@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=New+Tegomin&family=Original+Surfer&display=swap');
 #app {
-  font-family: 'Original Surfer', cursive;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   text-align: center;
- 
   color: #2c3e50;
 }
 body {
@@ -41,31 +44,30 @@ body {
 }
 #nav {
   padding: 30px;
-
   a {
     font-weight: bold;
     color: #2c3e50;
-
     &.router-link-exact-active {
       color: #42b983;
     }
   }
 }
 .logo {
-  width: 8vw;
-  height: 5vh;
+  width: 5vw;
+  margin-left: 3%;
+  margin-top:0;
+  font-size: 3rem;
+  color:#312c50;
   text-decoration: none; 
-  color: rgb(83, 62, 158);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight:bold;
+  align-items: center;
 }
 .nav-wrapper {
   width: 100vw;
-  background-color: coral;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  align-items: center;
 }
 .wrapper {
   padding-right: 2%;
@@ -77,26 +79,42 @@ body {
   flex-direction: row;
 }
 .routerLink{
-  text-decoration: none; 
   color: black;
   font-weight: bold;
 }
+a.logoutTag{
+  text-decoration: none;
+  color: black;
+}
 </style>
 
-<script>
-import M from 'materialize-css';
-//import {db} from './main';
 
+<script>
+import M from "materialize-css";
+import firebase from "firebase";
+import "firebase/auth";
 export default {
-   data() {
+  data(){
     return {
-      users: {}
+      Login:''
     }
   },
     mounted() {
     M.AutoInit();
+    this.checkUser();
   },
   methods:{
+  checkUser:function(){
+     firebase.auth().onAuthStateChanged((user) => {
+      if (firebase.auth().currentUser) {
+      console.log("User logged in"+user.email);
+      document.querySelector(".loginTag").style.display="none";
+      }else{
+        document.querySelector(".logoutTag").style.display="none";
+        console.log("Please sign in")
+      }
+    });
+  },
   logout(){
     firebase.auth().signOut().then(() => {
       console.log(firebase.auth().currentUser.email+ " has signed out")
@@ -112,5 +130,4 @@ export default {
   }
 }
 }
-
 </script>
