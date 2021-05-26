@@ -6,21 +6,20 @@
           <h3>Login</h3>
           <form @submit.prevent="pressed" id="login-form">
             <div class="input-field">
-            <label>Login</label>
               <input type="email" placeholder="email" v-model="email" id="login-email" required />
             <br>
               <input type="password" placeholder="password" v-model="password" id="login-password" required />
             </div>
-            <button class="btn black">Login</button>
+            <button class="btn">Login</button>
           </form>
         </div>
     </div>
     <p>Don't have an account yet? 
-        <router-link class="routerLink" to="/register">Sign Up</router-link>
+        <router-link to="/register">Sign Up</router-link>
     </p>
     <br>
     <p>
-        <router-link class="routerLink" to="/findPassword">Forget Password</router-link>
+        <router-link to="/findPassword">Forget Password</router-link>
     </p>
 
 </div>
@@ -69,10 +68,5 @@ import M from 'materialize-css';
     align-items: center;
     text-align: center;
     margin:none;
-    background-color: white;
-    padding:3%;
-}
-.routerLink{
-    text-decoration: none;
 }
 </style>

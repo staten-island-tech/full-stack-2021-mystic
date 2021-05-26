@@ -1,14 +1,14 @@
 <template>
   <div class="home">
+    
       <div class="welcome-message">
-      <h1 class="welcomelogo">
+      <h1>
         Welcome to Mystic
       </h1>
       <div>
       <button class='btn-large black'> 
           <router-link style="text-decoration: none; color: inherit; font-weight:bold"  to="/register">Start</router-link>
       </button>
-      
       </div>
     </div>
   </div>
@@ -16,8 +16,12 @@
 
 <script>
 // @ is an alias to /src
+import HelloWorld from "@/components/HelloWorld.vue";
 export default {
   name: "Home",
+  components: {
+    HelloWorld
+  }
 };
 </script>
 

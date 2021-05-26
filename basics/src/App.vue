@@ -1,14 +1,22 @@
 <template>
   <div id="app">
     <div class="nav-wrapper">
-      <a>
-      <router-link to="/"><img class="logo" src="../src/assets/logo.png" />
-      </router-link>
+      <!-- <a href="#">
+        <img class="logo" src="../src/assets/logo.png" />
+      </a> -->
+      <a href="#" class="logo">
+        <h6>Mystics</h6>
       </a>
-      
       <ul class="wrapper">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
+        <router-link class="routerLink" to="/">Home</router-link>
+        |
+        <router-link class="routerLink" to="/about">About</router-link>
+        |
+        <router-link class="routerLink" to="/login">Login</router-link>
+        |
+        <p @click="logout" class="routerLink" to="/login">Logout</p>
+        |
+        <router-link class="routerLink" to="/register">Register</router-link>
       </ul>
     </div>
     <router-view />
@@ -45,30 +53,36 @@ body{
     }
   }
 }
-
-.logo{
-  margin-top: 3%;
-    width: 8vw;
-    height: 7vh;
+.logo {
+  width: 8vw;
+  height: 5vh;
+  text-decoration: none; 
+  color: rgb(83, 62, 158);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:bold;
 }
-
-.nav-wrapper{
-  width:100vw;
-  height: 9vh;
-  background-color: #2b2d42;
+.nav-wrapper {
+  width: 100vw;
+  background-color: coral;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
 }
-.wrapper{
-  padding-right:5%;
-  width:auto;
-  color:white;
-  font-size: 1.3rem;
-  
+.wrapper {
+  padding-right: 2%;
+  width: auto;
+  text-decoration: none; 
+  color: rgb(83, 62, 158);
+  font-weight: bold;
+  display:flex;
+  flex-direction: row;
 }
-
+.routerLink{
+  text-decoration: none; 
+  color: black;
+  font-weight: bold;
+}
 </style>
 
 <script>
@@ -81,18 +95,24 @@ export default {
       users: {}
     }
   },
-    mounted () {
-        M.AutoInit()
-    },
-    /* firebase: {
-    users: {
-      source: db.ref('users'),
-      // Optional, allows you to handle any errors.
-      cancelCallback(err) {
-        console.error(err);
-      }
-    }, 
-  }*/
+    mounted() {
+    M.AutoInit();
+  },
+  methods:{
+  logout(){
+        firebase
+            .auth()
+            .signOut()
+            .then(() => {
+              console.log("user logged out")
+            this.$router.push({
+                name:"Home",
+                query: { redirect: '/about' }
+            });
+        })
+        .catch(error => (this.error = error));
+        },
+}
 }
 
 </script>
