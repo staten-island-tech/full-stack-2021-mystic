@@ -1,12 +1,7 @@
 <template>
   <div id="app">
-    <div class="nav-wrapper">
-      <!-- <a href="#">
-        <img class="logo" src="../src/assets/logo.png" />
-      </a> -->
-      <a href="#" class="logo">
-        <h6>Mystics</h6>
-      </a>
+     <nav class="nav-wrapper green lighten-4"> 
+       <p class="logo">Mystics</p>
       <ul class="wrapper">
         <router-link class="routerLink" to="/">Home</router-link>
         |
@@ -35,11 +30,14 @@
  
   color: #2c3e50;
 }
-body{
-    background-image: url('../src/assets/front.jpg');
-    margin:0;
-    background-position: center;
-    background-attachment: fixed;
+body {
+  background-image: url("../src/assets/school.jpg");
+  margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width:100%;
 }
 #nav {
   padding: 30px;
@@ -100,18 +98,18 @@ export default {
   },
   methods:{
   logout(){
-        firebase
-            .auth()
-            .signOut()
-            .then(() => {
-              console.log("user logged out")
-            this.$router.push({
-                name:"Home",
-                query: { redirect: '/about' }
-            });
-        })
-        .catch(error => (this.error = error));
-        },
+    firebase.auth().signOut().then(() => {
+      console.log(firebase.auth().currentUser.email+ " has signed out")
+      }).then(()=>{
+        this.$router.replace({
+          name:"Home"
+      });
+      })
+      
+      .catch((error) => {
+        console.log(error.message)
+      });
+  }
 }
 }
 

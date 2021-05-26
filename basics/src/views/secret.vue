@@ -6,14 +6,14 @@
         <h3>Welcome</h3>
         <form @submit.prevent="start" id="signup-form">
           <div class="input-field">
-            <label>Enter your name</label>
+            <label>Skip if you already have a name saved</label>
             <input
               type="text"
               v-model="name"
             />
           </div>
           <br />
-          <button class="btn" >Start</button>
+          <button class="btn black" >Start</button>
         </form>
       </div>
     </div>

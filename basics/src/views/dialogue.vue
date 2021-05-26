@@ -5,11 +5,13 @@ LI's name, make it a variable and import it
 </template>
 
 <script>
+import L1 from"../assets/photos/natsume.png";
 export default {
   data() {
     return {
       gameDialogue: [],
       name: "",
+      L1:L1
     };
   },
   mounted() {
@@ -58,6 +60,7 @@ export default {
       {
         eventIndex: 8,
         dialogue: `???: Sorry Teacher! Got caught up in the main office.`,
+        img: `${this.L1}`,
         choices: [{ statements: `Next`, answerIndex: 9 }],
       },
       {
@@ -68,6 +71,7 @@ export default {
       {
         eventIndex: 10,
         dialogue: `???: Thank you.`,
+        img: `${this.L1}`,
         choices: [{ statements: `Next`, answerIndex: 11 }],
       },
       {
@@ -78,6 +82,7 @@ export default {
       {
         eventIndex: 12,
         dialogue: `???: Hey. Did I miss anything?`,
+        img: `${this.L1}`,
         choices: [{ statements: `Next`, answerIndex: 13 }],
       },
       {
@@ -88,6 +93,7 @@ export default {
       {
         eventIndex: 14,
         dialogue: `???: Ah good. I’m Natsume by the way.`,
+        img: `${this.L1}`,
         choices: [{ statements: `Next`, answerIndex: 15 }],
       },
       {
@@ -103,11 +109,13 @@ export default {
       {
         eventIndex: 17,
         dialogue: `Natsume: Oh yeah. I transferred here for my last year.`,
+        img: `${this.L1}`,
         choices: [{ statements: `Next`, answerIndex: 18 }],
       },
       {
         eventIndex: 18,
         dialogue: `Natsume: I didn’t really like my old school. Didn’t suit me.`,
+        img: `${this.L1}`,
         choices: [{ statements: `Next`, answerIndex: 19 }],
       },
       {
@@ -118,6 +126,7 @@ export default {
       {
         eventIndex: 20,
         dialogue: `Natsume: Thank you!`,
+        img: `${this.L1}`,
         choices: [{ statements: `Next`, answerIndex: 21 }],
       },
       {
@@ -133,6 +142,7 @@ export default {
       {
         eventIndex: 23,
         dialogue: `Natsume: Oh wow. Looks like we’re together.`,
+        img: `${this.L1}`,
         choices: [{ statements: `Next`, answerIndex: 24 }],
       },
       {
@@ -143,6 +153,7 @@ export default {
       {
         eventIndex: 25,
         dialogue: `Natsume: Sure. After school at Starbucks?`,
+        img: `${this.L1}`,
         choices: [{ statements: `Next`, answerIndex: 26 }],
       },
       {
@@ -158,6 +169,7 @@ export default {
       {
         eventIndex: 28,
         dialogue: `Natsume: Hey ${this.name}, do you want to sit here or the back?`,
+        img: `${this.L1}`,
         choices: [
           { statements: `Here is fine.`, answerIndex: 29 },
           { statements: `Let's move to the back`, answerIndex: 31 },
@@ -191,6 +203,7 @@ export default {
       {
         eventIndex: 34,
         dialogue: `Natsume: I’m down for anything!`,
+        img: `${this.L1}`,
         choices: [{ statements: `Next`, answerIndex: 35 }],
       },
       {
@@ -206,6 +219,7 @@ export default {
       {
         eventIndex: 37,
         dialogue: `Natsume: Think it’s time to call it a day?`,
+        img: `${this.L1}`,
         choices: [{ statements: `Next`, answerIndex: 38 }],
       },
       {
