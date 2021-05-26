@@ -1,17 +1,22 @@
 <template>
   <div id="app">
     <div class="nav-wrapper">
-      <a href="#">
+      <!-- <a href="#">
         <img class="logo" src="../src/assets/logo.png" />
+      </a> -->
+      <a href="#" class="logo">
+        <h6>Mystics</h6>
       </a>
       <ul class="wrapper">
-        <router-link to="/">Home</router-link>
+        <router-link class="routerLink" to="/">Home</router-link>
         |
-        <router-link to="/about">About</router-link>
+        <router-link class="routerLink" to="/about">About</router-link>
         |
-        <router-link to="/login">Login</router-link>
+        <router-link class="routerLink" to="/login">Login</router-link>
         |
-        <router-link to="/register">Register</router-link>
+        <p @click="logout" class="routerLink" to="/login">Logout</p>
+        |
+        <router-link class="routerLink" to="/register">Register</router-link>
       </ul>
     </div>
     <router-view />
@@ -41,9 +46,12 @@ body {
   }
 }
 .logo {
-  margin-top: 1%;
-  width: 5vw;
-  height: 4vh;
+  width: 8vw;
+  height: 5vh;
+  text-decoration: none; 
+  color: rgb(83, 62, 158);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:bold;
 }
 .nav-wrapper {
   width: 100vw;
@@ -55,15 +63,46 @@ body {
 .wrapper {
   padding-right: 2%;
   width: auto;
-  color: white;
+  text-decoration: none; 
+  color: rgb(83, 62, 158);
+  font-weight: bold;
+  display:flex;
+  flex-direction: row;
+}
+.routerLink{
+  text-decoration: none; 
+  color: black;
+  font-weight: bold;
 }
 </style>
 
 <script>
 import M from "materialize-css";
+import firebase from "firebase";
+import "firebase/auth";
 export default {
-  mounted() {
+  data(){
+    return {
+      Login:''
+    }
+  },
+    mounted() {
     M.AutoInit();
   },
-};
+  methods:{
+  logout(){
+        firebase
+            .auth()
+            .signOut()
+            .then(() => {
+              console.log("user logged out")
+            this.$router.push({
+                name:"Home",
+                query: { redirect: '/about' }
+            });
+        })
+        .catch(error => (this.error = error));
+        },
+}
+}
 </script>

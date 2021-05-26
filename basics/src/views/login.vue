@@ -47,9 +47,8 @@ import M from 'materialize-css';
             .signInWithEmailAndPassword(this.email, this.password)
             .then((user) => {
                 console.log(user.data);
-                this.$router.push({
-                    name:"Interface",
-                    query: { redirect: '/Interface' }
+                this.$router.replace({
+                    name:"Secret",
                 });
             })
             .catch(error => (this.error = error));
