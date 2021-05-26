@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="dialogue-text">
+  <div class="dialogue-text">
+    <div>
       {{ gameDialogue[eventIndex].dialogue }}
     </div>
     <button @click="next" class="btn">
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import firebase from "firebase";
 export default {
   data() {
     return {
@@ -43,6 +44,28 @@ export default {
         this.secondChoice = false;
       }
     },
+      save(){
+        firebase.firestore().collection("users")
+        .doc(firebase.auth().currentUser.uid)
+        .get()
+        .then((docSnapshot)=>{
+          if(docSnapshot.exists){
+            firebase.firestore().collection("users")
+        .doc(firebase.auth().currentUser.uid).onSnapshot((doc)=>{
+          this.eventIndex = doc.data().eventIndex;
+        })
+        }else{
+          firebase.firestore().collection("users")
+        .doc(firebase.auth().currentUser.uid)
+        .set({
+            eventIndex:this.eventIndex
+        }).then(() => {
+          this.eventIndex = this.gameDialogue[
+        this.eventIndex]
+        }).catch(error => (this.error = error));
+        }
+      })
+  },
   },
   mounted() {
     this.name = this.$route.params.data.name;
@@ -54,10 +77,12 @@ export default {
 <style lang="scss" scoped>
 .btn {
   font-size: 1rem;
+  margin:2%;
 }
 .dialogue-text {
   font-size: 2rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
+  margin-TOP: 78vh;
 }
 </style>

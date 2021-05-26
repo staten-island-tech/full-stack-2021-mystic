@@ -64,5 +64,11 @@ export default {
     align-items: center;
     text-align: center;
     margin:none;
+    background-color: white;
+    padding:3%;
+}
+.routerLink{
+    text-decoration: none;
+    text-emphasis: underline;
 }
 </style>

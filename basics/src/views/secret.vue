@@ -4,17 +4,16 @@
     <div>
       <div>
         <h3>Welcome</h3>
-        <form @submit.prevent="pressed" id="signup-form">
+        <form @submit.prevent="start" id="signup-form">
           <div class="input-field">
+            <label>Enter your name</label>
             <input
               type="text"
-              placeholder="Please Enter Your Name"
               v-model="name"
             />
           </div>
-          <p>Who would you like to date with?</p>
           <br />
-          <button class="btn" @click="start">Start</button>
+          <button class="btn" >Start</button>
         </form>
       </div>
     </div>
@@ -41,14 +40,41 @@ export default {
     M.AutoInit();
   },
   methods: {
-    start() {
-      let data = {
-        name: this.name,
-      };
-      this.$router.push({ name: "Dialogue", params: { data } });
-    },
+  start(){
+        firebase.firestore().collection("users")
+        .doc(firebase.auth().currentUser.uid)
+        .get()
+        .then((docSnapshot)=>{
+          if(docSnapshot.exists){
+            firebase.firestore().collection("users")
+        .doc(firebase.auth().currentUser.uid).onSnapshot((doc)=>{
+          this.name = doc.data().username;
+          let data = { name:this.name };
+          this.$router.push({ 
+            name: "Dialogue", 
+            params: { data } 
+          }); 
+        })
+        }else{
+            firebase.firestore().collection("users")
+        .doc(firebase.auth().currentUser.uid)
+        .set({
+            username:this.name,
+            email: firebase.auth().currentUser.email,
+            uid:firebase.auth().currentUser.uid,
+            eventIndex:""
+        }).then(() => {
+          this.start();
+            this.$router.replace({
+            name:"Interface",
+        });
+        }).catch(error => (this.error = error));
+        }
+      })
   },
-};
+
+  },
+}
 </script>
 
 <style lang="scss">
@@ -58,5 +84,7 @@ export default {
   align-items: center;
   text-align: center;
   margin: none;
+  background-color: white;
+  padding:3%;
 }
 </style>
