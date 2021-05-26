@@ -1,26 +1,30 @@
 <template>
+<html lang="en">
   <div id="app">
-    <div class="nav-wrapper">
+    
       <!-- <a href="#">
         <img class="logo" src="../src/assets/logo.png" />
       </a> -->
-      <a href="#" class="logo">
-        <h6>Mystics</h6>
-      </a>
+     <nav class="nav-wrapper green lighten-4"> 
+       <p class="logo">Mystics</p>
       <ul class="wrapper">
-        <router-link class="routerLink" to="/">Home</router-link>
-        |
-        <router-link class="routerLink" to="/about">About</router-link>
-        |
+       <li1>
+         <router-link class="routerLink" to="/">Home</router-link>
+       </li1>
+      <li2>
         <router-link class="routerLink" to="/login">Login</router-link>
-        |
-        <p @click="logout" class="routerLink" to="/login">Logout</p>
-        |
-        <router-link class="routerLink" to="/register">Register</router-link>
+      </li2>  
+      <li3  @click="logout" class="routerLink">Logout</li3>
+        
+<!-- v-if="userIsAuthenticated" -->
+      <li4>
+      <router-link class="routerLink" to="/register">Register</router-link>
+      </li4>
       </ul>
-    </div>
-    <router-view />
+    </nav>
+    <router-view></router-view>
   </div>
+</html>
 </template>
 
 <style lang="scss">
@@ -46,16 +50,18 @@ body {
   }
 }
 .logo {
-  width: 8vw;
-  height: 5vh;
+  width: 5vw;
+  margin-left: 3%;
+  margin-top:0;
+  font-size: 3rem;
+  color:#312c50;
   text-decoration: none; 
-  color: rgb(83, 62, 158);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight:bold;
+  align-items: center;
 }
 .nav-wrapper {
   width: 100vw;
-  background-color: coral;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -70,7 +76,6 @@ body {
   flex-direction: row;
 }
 .routerLink{
-  text-decoration: none; 
   color: black;
   font-weight: bold;
 }
@@ -83,27 +88,37 @@ import "firebase/auth";
 
 export default {
   data(){
-    return {
-      Login:''
+    return{
+      title:"",
+      link:""
     }
   },
     mounted() {
     M.AutoInit();
   },
-  methods:{
-  logout(){
-        firebase
-            .auth()
-            .signOut()
-            .then(() => {
-              console.log("user logged out")
-            this.$router.push({
-                name:"Home",
-                query: { redirect: '/about' }
-            });
-        })
-        .catch(error => (this.error = error));
-        },
+  computed:{
+    navItems(){
+      let navItems = [
+        {title:'Home', link:'/'},
+        {title: 'Sign Up', link: '/register'},
+        {title: 'Login', link:'/login'}
+      ]
+      if (this.userIsAuthenticated){
+        navItems = [
+          {title:'Game', link:'/Interface'}
+        ]
+      }
+      return navItems.data
+    }, 
+    userIsAuthenticated () {
+        return this.$store.getters.user !== null && this.$store.getters.user !== undefined
+      }
+    },
+    methods:{
+    logout () {
+      this.$store.dispatch('logout')
+      this.$router.push({ name: "Home"});
+    }
 }
 }
 </script>

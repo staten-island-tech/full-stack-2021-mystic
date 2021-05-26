@@ -40,7 +40,7 @@ const routes = [
     path: "/Interface",
     name: "Interface",
     component: Interface,
-    props: true,
+    //props: true,
   },
   {
     path: "/dialogue",

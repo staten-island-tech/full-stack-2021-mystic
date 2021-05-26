@@ -26,7 +26,8 @@
 
 <script>
 import M from "materialize-css";
-import {db,user} from "../main";
+import firebase from "firebase";
+import {db,user, usersCollection} from "../main";
 export default {
   data() {
     return {
@@ -41,8 +42,7 @@ export default {
   },
   methods: {
     start() {
-      db
-      .collection("users")
+      usersCollection
       .doc(firebase.auth().currentUser.uid)
       .get()
       .then(doc=>{
@@ -56,13 +56,13 @@ export default {
       })    
     },
     getUsername(){
-      db
-      .collection("users")
+      usersCollection
       .doc(firebase.auth().currentUser.uid)
       .set({
           username:this.name,
           email: firebase.auth().currentUser.email,
           uid:firebase.auth().currentUser.uid,
+          eventIndex:""
       }).then(() => {
         this.start();
           this.$router.replace({

@@ -4,18 +4,20 @@
     <div>
         <div>
           <h3>Sign Up</h3>
-          <form @submit.prevent="pressed" id="signup-form">
+          <form @submit.prevent="signup" id="signup-form">
             <div class="input-field">
+            <label>Enter Email and Password</label>
               <input type="email" placeholder="email" v-model="email" id="signup-email" required />
               <br>
               <input type="password" placeholder="password" v-model="password" id="signup-password" required />
+            
             </div>
-            <button class="btn">Sign Up</button>
+            <button class="btn black">Sign Up</button>
           </form>
         </div>
     </div>
     <p>Already have an account?
-        <router-link to="/login">Login</router-link>
+        <router-link class="routerLink" to="/login">Login</router-link>
     </p>
 </div>
       
@@ -24,8 +26,8 @@
 </template>
 <script>
 import M from 'materialize-css';
-import firebase from "firebase";
-import "firebase/auth";
+import { db, user, usersCollection } from '../main';
+
 export default {
     data(){
         return{
@@ -38,7 +40,7 @@ export default {
         M.AutoInit();
     },
     methods:{
-        pressed(){
+        /* pressed(){
             user
             .createUserWithEmailAndPassword(this.email, this.password)
             .then((user) => {
@@ -50,6 +52,9 @@ export default {
             err => {
                 alert(err);
             }
+        } */
+        signup(){
+        this.$store.dispatch('signUp', {email: this.email, password: this.password})
         }
     }
 };
@@ -64,5 +69,12 @@ export default {
     margin:none;
     background-color: white;
     padding:3%;
+}
+.routerLink{
+    text-decoration: none;
+    text-emphasis: underline;
+}
+label{
+    color:black;
 }
 </style>

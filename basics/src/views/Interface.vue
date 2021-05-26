@@ -9,15 +9,12 @@
     <button v-if="secondChoice" @click="alsoNext" class="btn">
       {{ gameDialogue[eventIndex].choices[1].statements }}
     </button>
-    <button @click="save" class="btn">
-      save
-    </button>
   </div>
 </template>
 
 <script>
 import firebase from "firebase";
-import "firebase/auth";
+import {db,user} from "../main";
 export default {
   data() {
     return {
@@ -27,10 +24,10 @@ export default {
       secondChoice: false,
     };
   },
-  mounted() {
-    if(firebase.auth().currentUser == true){
-       console.log(firebase.auth().currentUser.uid);
-      /*  firebase.firestore().collection("users")
+  created(){
+    if(user.currentUser){
+       console.log(firebase.auth().currentUser.email);
+      db.collection("users")
       .doc(firebase.auth().currentUser.uid)
       .get()
       .then(doc=>{
@@ -40,13 +37,15 @@ export default {
         this.$router.push({ 
           name: "Dialogue", 
           params: { data } 
-        })        ; */
-        //this.name = this.$route.params.data.name;
-        //this.gameDialogue = this.$route.params.data.gameDialogue;
-    }else{
+        }); 
+      
+    })}
+    else{
       alert("Please Log in")
-    }
-    },
+    }}, 
+  mounted() {
+    this.name = this.$route.params.data.name;
+      this.gameDialogue = this.$route.params.data.gameDialogue;},
   methods:{
     next() {
       this.eventIndex = this.gameDialogue[
@@ -71,7 +70,7 @@ export default {
     save(){
       if (this.gameDialogue[this.eventIndex].choices.length > 1){
         firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid)
-        .set({
+        .onSnapshot({
           eventIndex:this.eventIndex
         })
       }else if(eventindex){

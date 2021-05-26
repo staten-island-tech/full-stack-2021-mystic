@@ -4,73 +4,56 @@
     <div>
         <div>
           <h3>Login</h3>
-          <form @submit.prevent="pressed" id="login-form">
+          <form @submit.prevent="login" id="login-form">
             <div class="input-field">
+            <label>Login</label>
               <input type="email" placeholder="email" v-model="email" id="login-email" required />
             <br>
               <input type="password" placeholder="password" v-model="password" id="login-password" required />
             </div>
-            <button class="btn">Login</button>
+            <button class="btn black">Login</button>
           </form>
         </div>
     </div>
     <p>Don't have an account yet? 
-        <router-link to="/register">Sign Up</router-link>
+        <router-link class="routerLink" to="/register">Sign Up</router-link>
     </p>
     <br>
     <p>
-        <router-link to="/findPassword">Forget Password</router-link>
+        <router-link class="routerLink" to="/findPassword">Forget Password</router-link>
     </p>
 
 </div>
 </template>
 
 <script>
-import {db,user} from "../main";
+import {db,user,userCollection} from "../main";
 import M from 'materialize-css';
-
-    export default {
+export default {
         data(){
         return{
             email:"",
             password:"",
             error:"",
-            name:""
+            name:"",
+            user:""
         };
     },
     mounted () {
         M.AutoInit();
     },
+    watch: {
+      user (value) {
+        if (value !== null && value !== undefined) {
+          this.$router.push('/Interface')
+        }
+      }
+    },
     methods:{
-        /* start() {
-        firebase.auth().onAuthStateChanged(
-        function(user){
-            if(user != null){
-            firebase
-            .firestore()
-            .collection("users")
-            .doc(firebase.auth().currentUser.uid)
-            .get()
-            .then(doc=>{
-                this.name = doc.data().username;
-                let data = { name:this.name };
-                this.$router.push({ 
-                name: "Dialogue", 
-                params: { data } 
-                });
-            })   
-            } })
-        }, */
-        pressed(){
-            const initializeAuth = new Promise(resolve => {
-                firebase.auth().onAuthStateChanged(user => {
-                    authService.setUser(user)
-                    resolve(user)
-                })
-                });
+        /* login(){
             user
             .signInWithEmailAndPassword(this.email, this.password)
-            .then(data => {
+            .then(() => {
                 user.onAuthStateChanged((user) => {
                 console.log("On Auth State Changed")
                 if (!user) {
@@ -92,10 +75,15 @@ import M from 'materialize-css';
             err => {
                 alert(err);
             }
-        },
-        
+        },   */
+        login(){
+            this.$store.dispatch('login', 
+            {email: this.email, 
+            password: this.password})
+        }
     }
-    }
+}
+
 </script>
 
 <style lang="scss">
@@ -107,5 +95,8 @@ import M from 'materialize-css';
     margin:none;
     background-color: white;
     padding:3%;
+}
+.routerLink{
+    text-decoration: none;
 }
 </style>
