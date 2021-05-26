@@ -4,14 +4,13 @@
       <h1 class="welcomelogo">
         Welcome to Mystic
       </h1>
-      <div>
-      <button class='btn-large black'> 
+      <button class='btn-large black center'> 
           <router-link style="text-decoration: none; color: inherit; font-weight:bold"  to="/register">Start</router-link>
       </button>
-      
       </div>
+      <img id="L1" src="../assets/photos/natsume.png">
+      
     </div>
-  </div>
 </template>
 
 <script>
@@ -26,6 +25,9 @@ export default {
   margin:2%;
   margin-top:20%
 }
+.welcome-message{
+  height:15vh;
+}
 h1.welcomelogo{
   background-color: white;
   border: 3px black solid;
@@ -39,5 +41,16 @@ h1.welcomelogo{
   font-weight:bold;
   display: block;
   align-content: center;
+}
+img{
+  width: 40%;
+  display: block;
+  z-index: -99;
+}
+
+#L1{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }
 </style>

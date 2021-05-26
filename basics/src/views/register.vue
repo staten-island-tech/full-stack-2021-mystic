@@ -10,12 +10,12 @@
               <br>
               <input type="password" placeholder="password" v-model="password" id="signup-password" required />
             </div>
-            <button class="btn">Sign Up</button>
+            <button class="btn black">Sign Up</button>
           </form>
         </div>
     </div>
     <p>Already have an account?
-        <router-link to="/login">Login</router-link>
+        <router-link class="routerLink" to="/login">Login</router-link>
     </p>
 </div>
       
@@ -45,7 +45,7 @@ export default {
             .then((user) => {
                 console.log(user.data);
                 this.$router.replace({
-                    name:"secret"
+                    name:"Secret"
                 });
             })
             .catch(error => (this.error = error));

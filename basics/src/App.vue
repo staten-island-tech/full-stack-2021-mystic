@@ -1,10 +1,6 @@
 <template>
 <html lang="en">
   <div id="app">
-    
-      <!-- <a href="#">
-        <img class="logo" src="../src/assets/logo.png" />
-      </a> -->
      <nav class="nav-wrapper green lighten-4"> 
        <p class="logo">Mystics</p>
       <ul class="wrapper">
@@ -40,6 +36,11 @@
 body {
   background-image: url("../src/assets/school.jpg");
   margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width:100%;
 }
 #nav {
   padding: 30px;
@@ -117,7 +118,13 @@ export default {
   logout(){
     firebase.auth().signOut().then(() => {
       console.log(firebase.auth().currentUser.email+ " has signed out")
-      }).catch((error) => {
+      }).then(()=>{
+        this.$router.replace({
+          name:"Home"
+      });
+      })
+      
+      .catch((error) => {
         console.log(error.message)
       });
   }
